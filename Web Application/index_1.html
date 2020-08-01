@@ -1,0 +1,242 @@
+<!-- index.html -->
+<html>
+  <head>
+      <meta name=viewport content="width=device-width, initial-scale=1">
+      <title>Rasa Chatbot</title>
+      <link rel="icon" href="favicon.png" type="image/x-icon">
+      <!--Google font -->
+      <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@100;200;300;400;500;600;700;800;900&amp;family=Arimo:wght@100;200;300;400;500;600;700;800;900&amp;subset=latin&amp;display=swap" rel="stylesheet">
+      <!-- Bootstrap CSS and other libraries for fonts and icons-->
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!-- our stylesheets -->
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="body.css">
+    </head>
+  
+  <body>
+      <!--Navbar-->
+      <nav class="navbar navbar-custom navbar-fixed-top navbar-expand-lg navbar-light justify-content-center">
+          <div class="container-fluid">
+                      <!-- Brand and toggle get grouped for better mobile display -->
+                      <div class="navbar-header">
+                       <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                              <i class="glyphicon glyphicon-list" style="font-size:40px; margin-top: 25px;"></i>
+                          </button>
+                          <!-- Navbar logo -->
+                          <a class="navbar-brand" href="#">
+                              <img src="logomed.png" alt="medbot logo">
+                          </a>
+                      </div>
+                       <!-- Collapse button -->
+                       <div id="navbarCollapse" class="collapse navbar-collapse" data-target="#navbarCollapse">
+                           <ul class="nav navbar-nav center">
+                               <li><a href="#Home" class="link-1">Home</a></li>
+                               <li><a href="#Members" class="link-1">Members</a></li>
+                               <li><a href="#Contact-us" class="link-1">Contact us</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <a type="button" class="btn btn-light btn-outline btn-circle" id="login" href="login.html">Login</a>
+                <a type="button" class="btn btn-light btn-outline btn-circle" id="signup" href="Sign up.html">Sign Up</a>
+            </ul>
+        </div>
+        </div>
+      </nav>
+      <!--about-->
+       <section id="Home" class="about text-center wow bounceIn" data-wow-duration="2s" data-wow-offset="100">
+        <div class="container">
+            <h1>Meet Our New Friendly<br><span class="element"></span></h1><br>
+            <p class="lead hidden-xs about-paragraph1"><strong>Bootstrap</strong></p>
+            <p class="lead visible-xs about-paragraph2"><strong>Bootstrap</strong></p>
+            <p class="lead hidden-xs about-paragraph1"><strong>Bootstrap</strong> ships with vanilla CSS, but its source code utilizes the two most popular CSS preprocessors, Less and Sass. Quickly get started with precompiled CSS or build on the source.</p>
+            <p class="lead visible-xs about-paragraph2"><strong>Bootstrap</strong> ships with vanilla CSS, but its source code utilizes the two most popular CSS preprocessors, Less and Sass. Quickly get started with precompiled CSS or build on the source.</p>
+            <p class="lead hidden-xs about-paragraph1"><strong>Bootstrap</strong> ships with vanilla CSS, but its source code utilizes the two most popular CSS preprocessors, Less and Sass. Quickly get started with precompiled CSS or build on the source.</p>
+            <p class="lead visible-xs about-paragraph2"><strong>Bootstrap</strong> ships with vanilla CSS, but its source code utilizes the two most popular CSS preprocessors, Less and Sass. Quickly get started with precompiled CSS or build on the source.</p>
+            <p class="lead hidden-xs about-paragraph1"><strong>Bootstrap</strong> ships with vanilla CSS, but its source code utilizes the two most popular CSS preprocessors</p>
+            <p class="lead visible-xs about-paragraph2"><strong>Bootstrap</strong> ships with vanilla CSS, but its source code utilizes the two most popular CSS preprocessors</p>
+        </div>
+    </section>
+    <!--End Section About-->
+      <!-- chatbot code -->
+       <mybot> </mybot>
+    <!--chatbot code ends->
+    <!--Start Our Section Team-->
+    <section id="Members" class="our-team text-center">
+    	<div class="team">
+            <div class="container">
+                <h2 class="h1">Our Awesome Team</h2><br><br>
+                <div class="row">
+                	<div class="col-md-10 col-md-offset-1">
+        <div class="col-lg-12">
+        	<h6 class="description"></h6>
+            <div class="col-md-4 col-sm-4 profile">
+              <div class="img-box">
+              	<img src="profile 1.png" alt="member1" class="img-responsive">
+                <ul class="text-center">
+                  <a href="#"><li><i class="fa fa-facebook"></i></li></a>
+                  <a href="#"><li><i class="fa fa-twitter"></i></li></a>
+                  <a href="#"><li><i class="fa fa-linkedin"></i></li></a>
+                </ul>
+              </div>
+              <h1>A</h1>
+              <h2>Co-founder/ Operations</h2>
+              <p>ABC</p>
+            </div>
+             <div class="col-md-4 col-sm-4 profile">
+              <div class="img-box">
+                <img src="profile 2.png" alt="member2"class="img-responsive">
+                <ul class="text-center">
+                  <a href="#"><li><i class="fa fa-facebook"></i></li></a>
+                  <a href="#"><li><i class="fa fa-twitter"></i></li></a>
+                  <a href="#"><li><i class="fa fa-linkedin"></i></li></a>
+                </ul>
+              </div>
+                <h1>B</h1>
+              <h2>Co-founder/ Operations</h2>
+              <p>ABC</p>
+            </div>
+            <div class="col-md-4 col-sm-4 profile">
+              <div class="img-box">
+                <img src="profile 3.png" alt="member3" class="img-responsive">
+                <ul class="text-center">
+                  <a href="#"><li><i class="fa fa-facebook"></i></li></a>
+                  <a href="#"><li><i class="fa fa-twitter"></i></li></a>
+                  <a href="#"><li><i class="fa fa-linkedin"></i></li></a>
+                </ul>
+              </div>
+                <h1>C</h1>
+              <h2>Co-founder/ Operations</h2>
+              <p>ABC</p>
+            </div>
+            <div class="col-md-4 col-sm-4 profile">
+              <div class="img-box">
+                <img src="profile 4.png" alt="member4" class="img-responsive">
+                <ul class="text-center">
+                  <a href="#"><li><i class="fa fa-facebook"></i></li></a>
+                  <a href="#"><li><i class="fa fa-twitter"></i></li></a>
+                  <a href="#"><li><i class="fa fa-linkedin"></i></li></a>
+                </ul>
+              </div>
+                <h1>D</h1>
+              <h2>Co-founder/ Operations</h2>
+              <p>ABC</p>
+            </div>
+            <div class="col-md-4 col-sm-4 profile">
+              <div class="img-box">
+                <img src="profile 5.png" alt="member5" class="img-responsive">
+                <ul class="text-center">
+                  <a href="#"><li><i class="fa fa-facebook"></i></li></a>
+                  <a href="#"><li><i class="fa fa-twitter"></i></li></a>
+                  <a href="#"><li><i class="fa fa-linkedin"></i></li></a>
+                </ul>
+              </div>
+                <h1>E</h1>
+              <h2>Co-founder/ Operations</h2>
+              <p>ABC</p>
+            </div>
+            <div class="col-md-4 col-sm-4 profile">
+              <div class="img-box">
+                <img src="profile 6.png" alt="member6" class="img-responsive">
+                <ul class="text-center">
+                  <a href="#"><li><i class="fa fa-facebook"></i></li></a>
+                  <a href="#"><li><i class="fa fa-twitter"></i></li></a>
+                  <a href="#"><li><i class="fa fa-linkedin"></i></li></a>
+                </ul>
+              </div>
+                <h1>F</h1>
+              <h2>Co-founder/ Operations</h2>
+              <p>ABC</p>
+            </div>
+                </div>
+  </div>
+</div>
+    </section>
+    <!--End Section Our Team-->
+    <!--Start Section Contact Us-->
+    <section id="Contact-us" class="contact-us text-center">
+        <div class="fields">
+            <div class="container">
+                <div class="row">
+                    <i class="fa fa-headphones fa-5x"></i>
+                    <h5 class="h1">Tell Us What You Feel</h5>
+                    <p class="lead">Feel Free To Contact Us Any Time</p><br>
+      <!--Start Contact Form-->
+                    <form>
+                    	<div style="border-radius: 20px;background-color: #f2f2f2; padding: 30px;border: 1px solid #24DAC4">
+                        <div class="col-md-6 wow slideInLeft" data-wow-duration="2s" data-wow-offset="350">  
+                            <div class="form-group">
+                                <input type="text" class="form-control input-lg" placeholder="Username">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control input-lg" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control input-lg" placeholder="Cell Phone">
+                            </div>
+                        </div>
+                        <div class="col-md-6 wow slideInRight" data-wow-duration="2s" data-wow-offset="350">
+                            <div class="form-group">
+                                <textarea class="form-control input-lg" placeholder="Type Your Message"></textarea>
+                            </div>
+                            </div>
+                            <button type="button" class="btn btn-primary btn-lg">Contact Us</button>
+                        </div>
+                    </form>
+                    <!--End Contact Form-->
+                </div>
+            </div>
+        </div>
+    </section>
+    <br><br><br>
+    <!--footer-->
+    <section class="foot" style="background-color: #311897">
+        <div class="copyright text-center" style="color: #fff">
+            Copyright &copy; Made with <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+        </div>
+    </section>
+    	
+    <!--JS-->
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+          <!-- jQuery CDN -->
+          <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+          <!-- Bootstrap Js CDN -->
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+          <!-- script files -->
+          <script src="script.js"></script>
+          <script type="text/javascript">
+var recognizing;
+var recognition = new webkitSpeechRecognition();
+recognition.continuous = true;
+reset();
+recognition.onend = reset();
+
+recognition.onresult = function (event) 
+{
+  for (var i = event.resultIndex; i < event.results.length; ++i) {
+    if (event.results[i].isFinal) {
+      chatinput.value += event.results[i][0].transcript;
+    }
+  }
+}
+
+function reset() 
+{
+  recognizing = false;
+  }
+
+function toggleStartStop() 
+{
+  if (recognizing) {
+    recognition.stop();
+    reset();
+  } else 
+  {
+    recognition.start();
+    recognizing = true;
+  }
+}
+</script>
+</body>
+</html>

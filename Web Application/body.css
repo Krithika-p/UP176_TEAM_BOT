@@ -1,0 +1,258 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 26 Jun, 2020, 7:50:43 PM
+    Author     : Lekshmi Priya Mohan
+*/
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,300);
+.body
+{
+  font-family: Arimo, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  padding-top: 50px;
+}
+
+.navbar-custom 
+{ 
+    background-color: #FFF;
+    display:block;
+    margin:0 auto;
+    width:100%;
+    min-height: 130px;
+    border-bottom: 6px solid #24DAC4;
+    box-sizing: content-box;
+    font-family: Bai Jamjuree, Helvetica, Arial, sans-serif;
+ }
+ 
+ .navbar-custom .container 
+{
+  position: relative;
+}
+.navbar-brand img
+{
+    height: 300px;
+    max-width:300px; 
+    margin-top: -90px;
+    margin-left: 10px;
+}
+
+.btn.btn-circle 
+{ 
+  border-radius: 50px; 
+  font-size: 17px;
+  margin-right: 15px;
+  margin-top: 7px;
+ }
+.btn.btn-outline
+{ 
+  background-color: #311897; 
+  color: #FFF !important;
+}
+.navbar .navbar-nav {
+  margin-left: 20px;
+  display: inline-block;
+  float: none;
+  margin-top: 40px;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+.link-1 {
+  transition: 0.2s ease;
+  color: #311897;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 70px 0;
+  margin: 0 30px;
+}
+.link-1:hover {
+  border-top: 4px solid #311897;
+  border-bottom: 4px solid #311897;
+  padding: 20px 15px; 
+}
+
+/*Start Section About*/
+.about {margin-top: 50px; padding-top: 100px; padding-bottom: 60px; background-color: #311897;}
+.about .about-paragraph1 {color: #FFF; font-size: 25px;}
+.about .about-paragraph2 {color: #FFF; font-size: 17px;}
+.about h1 {font-weight: bold ; color: #FFF;letter-spacing: 10px;}
+@keyframes changeLetter {
+  0% {
+    content: "Medbot";
+  }
+  50% {
+    color: #311897;
+  }
+  100% {
+    content:"your go-to assistant";
+  }
+}
+.element {
+  display: flex;
+  margin-top: 30px;
+  align-items: center;
+  justify-content: center;
+  color: #24DAC4;
+}
+.element:after {
+  -webkit-animation: changeLetter 3s linear infinite alternate;
+          animation: changeLetter 3s linear infinite alternate;
+  content: "Medbot";
+}
+/*End Section About*/
+
+/*Meet our team*/
+.our-team
+{
+  min-height: 600px
+}
+.team
+{
+  color: #311897;
+  font-family: Bai Jamjuree, Helvetica, Arial, sans-serif;
+  min-height: 600px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding:75px 0;
+}
+.team h2
+{
+  font-weight: bold;
+}
+.description
+{
+  color: #999;
+  border-bottom: 2px solid rgba(0, 0, 0,0.1);
+  padding-bottom: 5px;
+}
+.profile{
+  margin-top: 25px;
+}
+.profile h1
+{
+  font-weight: bold;
+  font-size: 20px;
+  margin:10px 0 0 0;
+}
+.profile h2
+{
+  font-size: 14px;
+  font-weight: lighter;
+  margin-top: 5px;
+  color:  #C0C0C0;
+}
+.profile .img-box{
+  opacity: 1;
+  display: block;
+  position: relative;
+}
+.profile .img-box:after{
+  content:"";
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+.img-box ul{
+  position: absolute;
+  z-index: 2;
+  bottom: 50px;
+  text-align: center;
+  width: 100%;
+  padding-left: 0px;
+  height: 0px;
+  margin:0px;
+  opacity: 0;
+}
+.profile .img-box:after, .img-box ul, .img-box ul li{
+  -webkit-transition: all 0.5s ease-in-out 0s;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
+}
+.img-box ul i{
+  font-size: 20px;
+  letter-spacing: 10px;
+}
+.img-box ul li{
+  width: 30px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid #24DAC4;
+    margin: 2px;
+    padding: 5px;
+   display: inline-block;
+}
+.img-box a{
+  color:#fff;
+}
+.img-box:hover:after{
+  opacity: 1;
+}
+.img-box:hover ul{
+  opacity: 1;
+}
+.img-box ul a{
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.img-box a:hover li{
+  border-color: #fff;
+  color: #311897;
+}
+/*Start Section Contact Us*/
+.fa.fa-headphones
+{
+  color: #24DAC4 ;
+}
+.contact-us
+{
+  background-color: #FFF;
+  overflow:hidden;
+  min-height: 350px;
+}
+.contact-us .fields
+{
+  color: #311897;
+  min-height: 320px;
+  padding-top: 40px;
+  padding-bottom: 40px
+}
+.contact-us .btn.btn-primary
+{
+  background-color: #24DAC4;
+  border: none;
+  border-radius: 50px;
+  margin-top: 30px;
+}
+.contact-us .btn.btn-primary:hover {background-color: #311897 ;}
+.contact-us h5{color: #C0C0C0; font-weight: bold;}
+.contact-us p {margin-bottom: 40px}
+.contact-us textarea {height: 135px; width: 90%;}
+.contact-us input[type="text"],
+.contact-us textarea
+{
+  color:  #000;
+  border: 1px solid #C0C0C0;
+  resize: none;
+}
+.contact-us
+{
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/*End Section Contact Us*/
+

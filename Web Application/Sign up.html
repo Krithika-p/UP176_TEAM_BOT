@@ -1,0 +1,113 @@
+<!-- index.html -->
+<html>
+  <head>
+      <meta name=viewport content="width=device-width, initial-scale=1">
+      <title>Rasa Chatbot Sign Up</title>
+      <link rel="icon" href="favicon.png" type="image/x-icon">
+      <!--Google font -->
+      <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@100;200;300;400;500;600;700;800;900&amp;family=Arimo:wght@100;200;300;400;500;600;700;800;900&amp;subset=latin&amp;display=swap" rel="stylesheet">
+      <!-- Bootstrap CSS and other libraries for fonts and icons-->
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+      <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!-- our stylesheets -->
+      <link rel="stylesheet" href="login.css">
+      
+    </head>
+<!--Navbar-->
+<nav class="navbar navbar-custom navbar-fixed-top navbar-expand-lg navbar-light justify-content-center">
+    <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <!-- Navbar logo -->
+                    <a class="navbar-brand" href="#">
+                        <img src="logomed.png" alt="medbot logo">
+                    </a>
+                </div>
+              </div>
+</nav> 
+      
+<!--Start of SignUp form-->
+      <body>
+        <div class="container">
+            <div class="row">
+            <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-arimo"></div>
+            <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+              <div class="card card-signin my-5">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Sign Up</h5>
+                  <form class="form-signin" >
+                    
+                    <div class="form-label-group">
+                        <input type="firstname" id="inputfirstname" class="form-control" placeholder="First Name" required autofocus>
+                        <label for="inputfirstname">First Name</label>
+                      </div>
+                      
+                      <div class="form-label-group">
+                        <input type="lastname" id="inputlastname" class="form-control" placeholder="Last Name" required autofocus>
+                        <label for="inputlastname">Last Name</label>
+                      </div>
+                      
+                        
+                      <div class="form-gender">
+                            <label class="radio-container m-r-45">Male
+                                <input type="radio" checked="checked" name="gender">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="radio-container">Female
+                                <input type="radio" name="gender">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>  
+
+                      <div class="form-label-group">
+                        <input type="employeeid" id="inputemployeeid" class="form-control" placeholder="Employee ID" required autofocus>
+                        <label for="inputemployeeid">Employee ID</label>
+                      </div>
+
+                    <div class="form-label-group">
+                      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                      <label for="inputEmail">Email address</label>
+                    </div>
+      
+                    <div class="form-label-group">
+                      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                      <label for="inputPassword">Password</label>
+                    </div>
+      
+                
+                    <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" id="submitBtn" onclick="window.location.href='login.html'">Sign Up</button>
+                 
+      
+                
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!--End of Login form-->
+
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+         <!----Disabled button--->
+         <script type="text/javascript">
+          $(document).ready(function() {    
+            $('#inputEmail, #inputPassword, #inputemployeeid, #inputfirstname, #inputlastname').keyup(function(){
+                    if ($('#inputPassword').val() != '' && $('#inputEmail').val() != '' && $('#inputemployeeid').val() != '' && 
+                      $('#inputfirstname').val() != '' && $('#inputlastname').val() != '')
+                    {
+                      $('#submitBtn').prop("disabled", false);
+                    }
+                    else
+                    {
+                      $('#submitBtn').prop("disabled", true);
+                    }
+                });
+          });
+         </script>
+
+</body>
+</html>

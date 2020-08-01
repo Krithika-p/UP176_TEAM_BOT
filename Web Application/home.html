@@ -1,0 +1,168 @@
+<html>
+<head>
+    <title>Chatbot Widget</title>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+      <!--Google font -->
+      <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@100;200;300;400;500;600;700;800;900&amp;family=Arimo:wght@100;200;300;400;500;600;700;800;900&amp;subset=latin&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:500&display=swap" rel="stylesheet">
+
+    <!--Import Font Awesome Icon Font-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+
+    <!--Import materialize.css-->
+    <link rel="stylesheet" type="text/css" href="static/css/materialize.min.css">
+
+    <!--Main css-->
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body style="background-image: url('background.png');background-size: cover;">
+	      <!--Navbar-->
+      <nav class="navbar navbar-light navbar-custom navbar-expand-lg">
+	<div class="container">
+  <a class="navbar-brand" href="#">
+    <img src="logomed.png" alt="">
+  </a>
+  <!--features and help-->
+  <button type="button" class="btn btn-info" onclick="openModal()">Features and Help</button>
+  <dialog id="dialog">
+queries can be asked:
+reboot MRI
+Power Off
+Trouble shooting
+Features:
+clear/Restart/Close chat
+Full Chat History with intents and confidence level logged into chathistory folder with userid,date,time
+<br/><br/><br/>
+    <button type="button" class="btn btn-info" onclick="closeModal()" style="float:right">Close</button>
+</dialog>
+</div>
+</nav>
+    <div class="container">
+      <!-- Modal for rendering the charts, declare this if you want to render charts, 
+         else you remove the modal -->
+        <div id="modal1" class="modal">
+            <canvas id="modal-chart"></canvas>
+        </div>
+
+        <!--chatbot widget -->
+        <div class="widget" id="widg">
+            <div class="chat_header">
+
+                <!--Add the name of the bot here -->
+                <span class="chat_header_title">MEDBOT</span>
+                <span class="dropdown-trigger" href='#' data-target='dropdown1'>
+                  <i class="material-icons">
+                  more_vert
+                  </i>
+               </span>
+
+                <!-- Dropdown menu-->
+                <ul id='dropdown1' class='dropdown-content'>
+                    <li><a href="#" id="clear">Clear</a></li>
+                    <li><a href="#" id="restart">Restart</a></li>
+                    <li><a href="#" id="close">Close</a></li>
+                    <li><a href='#' id="maximize" class='max'>Maximize</a></li>
+                </ul>
+            </div>
+
+            <!--Chatbot contents goes here -->
+            <div class="chats" id="chats">
+                <div class="clearfix"></div>
+
+            </div>
+
+            <!--keypad for user to type the message -->
+            <div class="keypad">
+                <!-- <button class="fa fa-microphone fa-3x" onclick="toggleStartStop()"></button> -->
+                <textarea id="userInput" placeholder="Type the message..." class="usrInput"></textarea>
+                <div id="sendButton"><i class="fa fa-paper-plane" aria-hidden="true"></i></div>
+                <div id="fa-microphone"><i class="fa fa-microphone" aria-hidden="true" onclick="toggleStartStop()"></i></div>
+            </div>
+        </div>
+
+
+
+        <!--bot profile-->
+        <div class="profile_div" id="profile_div">
+            <img class="imgProfile" src="static/img/botAvatar.png" />
+        </div>
+
+        <!-- Bot pop-up intro -->
+        <div class="tap-target" data-target="profile_div">
+            <div class="tap-target-content">
+                <h5 class="white-text">Hey there 👋</h5>
+                <p class="white-text">How can I help you today?!</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="static/js/materialize.min.js"></script>
+
+    <!--Main Script -->
+    <script type="text/javascript" src="static/js/script.js"></script>
+
+    <!--Chart.js Script -->
+    <script type="text/javascript" src="static/js/chart.min.js"></script>
+
+    <!--Voice Script-->
+    <script type="text/javascript">
+        var recognizing;
+        var recognition = new webkitSpeechRecognition();
+        recognition.continuous = true;
+        reset();
+        recognition.onend = reset();
+        
+        recognition.onresult = function (event) 
+        {
+          for (var i = event.resultIndex; i < event.results.length; ++i) {
+            if (event.results[i].isFinal) {
+              userInput.value += event.results[i][0].transcript;
+            }
+          }
+        }
+        
+        function reset() 
+        {
+          recognizing = false;
+          }
+        
+        function toggleStartStop() 
+        {
+          if (recognizing) {
+            recognition.stop();
+            reset();
+          } else 
+          {
+            recognition.start();
+            recognizing = true;
+          }
+        }
+        </script>
+
+        <!--Modal in navbar script. Remove when needed -->
+        <script>
+var dailog = document.getElementById("dialog"); 
+
+function openModal() { 
+   // dailog.show(); 
+      dailog.showModal();
+} 
+
+function closeModal() { 
+    dailog.close(); 
+} 
+</script>
+</body>
+</html>
