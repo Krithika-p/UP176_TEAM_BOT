@@ -2,9 +2,13 @@
 * greet
   - utter_greet
 
-## fallback story
+<!-- ## fallback story
 * out_of_scope
-  - action_custom_fallback
+  - action_custom_fallback -->
+
+## deny path
+* deny
+  - utter_canthelp
 
 ## thanks path
 * thanks
@@ -129,6 +133,7 @@
 ## patient_schedule
 * patient_schedule
   - utter_patient_schedule
+  - utter_patient_suggestions
 
 ## retro_recon
 * retro_recon
@@ -681,117 +686,6 @@
 * deny
   - utter_happy
 
-<!-- ## table_component_collimator affirm
-* table_component_collimator
-  - utter_table_component_collimator
-  - utter_did_that_help
-* affirm
-  - utter_happy
-
-## table_component_collimator deny
-* table_component_collimator
-  - utter_table_component_collimator
-  - utter_did_that_help
-* deny
-  - utter_happy
-
-## table_component_gantry affirm
-* table_component_gantry
-  - utter_table_component_gantry
-  - utter_did_that_help
-* affirm
-  - utter_happy
-
-## table_component_gantry deny
-* table_component_gantry
-  - utter_table_component_gantry
-  - utter_did_that_help
-* deny
-  - utter_happy
-
-## table_component_matrix_detector affirm
-* table_component_matrix_detector
-  - utter_table_component_matrix_detector
-  - utter_did_that_help
-* affirm
-  - utter_happy
-
-## table_component_matrix_detector deny
-* table_component_matrix_detector
-  - utter_table_component_matrix_detector
-  - utter_did_that_help
-* deny
-  - utter_happy
-
-## table_component_other_changes affirm
-* table_component_other_changes
-  - utter_table_component_other_changes
-  - utter_did_that_help
-* affirm
-  - utter_happy
-
-## table_component_other_changes deny
-* table_component_other_changes
-  - utter_table_component_other_changes
-  - utter_did_that_help
-* deny
-  - utter_happy
-
-## table_component_coverage affirm
-* table_component_coverage
-  - utter_table_component_coverage
-  - utter_did_that_help
-* affirm
-  - utter_happy
-
-## table_component_coverage deny
-* table_component_coverage
-  - utter_table_component_coverage
-  - utter_did_that_help
-* deny
-  - utter_happy
-
-## table_component_axial_detector_signal_collection affirm
-* table_component_axial_detector_signal_collection
-  - utter_table_component_axial_detector_signal_collection
-  - utter_did_that_help
-* affirm
-  - utter_happy
-
-## table_component_axial_detector_signal_collection deny
-* table_component_axial_detector_signal_collection
-  - utter_table_component_axial_detector_signal_collection
-  - utter_did_that_help
-* deny
-  - utter_happy
-
-## table_component_axial_interval affirm
-* table_component_axial_interval
-  - utter_table_component_axial_interval
-  - utter_did_that_help
-* affirm
-  - utter_happy
-
-## table_component_axial_interval deny
-* table_component_axial_interval
-  - utter_table_component_axial_interval
-  - utter_did_that_help
-* deny
-  - utter_happy
-
-## table_component_helicalpitch_scanmode_collimation affirm
-* table_component_helicalpitch_scanmode_collimation
-  - utter_table_component_helicalpitch_scanmode_collimation
-  - utter_did_that_help
-* affirm
-  - utter_happy
-
-## table_component_helicalpitch_scanmode_collimation deny
-* table_component_helicalpitch_scanmode_collimation
-  - utter_table_component_helicalpitch_scanmode_collimation
-  - utter_did_that_help
-* deny
-  - utter_happy -->
 
 ## scan_mode_pitches affirm
 * scan_mode_pitches
@@ -920,74 +814,427 @@
 ## tubeID_verification_fails
 * tubeID_verification_fails
   - utter_tubeID_verification_fails
-  - utter_axial_suggestions
+  - utter_cal_suggestions
 
 ## daily_prep_screen
 * daily_prep_screen
   - utter_daily_prep_screen
-  - utter_axial_suggestions
+  - utter_cal_suggestions
 
 ## tube_warm_up
 * tube_warm_up
   - utter_tube_warm_up
-  - utter_axial_suggestions
+  - utter_cal_suggestions
 
 ## calibration
 * tube_warm_up
   - utter_tube_warm_up
-  - utter_axial_suggestions
+  - utter_cal_suggestions
 
 ## daily_calibration
 * daily_calibration
   - utter_daily_calibration
-  - utter_axial_suggestions
+  - utter_cal_suggestions
 
 ## full_system_caliberation
 * full_system_caliberation
   - utter_full_system_caliberation
-  - utter_axial_suggestions
+  - utter_cal_suggestions
 
 ## warning_message_air_calibrations
 * warning_message_air_calibrations
   - utter_warning_message_air_calibrations
-  - utter_axial_suggestions
+  - utter_cal_suggestions
 
 ## non_ge_xray_tube
 * non_ge_xray_tube
   - utter_non_ge_xray_tube
-  - utter_axial_suggestions
+  - utter_cal_suggestions
 
 ## scanner_utilities
 * scanner_utilities
   - utter_scanner_utilities
-  - utter_axial_suggestions
+  - utter_cal_suggestions
 
 ## daily_qa_workflow
 * daily_qa_workflow
   - utter_daily_qa_workflow
-  - utter_axial_suggestions
+  - utter_cal_suggestions
 
 ## tube_warmup_warning
 * tube_warmup_warning
   - utter_tube_warmup_warning
-  - utter_axial_suggestions
+  - utter_cal_suggestions
 
 ## tube_warm-up
 * tube_warm-up
   - utter_tube_warm-up
-  - utter_axial_suggestions
+  - utter_cal_suggestions
 
 ## tube_warmup_usage
 * tube_warmup_usage
   - utter_tube_warmup_usage
-  - utter_axial_suggestions
+  - utter_cal_suggestions
 
 ## fast_cal_considerations
 * fast_cal_considerations
   - utter_fast_cal_considerations
-  - utter_axial_suggestions
+  - utter_cal_suggestions
 
 ## fast_calibrations
 * fast_calibrations
   - utter_fast_calibrations
-  - utter_axial_suggestions
+  - utter_cal_suggestions
+
+<!---------------------------------chapter 8------------------------------------>
+## connect_pro
+* connect_pro
+  - utter_connect_pro
+  - utter_patient_suggestions
+
+## performed_procedure_step
+* performed_procedure_step
+  - utter_performed_procedure_step
+## disc
+* disc
+  - utter_disc
+
+## defer
+* defer
+  - utter_defer
+
+## comp
+* comp
+  - utter_comp
+
+## N_C_status
+* N_C_status
+  - utter_N_C_status
+  - utter_patient_suggestions
+
+## connectpro_ways
+* connectpro_ways
+  - utter_connectpro_ways
+  - utter_patient_suggestions
+
+## schedule_screen_display
+* schedule_screen_display
+  - utter_schedule_screen_display
+  - utter_patient_suggestions
+
+## add_patient
+* add_patient
+  - utter_add_patient
+  - utter_patient_suggestions
+
+## edit_patient
+* edit_patient
+  - utter_edit_patient
+  - utter_patient_suggestions
+
+## delete_selected_patient
+* delete_selected_patient
+  - utter_delete_selected_patient
+  - utter_patient_suggestions
+## delete_all_patients
+* delete_all_patients
+  - utter_delete_all_patients
+  - utter_patient_suggestions
+
+## preferences_patients
+* preferences_patients
+  - utter_preferences_patients
+
+## add_patient_to_schedule_manually
+* add_patient_to_schedule_manually
+  - utter_add_patient_to_schedule_manually
+
+## update_patient_screen
+* update_patient_screen
+  - utter_update_patient_screen
+
+## view_more_patients_info_on_schedule
+* view_more_patients_info_on_schedule
+  - utter_view_more_patients_info_on_schedule
+  - utter_patient_suggestions
+
+## select_patient_from_schedule
+* select_patient_from_schedule
+  - utter_select_patient_from_schedule
+  - utter_patient_suggestions
+
+## check_patients_status
+* check_patients_status
+  - utter_check_patients_status
+  - utter_patient_suggestions
+
+## ansr
+* ansr
+  - utter_ansr
+
+## anrt_reconstruction
+* anrt_reconstruction
+  - utter_anrt_reconstruction
+
+## anrt_constraints
+* anrt_constraints
+  - utter_anrt_constraints
+
+## anrt_image_annotate
+* anrt_image_annotate
+  - utter_anrt_image_annotate
+
+## enable_anrt_scanning
+* enable_anrt_scanning
+  - utter_enable_anrt_scanning
+
+## acquire_anrtscan_ma_reduction_guidance
+* acquire_anrtscan_ma_reduction_guidance
+  - utter_acquire_anrtscan_ma_reduction_guidance
+
+## constraints_anrtscan_ma_reduction_guidence
+* constraints_anrtscan_ma_reduction_guidence
+  - utter_constraints_anrtscan_ma_reduction_guidence
+
+## conduct_arntscan_ma_reduction_guidance
+* conduct_arntscan_ma_reduction_guidance
+  - utter_conduct_arntscan_ma_reduction_guidance
+
+## usage_asir
+* usage_asir
+  - utter_usage_asir
+
+## asir
+* asir
+  - utter_asir
+
+## snr
+* snr
+  - utter_snr
+
+## snr_formula
+* snr_formula
+  - utter_snr_formula
+
+## roi_measurements_snr
+* roi_measurements_snr
+  - utter_roi_measurements_snr
+
+## mtf
+* mtf
+  - utter_mtf
+
+## asir_recon_mode
+* asir_recon_mode
+  - utter_asir_recon_mode
+
+## dose_adjustment_factors_noise_index_adjustment_method
+* dose_adjustment_factors_noise_index_adjustment_method
+  - utter_dose_adjustment_factors_noise_index_adjustment_method
+
+## dose_adjustment_factors_ma_adjustment_method
+* dose_adjustment_factors_ma_adjustment_method
+  - utter_dose_adjustment_factors_ma_adjustment_method
+
+## non_ASiR_protocol_value
+* non_ASiR_protocol_value
+  - utter_non_ASiR_protocol_value
+
+## asir_reconstruction_image_construction
+* asir_reconstruction_image_construction
+  - utter_asir_reconstruction_image_construction
+
+## asir_reconstruction_location
+* asir_reconstruction_location
+  - utter_asir_reconstruction_location
+
+## modes_asir_reconstruction
+* modes_asir_reconstruction
+  - utter_modes_asir_reconstruction
+
+## slice_mode
+* slice_mode
+  - utter_slice_mode
+
+## asir_reconstruction
+* asir_reconstruction
+  - utter_asir_reconstruction
+
+## prospective_reconstruction
+* prospective_reconstruction
+  - utter_prospective_reconstruction
+
+## retrospective_reconstruction
+* retrospective_reconstruction
+  - utter_retrospective_reconstruction
+
+## asir_image_annotate
+* asir_image_annotate
+  - utter_asir_image_annotate
+
+## asir_acquire_scan
+* asir_acquire_scan
+  - utter_asir_acquire_scan
+
+## selecting_asir_recon_mode_toacquire_scan
+* selecting_asir_recon_mode_toacquire_scan
+  - utter_selecting_asir_recon_mode_toacquire_scan
+
+## scan_asir
+* scan_asir
+  - utter_scan_asir
+
+## asir_reconstruction_method
+* asir_reconstruction_method
+  - utter_asir_reconstruction_method
+
+## when_to_acquire_asirscan_dose_reduction_guidance
+* when_to_acquire_asirscan_dose_reduction_guidance
+  - utter_when_to_acquire_asirscan_dose_reduction_guidance
+
+## acquire_asirscan_manual_mA_dose_reduction_guidance
+* acquire_asirscan_manual_mA_dose_reduction_guidance
+  - utter_acquire_asirscan_manual_mA_dose_reduction_guidance
+
+## acquire_asirscan_auto_mA_dose_reduction_guidance
+* acquire_asirscan_auto_mA_dose_reduction_guidance
+  - utter_acquire_asirscan_auto_mA_dose_reduction_guidance
+
+## constraints_asirscan_dose_reduction_guidence
+* constraints_asirscan_dose_reduction_guidence
+  - utter_constraints_asirscan_dose_reduction_guidence
+
+## conduct_asirscan_dose_reduction_guidance
+* conduct_asirscan_dose_reduction_guidance
+  - utter_conduct_asirscan_dose_reduction_guidance
+
+## biopsy_mode_usage
+* biopsy_mode_usage
+  - utter_biopsy_mode_usage
+  - utter_biopsy_suggestions
+
+## biopsy_rx_screen
+* biopsy_rx_screen
+  - utter_biopsy_rx_screen
+  - utter_biopsy_suggestions 
+
+## biopsy_rx_screen_components
+*  biopsy_rx_screen_components
+  - utter_biopsy_rx_screen_components
+  - utter_biopsy_suggestions
+
+## biopsy_rx_screen_biopsy_reference
+*  biopsy_rx_screen_biopsy_reference
+  - utter_biopsy_rx_screen_biopsy_reference
+  - utter_biopsy_suggestions
+
+## biopsy_rx_screen_biopsy_and_alignment_location
+*  biopsy_rx_screen_biopsy_and_alignment_location
+  - utter_biopsy_rx_screen_biopsy_and_alignment_location
+  - utter_biopsy_suggestions
+
+## biopsy_rx_screen_NoOfImage_thickness_image_interval
+*  biopsy_rx_screen_NoOfImage_thickness_image_interval
+  - utter_biopsy_rx_screen_NoOfImage_thickness_image_interval
+  - utter_biopsy_suggestions
+
+## biopsy_rx_screen_acquire_scan
+*  biopsy_rx_screen_acquire_scan
+  - utter_biopsy_rx_screen_acquire_scan
+  - utter_biopsy_suggestions
+
+## DMPR
+*  DMPR
+  - utter_DMPR
+
+## parameters_identical_to_combine_groups
+*  parameters_identical_to_combine_groups
+  - utter_parameters_identical_to_combine_groups
+
+## session_selection_screen
+*  session_selection_screen
+  - utter_session_selection_screen
+
+## filter_strength_dmpr
+*  filter_strength_dmpr
+  - utter_filter_strength_dmpr
+
+## dmprscan_with_auto_batch
+*  dmprscan_with_auto_batch
+  - utter_dmprscan_with_auto_batch
+
+## consideration_acquire_dmpr_scan_with_Auto_Batch
+*  consideration_acquire_dmpr_scan_with_Auto_Batch
+  - utter_consideration_acquire_dmpr_scan_with_Auto_Batch
+
+## dmpr_interactive_review_screen
+*  dmpr_interactive_review_screen
+  - utter_dmpr_interactive_review_screen
+
+## dmprscan_without_auto_batch
+*  dmprscan_without_auto_batch
+  - utter_dmprscan_without_auto_batch
+
+## dmpr_batch_rx_screen
+*  dmpr_batch_rx_screen
+  - utter_dmpr_batch_rx_screen
+
+## DMPR_images_manipulation
+*  DMPR_images_manipulation
+  - utter_DMPR_images_manipulation
+
+## Split_exams_usage
+*  Split_exams_usage
+  - utter_Split_exams_usage
+
+## Split_exams_with_Connect_Pro
+*  Split_exams_with_Connect_Pro
+  - utter_Split_exams_with_Connect_Pro
+
+## Neuro_3D_filter_Auto_Transfer
+*  Neuro_3D_filter_Auto_Transfer
+  - utter_Neuro_3D_filter_Auto_Transfer
+
+## Neuro_3D_filter_usage
+*  Neuro_3D_filter_usage
+  - utter_Neuro_3D_filter_usage
+
+## Neuro_3D_filter_application
+*  Neuro_3D_filter_application
+  - utter_Neuro_3D_filter_application
+
+## Neuro_3D_filter_prerequisites
+*  Neuro_3D_filter_prerequisites
+  - utter_Neuro_3D_filter_prerequisites
+
+## SmartPrep_usage
+*  SmartPrep_usage
+  - utter_SmartPrep_usage
+
+## SmartPrep_screen
+*  SmartPrep_screen
+  - utter_SmartPrep_screen
+
+## SmartPrep_scan_desktop
+*  SmartPrep_scan_desktop
+  - utter_SmartPrep_scan_desktop
+
+## SmartPrep Display Screen
+*  SmartPrep Display Screen
+  - utter_SmartPrep Display Screen
+
+## SmartPrep_SetUp
+*  SmartPrep_SetUp
+  - utter_SmartPrep_SetUp
+
+## Motion_Correction
+*  Motion_Correction
+  - utter_Motion_Correction
+
+## Gray_Scale_Enhancement
+*  Gray_Scale_Enhancement
+  - utter_Gray_Scale_Enhancement
+
+## Image_Filter
+*  Image_Filter
+  - utter_Image_Filter

@@ -293,6 +293,10 @@
 - How to view patient schedules?
 - Where to update patient schedules?
 - Where can I select the schedule of the patients 
+- What is patient schedule?
+- patient schedule
+- schedule patients
+- how to schedule patients
 
 ## intent:retro_recon
 - I want to perform retrospective reconstruction.
@@ -978,71 +982,6 @@
 - table components
 - specify the hardware components of the table
 
-## intent:table_component_collimator
-
-- table component collimator
-- what is the collimator used in revolution ACTs 
-- what does the collimator in this machine come with
-- What is the purpose of collimator
-- what makes Revolution ACTs collimator different from others
-- function of collimator 
-- what does the collimator do
-- collimator usage in this system
-
-## intent:table_component_gantry
-- table component gantry
-- how much can shorter scan geometry is allowed in the gantry
-- what is the distance from the focal point 
-- what is the gantry aperture size
-- focal spotto of the detector in gantry
-
-
-## intent:table_component_matrix_detector
-- what is the matrix detector in this system
-- matrix detector in Revolution ACTs
-- can you tell me about the matrix detector in this machine 
-
-## intent:table_component_other_changes
-
-- table component other changes
-- what are the changes made in this machine
-- other changes of the Revolution ACT
-- what’s different in Revolution ACT
-
-## intent:table_component_coverage
-- table component coverage
-- what are the Axial Detector Coverage/Beam Collimation in this machine
-- state the Axial Detector Coverage
-- what is the Beam Collimation of ACT revolutionary 
-
-
-## intent:table_component_axial_detector_signal_collection
-
-- table component axial detector signal collection
-- what does the axial detector signal specify
-- How are the signals/channels collected
-- what affects the maximum slice thickness.  
-- how many slices can be  generated per rotation
-- tell me about axial detector signal collection
-- what is axial detector signal collection
- 
-
-## intent:table_component_axial_interval
-- Table component axial interval
-- what is the axial interval 
-- how is axial interval and beam collimation related
-- definition for axial interval
-
-
-## intent:table_component_helicalpitch_scanmode_collimation
-- table component helical pitch scanmode collimation
-- What is Helical pitch in table component
-- scan modes are expressed in terms of what
-- unit for scan modes
-- definition of helical pitch
-- for what is helical pitch used
-- how is Helical pitch, scan mode, and collimation associated with each other
-- what is helical pitch
 
 ## intent:scan_mode_pitches
 - scan mode pitches
@@ -1343,12 +1282,681 @@
 - scan aborted during fast cal execution.
 
 ## intent:fast_calibrations
-- How to do  fast_calibrations
-- how to execute  fast_calibrations
-- show details of  fast_calibrations
-- perform fast_calibrations
-- how to run  fast_calibrations
-- run fast_calibrations
-- fast_calibrations
+- How to do  fast calibrations
+- how to execute  fast calibrations
+- show details of  fast calibrations
+- perform fast calibrations
+- how to run  fast calibrations
+- run fast calibrations
+- fast calibrations
+
+<!-------------------------chapter 8---------------------------------------->
 
 
+
+## intent:connect_pro
+- what is connect pro?
+- Can I get a patient’s info from HIS/RIS to the patient schedule?
+- what is a modality worklist?
+- I want only some information of the patient
+- connect pro
+
+## intent:performed_procedure_step
+- What is pps?
+- performed procedure step
+- how to know the pps status of each exam?
+
+## intent:comp
+- what is the comp state in pps?
+- comp
+- the exam is not recognized by HIS/RIS
+
+## intent:disc
+- what is disc state in pps?
+- disc
+- when to use disc state in pps?
+- The image obtained were not of the correct patient.
+
+## intent:defer
+- what is the defer state in pps?
+- defer
+- does defer means pps ended?
+- why is my exam denoted as inpr?
+
+## intent:N_C_status
+- what is N and C in patient schedule?
+- why is the status column C?
+- why is the status column N?
+- N status 
+- C status
+
+## intent:connectpro_ways
+- when can I use connect pro to get the patient schedule?
+- Completed records are also on the schedule list
+- schedule list error
+- the completed records are also on the schedule list while using connect pro.
+- what should I set in the connect pro for acquiring only the scheduled patient info?
+- connect pro ways.
+
+## intent:schedule_screen_display
+- How to display the schedule screen?
+- how to view the patient schedule screen
+- I can’t find the schedule screen
+- Schedule screen display
+- Schedule screen
+- Display Patient Schedule Screen 
+
+## intent:add_patient
+- add patient
+- How to add patients to the schedule screen?
+- I want to add patient to the schedule screen
+
+
+## intent:edit_patient
+- edit patient
+- How to edit patients to the schedule screen?
+- I want to edit patient on the schedule screen
+- How to edit a patient schedule?
+- When will a patient record cannot be edited?
+
+## intent:delete_selected_patient
+- delete selected patient
+- delete selected patient from the schedule list
+- How to delete a selected patient from the schedule screen?
+- I incorrectly entered the wrong patient on the schedule screen.
+
+## intent:delete_all_patients
+- delete all patients
+- delete all patients from the schedule list
+- How to delete all patients from the schedule screen?
+
+## intent:preferences_patients
+- How to set preferences for patients
+- preferences in the schedule screen
+- preferences of patients
+- What is the procedure for setting patients schedule preference?
+- What are the fields needed for schedule preference?
+- How to show update parameters screen?
+- display update parameters
+- show update parameter
+- How to update the schedule of patients automatically?
+- Can the schedule of patients be updated automatically?
+- I want the patient schedule to be updated automatically.
+- How to display the schedule preference screen?
+- How to update schedules automatically?
+- How to view the updated parameters?
+- How to sort the patient's schedule?
+- How to delete the completed exams ?
+- update patients schedule automatically
+- what is study UID?
+- What should I opt to study UID?
+- study UID
+- sorting options of patients list
+- sorting
+- edit modality worklist
+- delete completed records
+- default update parameters
+
+## intent:add_patient_to_schedule_manually
+- What are the steps in adding a patient to the schedule manually?
+- What relevant info is needed to schedule patient?
+- What is exam split?
+- How is exam split useful?
+
+## intent:update_patient_screen
+- What is the procedure for updating the patients schedule?
+- What info is needed to update the schedule?
+- What are the options from the get patient list to populate the schedule?
+- What are the optional fields while updating the schedule?
+- How to open the update parameters screen?	
+- What info is needed for update parameters?
+- What is data range?
+- What are the steps for updating a patient's schedule?
+
+## intent:view_more_patients_info_on_schedule
+- What is view more patient info?
+- How to select a patient for viewing?
+- what is the process for viewing more info of the patient?
+- view more information about patients on schedule.
+
+## intent:select_patient_from_schedule
+- How to display the Exam Rx screen?
+- What happens when there are more records with one patient ID?
+- What is the procedure for selecting a patient from a schedule?
+- What happens if a protocol is not tied to a patient?
+- select patient from schedule.
+
+## intent:check_patients_status
+- How to check the patients status
+- steps to check patients status
+- What is status column
+- What is the use of arrows in the patients status?
+- check patient status
+
+<!----------------------------------chapter 10-------------------------------------->
+
+## intent:ansr
+- ansr
+- what is ansr? 
+- what is the meaning of ANSR?
+- ANSR
+- How to decrease the noise level of the diagnostic image?
+- i want decrease noise level of scanned image
+
+## intent:anrt_reconstruction
+- anrt reconstruction
+- what is anrt reconstruction?
+- where is anrt located?
+- can asir images be set in advance?
+- reconstruction of asir images set during post reconstruction.
+- what is anrt reconstruction
+
+
+## intent:anrt_constraints
+- anrt constraints
+- what are the constraints applied to the acquisition of data?
+- where can anrt be used?
+- compatibility of anrt.
+- application of anrt.
+- rules for acquisition of data
+- With what is anrt not compatible with
+
+## intent:anrt_image_annotate
+- what should be used for anrt image annotation?
+- how can I annotate anrt  image?
+- is anrt the annotation for the anrt image?
+- annotate anrt image
+- where is the anrt image annotation display?
+- what is in the bottom left corner of images in anrt?
+
+## intent:enable_anrt_scanning
+- how to enable anrt scanning
+- I want to allow anrt scanning
+- enable anrt scanning
+- what to do to enable anrt scan
+
+## intent:acquire_anrtscan_ma_reduction_guidance
+- how to acquire a scan using mA reduction guidance?
+- can I obtain a scan using mA reduction guidance?
+- what is the default mA value reduction percentage?
+- scanning using mA reduction guidance
+
+## intent:constraints_anrtscan_ma_reduction_guidence
+- What are the things to be noted for a scan using mA reduction guidance?
+- what are the constraints for using mA reduction guidance?
+- what is the minimum mA value?
+- points to be noted when scanning using mA reduction guidance.
+
+## intent:conduct_arntscan_ma_reduction_guidance
+- how to perform a scan using mA reduction guidance?
+- can I conduct a scan using mA reduction guidance?
+- perform scanning using mA reduction guidance
+
+## intent:usage_asir
+- Why can’t I use a third party x-ray tube?
+- Can I use any x-ray tube with asir? 
+- what are the x-ray tubes used with asir?
+
+## intent:asir
+- what is asir? 
+- what is the meaning of ASIR?
+- ASIR
+- How to improve diagnostic image with unacceptable noise level?
+
+
+## intent:snr
+- can snr be equal?
+- When will the value of signal to noise ratio be equal?
+- what percent of the asir should be applied to make the signal noise ratio to equal?
+- equal value of snr.
+
+## intent:snr_formula
+- how to calculate snr value?
+- formula for signal to noise ratio.
+- what are the parameters for calculating snr?
+
+## intent:roi_measurements_snr
+- how to calculate snr value from roi measurements?
+- can I calculate snr value from roi measurements?
+- what are the parameters for calculating snr?
+- finding snr from roi measurements.
+
+## intent:mtf
+- what happens to mtf when asir % is increased?
+- modulation transfer function when asir is increased?
+- what percent of the asir should be applied to make the mtf constant?
+
+## intent:asir_recon_mode
+- What are the things to be noted for selecting asir recon mode?
+- what are the constraints for selecting asir recon mode?
+- compatibility for asir recon mode.
+- points to be noted when choosing asir recon mode.
+
+## intent:dose adjustment_factors_noise index adjustment method
+- how to calculate dose reduction for Noise Index based on the ASiR level selected for auto mA?
+- how should the dose reduction be calculated for auto mA?
+- formula for finding noise index factor when using smart mA.
+- for which mA method is noise index adjustment used?
+- noise index factor with respect to the asir level.
+
+## intent:dose_adjustment_factors_ma_adjustment_method
+- how to calculate dose reduction for mA based on the ASiR level selected for manual mA?
+- how should the dose reduction be calculated for manual mA?
+- formula for finding mA factor when using manual mA.
+- for which ma method is the manual mA method used?
+
+## intent:non_ASiR_protocol_value
+- how to return any noise index or manual mA values adjusted for ASiR to non-ASiR value
+- change noise index or manual mA asir values to non- asir
+- is it possible to convert the asir values calculated for dose adjustments to non asir values?
+
+## intent:asir_reconstruction_image_construction
+- what is asir reconstruction?
+- what is image reconstruction?
+- what do you mean by asir or image reconstruction?
+
+## intent:asir_reconstruction_location
+- where is asir is located?
+- I can’t find asir reconstruction option.
+- asir reconstruction location.
+
+## intent:modes_asir_reconstruction
+- What are the modes of asir reconstruction?
+- How many modes are there for Asir?
+- Various asir modes.
+
+## intent:slice_mode
+- what is the slice mode in asir image reconstruction?
+- where is the slice mode used in asir image reconstruction?
+- slice mode in asir reconstruction
+- slice mode
+
+## intent:asir_reconstruction
+- can the data be reconstructed retrospectively?
+- what are the prescribed prospectives for reconstruction of asir images?
+
+## intent:prospective_reconstruction
+
+- what is prospective reconstruction
+- prospective reconstruction
+- steps to perform prospective reconstruction
+- how can I perform prospective reconstruction
+
+## intent:retrospective_reconstruction
+- what is retrospective reconstruction
+- retrospective reconstruction
+- steps to perform retrospective reconstruction
+- how can I perform retrospective reconstruction
+
+## intent:asir_image_annotate
+- what should be used for asir level annotation?
+- what should be used for asir mode annotation?
+- what is the annotation logic for asir levels and modes?
+- how can I annotate asir level and its mode?
+- the annotation for the asir image?
+- where is the asir level and mode annotation displayed?
+- annotate asir level and mode.
+
+## intent:asir_acquire_scan
+- how to acquire a scan using asir?
+- can I obtain a scan using asir?
+- procedure to acquire data.
+
+## intent:selecting_asir_recon_mode_toacquire_scan
+- What are the things to be noted for choosing asir recon mode?
+- what are the constraints for selecting asir recon mode?
+- compatibility for asir recon mode.
+- points to be noted when choosing asir recon mode.
+
+## intent:scan_asir
+- how to scan with asir?
+- what should be done to scan with asir?
+- procedure to scan with asir?
+- how can I perform scanning with asir?
+
+## intent:asir_reconstruction_method
+- what are the methods for asir reconstruction?
+- various asir reconstruction methods.
+- what are the types of reconstruction methods in asir?
+
+## intent:when_to_acquire_asirscan_dose_reduction_guidance
+- When to acquire asir dose reduction guidance?
+- condition to opt for asir dose reduction guidance?
+- how to automatically select the ASiR level by selecting a dose reduction percentage.
+
+
+## intent:acquire_asirscan_manual_mA_dose_reduction_guidance
+- how to acquire a scan for manual mA using dose reduction guidance?
+- can I obtain a scan using dose reduction guidance for manual mA?
+- scanning using dose reduction guidance for manual mA
+
+## intent:acquire_asirscan_auto_mA_dose_reduction_guidance
+- how to acquire a scan for auto mA using dose reduction guidance?
+- can I obtain a scan using dose reduction guidance for auto mA?
+- scanning using dose reduction guidance for auto mA
+
+## intent:constraints_asirscan_dose_reduction_guidence
+- What are the things to be noted for a scan using dose reduction guidance?
+- what are the constraints for using dose reduction guidance?
+- points to be noted when scanning using dose reduction guidance.
+
+## intent:conduct_asirscan_dose_reduction_guidance
+- how to perform a scan using dose reduction guidance?
+- can I conduct a scan using dose reduction guidance?
+- perform scanning using dose reduction guidance
+- steps for asir scan by dose reduction guidance.
+
+
+## intent:biopsy_mode_usage
+- biopsy mode usage
+- What does the biopsy mode do? 
+- What type of scans are taken in the biopsy mode
+- What can I do in biopsy mode?
+- what can be changed in the biopsy mode?
+- usage of biopsy mode mode
+- function of biopsy mode
+
+## intent:biopsy_rx_screen
+
+- biopsy rx screen
+- How to open the biopsy rx screen
+- i want open the biopsy rx screen
+- what icon should i press to open the biopsy rx screen
+- button the shows biopsy rx screen
+- display biopsy rx screen
+
+## intent:biopsy_rx_screen_components
+-  biopsy rx screen components
+- what are the components of the biopsy rx screen?
+- what are displayed on the biopsy rx screen
+- tell me about the different buttons on the biopsy rx screen
+- what are the values on the biopsy rx screen?
+
+## intent:biopsy_rx_screen_biopsy_reference
+- biopsy rx screen biopsy reference
+- what is the biopsy reference
+- what tells the system about how image acquisition based on biopsy location should be   
+   done?
+- what does superior, interior and centered mean in biopsy reference
+- superior in biopsy reference
+- what refers to scans acquired from Biopsy Location inferiorly
+- biopsy reference
+
+
+## intent:biopsy_rx_screen_biopsy_and_alignment_location
+- biopsy rx screen biopsy and alignment location
+- what is biopsy location
+- what is get alignment light location
+- what specifies the localizer scans for biopsy
+- what is used when a needle is necessary for aligning internal 
+- for what is biopsy location and get alignment light location is used
+- functions of get alignment light location 
+- purpose of biopsy location
+- Biopsy Location
+
+## intent:biopsy_rx_screen_NoOfImage_thickness_image_interval
+- biopsy rx screen No of Images, thickness, image interval
+- what is the number of images component on the biopsy rx screen
+- thickness field in the biopsy rx screen
+- what specifies the distance between images
+- what is the image interval in biopsy rx screen
+- what is the range of thickness in the biopsy rx screen
+- Number of Images, Thickness, Image Interval
+
+## intent:biopsy_rx_screen_acquire_scan
+- biopsy rx screen acquire scan
+- How to acquire scan in biopsy mode
+- steps to get scan in biopsy mode
+- scan acquisition steps in biopsy mode
+- procedure for scan acquisitions 
+
+## intent:DMPR
+- DMPR
+- what is dmpr?
+- Can I make 2D into 3D in DMPR
+- tell me about DMPR 
+- what is direct multi planar reformat
+
+## intent:parameters_identical_to_combine_groups
+- parameters identical to combine groups.
+- what are the parameters to be identical to combine the groups?
+- parameters to be noted for merging groups.
+
+
+## intent:session_selection_screen
+- session selection screen
+- how to display session selection screen
+- where is the session selection screen?
+- how to start direct mpr?
+- how to start neuro 3D?
+- options in the session screen.
+
+
+## intent:filter_strength_dmpr
+- filter strength dpmr
+- what are the levels of filter strength?
+- levels of filter strength in dmpr
+- various filter strengths in dmp
+- direct multi planar reformat filter levels
+
+
+## intent: session_setup_dmpr
+- session setup dmpr
+- how to display session setup screen using directMPR?
+- show direct multi planar reformat for setting the protocols
+- show dmpr for setting the parameters
+- what are the options available in the session setup screen?
+- how to start a new dmpr session?
+- how to end a new dmpr session?
+- combining the group
+- batch protocols
+- reformat protocols
+- film setup
+- automatically create reformatted images
+- automatically archive reformatted images
+- automatically send the reformatted images to another location.
+- session setup dmpr
+
+## intent: dmprscan_with_auto_batch
+- dmpr scan with auto batch
+- how to scan dmpr with auto batch
+- acquire direct multi planar reformat scan with auto batch 
+- how to acquire dmpr scan using auto batch?
+- can I obtain a dmpr scan using auto batch?
+- scanning with auto batch for direct multi planar reformat
+
+
+## intent:consideration_acquire_dmpr_scan_with_Auto_Batch
+- consideration acquire dmpr scan with Auto Batch
+- What are the things to be noted for a dmpr scan using auto batch?
+- what are the constraints for scanning dmpr with auto batch?
+- points to be noted when to conduct a dmpr scan with auto batch.
+- consideration to acquire dmpr scan with auto batch.
+- dmpr scan image orientation
+- types of direct multi planar reformat session
+- limits of images for direct multi planar reformat scan
+- scan aborts before getting dmpr images
+- can I use the oblique port for dmpr scan using autobatch
+
+## intent:dmpr_interactive_review_screen
+- dmpr interactive review screen 
+- how to display dmpr interactive review screen?
+- what is oblique mode?
+- how to set the image orientation?
+- how to set the annotation level?
+- measurements in direct multi planar reformat
+- reformat image save in DMPR
+- normal display in direct multi planar reformat
+
+## intent:dmprscan_without_auto_batch
+- dmpr scan without auto batch
+- how to scan dmpr without auto batch
+- acquire dmpr scan without auto batch 
+- how to acquire dmpr scan without using auto batch?
+- can I obtain a dmpr scan without using auto batch?
+- scanning without auto batch for dmpr.
+
+## intent:dmpr_batch_rx_screen
+- dmpr batch rx screen
+- manual batch reformats using batch rx screen
+- how to open the batch rx screen?
+- modes in batch rx screen.
+- what is average mode in bt
+
+
+
+## intent:DMPR_images_manipulation
+- DMPR images manipulation
+- what are the different Review controller procedures in DMPR
+- what is DMPR image manipulation 
+- Manipulate DMPR images 
+- how to pan in/ pan out in DIRECT MULTI PLANAR REFORMAT 
+- control functions of DMPR
+- how to render mode in DMPR
+- what does Cine Paging Speed do in direct multi planar reformat
+
+
+
+
+## intent:Split_exams_usage
+- Split exams usage
+- what is the purpose of split exams usage
+- what should i use to split images from a single acquisition
+- Usage of  Split exams
+- what is split exam
+- tell me about split exam
+- description on split exams
+
+
+
+## intent:Split_exams_with_Connect_Pro
+
+- Split exams with Connect Pro
+- how to perform split exam with connect pro
+- what steps should i follow for Split exams with Connect Pro
+- i want to perform split exams with connect pro
+- procedure for Split exams with Connect Pro
+
+
+
+## intent:Neuro_3D_filter_Auto_Transfer 
+- Neuro 3D filter Auto Transfer 
+- Filter Auto Transfer by Series screen
+- Filter Auto Transfer by Series screen text and translation
+- how should i display  Filter Auto Transfer
+- what are the 4 hosts in the neuro 3D filter
+- description on the 4 hosts available in neuro 3D filter
+
+
+
+## intent:Neuro_3D_filter_usage
+- Neuro 3D filter
+- what is neuro 3D filter
+- why use neuro 3D filter
+- can you tell me about neuro filter
+- main purpose of neuro filter 
+- what are the three levels in the neuro 3D filter
+- how to reduce noise reduction 
+- neuro 3D filter usage
+
+
+
+## intent:Neuro_3D_filter_application
+
+- Neuro 3D filter application
+- how to apply neuro 3D filter 
+- steps to apply neuro 3D filter
+- i want to use neuro 3D filter
+- tell me the application steps of neuro 3D filter
+- steps to follow for neuro 3D filter
+
+
+## intent:Neuro_3D_filter_prerequisites
+- Neuro 3D filter prerequisites
+- what should i keep in mind for neuro 3D filter
+- compatibility of neuro 3D filter 
+- is neuro 3D filter compatible with ASiR
+- what parameters must be the same in neuro 3D filter
+- points to remember while using neuro 3D filter
+- considerations before applying neuro 3D filter
+
+
+
+
+
+## intent:SmartPrep_usage
+- SmartPrep usage
+- what does SmartPrep do?
+- purpose of smartprep
+- what are the different phases of smartprep
+- what is monitor phase in smartprep
+- what are baseline phase and scan phase in the smartprep 
+- for what is smartprep used
+
+
+
+## intent:SmartPrep_screen
+- SmartPrep screen
+- DynamicTransition in the smartprep screen
+- what does  mA indicate in smartprep screen
+- how to open smartprep screen
+- components of smartprep screen
+- what is displayed in the smartprep page
+- MonitoringISD in smartprep screen
+- what is the Enhancement Threshold in smartprep screen
+- what does DiagnosticDelay signify in smartprep screen
+
+
+## intent:SmartPrep_scan_desktop
+-  SmartPrep scan desktop
+- what does SmartPrep scan desktop contain 
+- components on the  SmartPrep scan desktop
+- what is Real Time Information 
+- Scan Progress in smartprep desktop
+- Tell me what is Report Last Group in the smartprep desktop
+- description on Monitor Phase
+
+
+
+## intent:SmartPrep Display Screen
+- SmartPrep Display Screen
+- what are the components of smartprep display screen
+- what does Upper left viewport display
+- what is Upper right viewport
+- smartprep display screen components
+- Lower left viewport functionality in smartprep
+
+
+## intent:SmartPrep_SetUp
+
+- SmartPrep setup
+- how to run smartprep setup
+- tell me about the smartprep setup
+- which icon must be clicked for smartprep scan
+- help me set up the smartprep screen
+- i have problem setting up smartprep
+- Set up a scan for smartprep 
+
+## intent:Motion_Correction
+- Motion Correction
+- what minimizes  Lateral Motion in Axial Head Scans
+- what is motion correction
+- for what is motion correction used
+- purpose of motion correction
+- in what cases is motion correction not used
+- What feature is used to  Lateral Motion
+
+## intent:Gray_Scale_Enhancement
+- Gray Scale Enhancement 
+- what is the feature gray scale enhancement
+- what does GSE feature do
+- GSE is available for which modes?
+- modes GSE is available in
+- Reason to use Gray scale enhancement
+
+## intent:Image_Filter 
+- Image Filter 
+- in what scan mode is image filter available
+- what are the smooth, edge, lung values in an image filter?
+- what is image filter?
+- when can image filter be used

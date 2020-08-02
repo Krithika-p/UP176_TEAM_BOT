@@ -154,6 +154,91 @@ intents:
 - tube_warmup_usage
 - fast_cal_considerations
 - fast_calibrations
+- connect_pro
+- performed_procedure_step
+- disc
+- defer
+- comp
+- select_patient_from_schedule
+- view_more_patients_info_on_schedule
+- update_patient_screen
+- add_patient_to_schedule_manually
+- preferences_patients
+- delete_all_patients
+- delete_selected_patient
+- edit_patient
+- add_patient
+- schedule_screen_display
+- connectpro_ways
+- N_C_status
+- check_patients_status
+- ansr
+- anrt_reconstruction
+- anrt_constraints
+- anrt_image_annotate
+- enable_anrt_scanning
+- acquire_anrtscan_ma_reduction_guidance
+- constraints_anrtscan_ma_reduction_guidence
+- conduct_arntscan_ma_reduction_guidance
+- usage_asir
+- asir
+- snr
+- snr_formula
+- roi_measurements_snr
+- mtf
+- asir_recon_mode
+- dose_adjustment_factors_noise_index_adjustment_method
+- dose_adjustment_factors_ma_adjustment_method
+- non_ASiR_protocol_value
+- asir_reconstruction_image_construction
+- asir_reconstruction_location
+- modes_asir_reconstruction
+- slice_mode
+- asir_reconstruction
+- prospective_reconstruction
+- retrospective_reconstruction
+- asir_image_annotate
+- asir_acquire_scan
+- selecting_asir_recon_mode_toacquire_scan
+- scan_asir
+- asir_reconstruction_method
+- when_to_acquire_asirscan_dose_reduction_guidance
+- acquire_asirscan_manual_mA_dose_reduction_guidance
+- acquire_asirscan_auto_mA_dose_reduction_guidance
+- constraints_asirscan_dose_reduction_guidence
+- conduct_asirscan_dose_reduction_guidance
+- biopsy_mode_usage
+- biopsy_rx_screen
+- biopsy_rx_screen_components
+- biopsy_rx_screen_biopsy_reference
+- biopsy_rx_screen_biopsy_and_alignment_location
+- biopsy_rx_screen_NoOfImage_thickness_image_interval
+- biopsy_rx_screen_acquire_scan
+- DMPR
+- parameters_identical_to_combine_groups
+- session_selection_screen
+- filter_strength_dmpr
+- session_setup_dmpr
+- dmprscan_with_auto_batch
+- consideration_acquire_dmpr_scan_with_Auto_Batch
+- dmpr_interactive_review_screen
+- dmprscan_without_auto_batch
+- dmpr_batch_rx_screen
+- DMPR_images_manipulation
+- Split_exams_usage
+- Split_exams_with_Connect_Pro
+- Neuro_3D_filter_Auto_Transfer
+- Neuro_3D_filter_usage
+- Neuro_3D_filter_application
+- Neuro_3D_filter_prerequisites
+- SmartPrep_usage
+- SmartPrep_screen
+- SmartPrep_scan_desktop
+- SmartPrep Display Screen
+- SmartPrep_SetUp
+- Motion_Correction
+- Gray_Scale_Enhancement
+- Image_Filter
 
 
 responses:
@@ -169,11 +254,11 @@ responses:
     - payload: NO
       title: NO
   utter_canthelp:
-  - text: I'm still learning. Refer the manual for more info!
-    custom:
-      payload: pdf_attachment
-      title: ACTS Manual
-      url: http://localhost:7000/img/manual.pdf
+  - text: I'm still learning. Please try again!
+    # custom:
+    #   payload: pdf_attachment
+    #   title: ACTS Manual
+    #   url: http://localhost:7000/img/manual.pdf
   utter_happy:
   - text: Great, carry on!
   utter_goodbye:
@@ -377,11 +462,6 @@ ViewEditconventions:  You can edit the fields by row or column. If you edit by c
 
   utter_scan_dosage_info:
     - text: "Typically, dose information is displayed in this area. It may also display Real-Time information when the active application requires it
-"
-
-  utter_patient_schedule:
-    - text: "Click the Patient Schedule icon to enable the Schedule screen. Here, you can update and select the patients by clicking the appropriate buttons
-Retro Scan
 "
 
   utter_retro_recon:
@@ -1113,39 +1193,7 @@ Scanning range (including axial head holder) is no less than 1200mm. The maximum
           - title: Table functions
             payload: Table functions
           - title: table hardware components
-            payload: table hardware components
-  # utter_table_component_collimator:
-  #   - text:
-  #     image:
-  #     buttons:
-  # utter_table_component_gantry:
-  #   - text:
-  #     image:
-  #     buttons:
-  # utter_table_component_matrix_detector:
-  #   - text:
-  #     image:
-  #     buttons:
-  # utter_table_component_other_changes:
-  #   - text:
-  #     image:
-  #     buttons:
-  # utter_table_component_coverage:
-  #   - text:
-  #     image:
-  #     buttons:
-  # utter_table_component_axial_detector_signal_collection:
-  #   - text:
-  #     image:
-  #     buttons:
-  # utter_table_component_axial_interval:
-  #   - text:
-  #     image:
-  #     buttons:
-  # utter_table_component_helicalpitch_scanmode_collimation :
-  #   - text:
-  #     image:
-  #     buttons:   
+            payload: table hardware components  
   utter_scan_mode_pitches:
       - text: "The following pitches are available:
 1:1 pitch  
@@ -1356,45 +1404,903 @@ Click OK and follow the Attention instructions
           title: restart the system
   utter_daily_prep_screen:
     - text: "From the monitor, click the Daily Prep icon, to display the Daily Preparation screen"
-      
+      image: (pg 181)      
   utter_tube_warm_up:
-    - text: ""
+    - text: "The system operates most efficiently within certain parameters. These parameters are established by warming up the tube using a preset group of exposures. When you perform a tube warm-up at least once per24 hour period and at any system prompt,the tube warm-up reduces the possibility of artifacts and may aid in prolonging the life of the tube."
       
   utter_calibration:
-    - text: ""
-      
+    - text: "did you mean any of these"
+      buttons:
+        - payload: Daily Calibration
+          title: Daily Calibration
+        - payload: Full system calibration
+          title: Full system calibration
   utter_daily_calibration:
-    - text: ""
-      
+    - text: "The system requires that all kV and mA settings be within specific ranges. These ranges are established and maintained by performing air calibrations. The air calibrations are performed as part of the daily system preparation following a tube warm-up procedure
+
+Click here to know about tube warm-up procedure
+"
+      buttons:
+        - payload: tube warmup procedure
+          title: tube warmup procedure
   utter_full_system_caliberation:
-    - text: ""
-      
+    - text: "Full system calibrations are normally performed by a qualified engineer following a tube change or as part of preventative maintenance. The air calibrations (Fast Cals) execute several automatic checks
+
+CLICK HERE TO KNOW HOW TO EXECUTE AIR OR FAST CALIBRATION
+"
+      buttons:
+        - payload: fast calibrations
+          title: fast calibrations
+
   utter_warning_message_air_calibrations:
-    - text: ""
+    - text: "The system displays a message when there is any obstruction in the path of the Beam.
+(IMAGE1)7-6
+The system displays a message to indicate the balance check is in- progress.
+(image2)Figure 7-7 Gantry Balance Check message
+Mylar Window Check ensures the window is clean. The Mylar Window must be kept clean. Dirt, contrast material, and other matter could corrupt the calibration files. 
+(IMAGE3)Figure 7-8 Mylar Window Check message 
+Figure 7-9 Warmup 2 Scan List
+The Interconnectivity Mop Scan List displays. This set of scans check for connectivity between the DAS and the Detector.
+The system finishes the Fast Cal procedure by performing the actual Fast Cal air scans from the Fast Calibration Scan List. The default is to perform the Fast Cal scans for 80, 100, 120 and 140kVp
+"
       
   utter_non_ge_xray_tube:
-    - text: ""
-      
+    - text: "When the system is configured as a non-GE tube or if the tube is unrecognized by the system, one of the following messages may alert you during system start-up,tube warmup,and fast calibrations that a non-GE X-ray tube is detected in the system configuration. System configurations with non-GE X-ray tubes will also be notified on the Dose Report and in protocol selection and management. "
+      image: (179)      
       
   utter_daily_qa_workflow:
-    - text: ""
+    - text: "Execute this workflow every day before patients are scanned.
+1. Select Daily Prep - select and run Fast Cal. 
+2. Perform QA scan. 
+3. Reboot the system if it has not been rebooted in the last 24 hours
+
+"
       
   utter_tube_warmup_warning:
-    - text: ""
+    - text: "
+Every 7 days a beam quality check will be run to check the integrity of the x-ray beam. You will be prompted to make sure the beam is clear. This will increase tube Warm up time slightly.  
+GE recommends that you warm up the tube after two hours of non-use. Only the tube warm-up scans need to be done at this time.
+If the detectors are cold due to the A1 Power Panel (Breaker) being off, turn the system on and wait two hours before performing a tube warm up. This allows the detectors to return to their operating temperature.  
+Failure to perform tube warm-ups w
+Failure to perform requested tube warm-up will result in reduction of the maximum mA possible for the exam after a tube warm-up has been cancelled or skipped.
+
+"
       
   utter_tube_warm-up:
-    - text: ""
+    - text: "From the scan monitor, click [Daily Prep].
+Click [TubeWarm-Up]
+Click [Accept & Run Tube Warm-up] to proceed
+Press Start Scan on the top of the keyboard
+Click [Quit] or proceed to Fast Calibrations.
+"
       
   utter_tube_warmup_usage:
-    - text: ""
+    - text: "For optimum performance and consistent image quality, perform a tube warm up if your system has been inactive for two or more hours. 
+"
       
   utter_fast_cal_considerations:
-    - text: ""
+    - text: "If the detectors are not at operating temperature, a message will post indicating a time when the detectors will be at operating temperature.  
+If there is a large shift in room temperature (+/-10 degrees), perform a FastCal to maintain optimum IQ.Once the room temperature has stabilized perform another FastCal. 
+ Fast Cal must be run once every 24 hours. It takes approximately 10 to 15 minutes, depending on options installed.  
+If you experience a scan abort with resumes during FastCal, notify your service engineer
+
+"
       
   utter_fast_calibrations:
-    - text: ""
+    - text: "Clear the gantry of any objects or personnel. Any obstruction in the gantry may lead to artifacts in scanned images.
+Click Fast Calibration
+Press Start Scan. Respond to all messages that appear during the approximate 10 to 15 minute calibration. Execute any necessary actions indicated in the messages.
+
+If the system detects a dirty mylar window, which may be caused by a beam obstruction, something in the gantry, contrast,dirt, orother matter on the mylar window, a message displays. Clean the mylar window and click Retry.  
+The following automated cal check procedures occur:warm-up,inter-connectivity mapscan,and FastCal air scans. Read the screen messages for calibration status
+WhenFastCal is complete,the system returns to theDaily Prep menu.Click Quit to exit the Daily Prep screen.
+"
+  utter_cal_suggestions:
+    - text: "did you mean any of these"
+      custom:
+          payload: quickReplies
+          data:
+          - title: perform tube warm-up
+            payload: perform tube warm-up
+          - title: daily preparation screen
+            payload: daily preparation screen
+          - title: daily calibration
+            payload: daily calibration
+          - title: daily qa workflow
+            payload:  daily qa workflow
+            
+  utter_patient_schedule:
+    - text: "
+PatientSchedule Patient Schedule allows you to preprogram patient information and exam protocols prior to the patient's arrival. At scan time, you can either select from the created list, enter the patient ID number, enter the Accession number, or use the optional Bar Code Readerto call up patient information. Patient information can be easily added or deleted from this list.
+
+"
+  utter_patient_suggestions:
+    - text: "did you mean any of these"
+      buttons:
+        - payload: Display Patient Schedule Screen 
+          title: Display Patient Schedule Screen
+        - payload: Updates the parameters
+          title: Updates the parameters
+        - payload: Select Patient
+          title: Select Patient
+        - payload: View More Info 
+          title: View More Info 
+        - payload: Add Patient
+          title: Add Patient
+        - payload: Edit Patient
+          title: Edit Patient
+        - payload: Delete Selected
+          title: Delete Selected
+        - payload: Delete All
+          title: Delete All
+        - payload: Preferences
+          title: Preferences
+        - payload: Check status of patients
+          title: Check status of patients
+  utter_connect_pro:
+    - text: "ConnectPro retrieves critical patient information from yourHIS/RIS using a DICOM connection and then sends this information to your Patient Schedule. The patient information from HIS/RIS is referred to as the ModalityWorklist. 
+
+Connect Pro can be customized to fit your department’s needs by using filters to pull only the information in which you are interested. It can collect more than standard patient demographic information; for example allergies,pregnancy status, medical alerts,etc.
+"
+  utter_performed_procedure_step:
+    - text: "Performed Procedure Step (PPS) is part of theConnect Pro option that requires aHIS/RIS system and PACS. It communicates to PACS and HIS/RIS when a procedure is completed. It improves transfer of data to PACS because it can provide a complete message when all data has been transferred.The browser in ImageWorks has a MPPS1 column that lists the PPS status of each exam.
+
+Click here to know more about the states of the exam status.
+"
+      buttons:
+        - payload: comp
+          title: comp
+        - payload: disc
+          title: disc
+        - payload: defer
+          title: defer
+
+  utter_comp:
+    - text: "COMP ends the exam and PPS. You can annotate an image oradd a series, such as a screen save, but you should not edit the patient information. If you edit the exam(throughEdit PatientData),the exam is no longer recognized by the HIS/RIS system as the exam it requested. This status annotates the exam as COMP.
+"
+
+  utter_disc:
+    - text: "DISC notifies the HIS/RIS that you are aborting the PPS. Use only if the images you acquired were unacceptable or were not the correct patient. This status annotates the exam as DISC."
+
+  utter_defer:
+    - text: "DEFER does not end PPS. You can still post process and edit the patient information. If you edit the exam(throughEditPatientData),the exam is no longer recognized by the HIS/RIS system as the exam it requested. Selecting PPS from the browser menu bar displays a window and allows you to Complete or Discontinue the PPS on the patient. This status annotates the exam as INPR.
+
+"
+  utter_N_C_status:
+    - text: "In the patient schedule there is a column labeled Status. In the Status column, an N or a C is listed next to each patient entry.  
+N indicates the record is not completed or is a new record. These are records for patient studies that are scheduled in Patient Schedule, but are not yet completed. 
+C indicates the record is completed. These patient studies were scheduled and have now been completed.
+"
+  utter_connectpro_ways:
+    - text: "If obtaining your patient using Connect Pro it is best to only have New Records in your schedule list. Having Completed Records may cause inadvertent scanning of a patient with the wrong accession number. Set Delete Completed Exams to 0 days in the Connect Pro preferences. This setting assures that Completed Records are not added to the schedule list.
+"
+  utter_schedule_screen_display:
+    - text: "Click the Patient Schedule icon to display the Schedule screen
+"
+      image: ()
+  utter_add_patient:
+    - text: "Opens the Patient Schedule information screen, where you can enter the patient’s information and add the number of a specific protocol.
+CLICK HERE TO KNOW HOW TO ADD PATIENT MANUALLY"
+      buttons:
+        - payload: ADD PATIENT MANUALLY
+          title: ADD PATIENT MANUALLY
+
+  utter_edit_patient:
+    - text: "Allows you to change patient information if it is entered incorrectly in the Patient Schedule. 
+
+A patient record cannot be edited if it came from HIS/RIS and Edit Modality Worklist on the Preferences screen is set to No. 
+
+1. Click the Patient Schedule icon.
+2. From the Schedule screen, select a patient.
+3. Click Edit Patient. 
+4. Change the patient information as needed. 
+5. ClickAccept.
+"
+
+  utter_delete_selected_patient:
+    - text: "Deletes the selected patients that are selected in the list.
+
+1. Click the Patient Schedule icon. 
+2. From the Schedule screen, select patients to be removed. 
+3. ClickDelete Selected.  
+4. Click OK to the confirmation prompt
+"
+  utter_delete_all_patients:
+    - text: "Deletes all the patients from the list
+
+1. Click the Patient Schedule icon. 
+2. Click Delete All to remove all the patients from the list and Click Delete All Completed to remove all the completed patients marked with C from the list
+3. Click OK to the confirmation prompt.
+"
+
+  utter_preferences_patients:
+    - text: "1. Click the Patient Schedule icon and select Preferences
+2. From the Schedule screen, click Preferences. 
+3. From the Preferences screen, complete fields as needed
+4. ClickOK.  
+Close the Preferences screen before switching between Patient Schedule and Exam.
+"
+      custom: 
+            payload: "collapsible"
+            data: 
+            - title: Update Schedule Automatically
+              description: If have Connect Pro,click Yes to update
+            - title: Show Update Parameters
+              description: If you have Connect Pro, click Yes to display the Update Parameters screen every time the system starts to automatically update
+            - title: Use Study UID
+              description: If you have Connect Pro, click Yes to use a study instance UID1 from HIS/RIS
+            - title: Sort By
+              description: Click the Date/Time, Name, or ID sort option
+            - title: Delete completed exams after days
+              description: Set a number of days (0 to 30) to delete exams. Set 
+                    the value to 0 when the schedule is updated from a HIS/RIS system so that completed exams are not added to the patient schedule. This eliminates the selection of completed accession being selected causing patient reconciliation issues on a PACS system
+            - title: EditModalityWorklist
+              description: If you have Connect Pro, click Yes to be able to edit any patient informationfromHIS/RIS.
+            - title: Default update parameters
+              description: Choose a location and date range
+      image: (8-3)
+  utter_add_patient_to_schedule_manually:
+    - text: "1.Click the Patient Schedule icon. 
+2. From the Schedule screen, click Add Patient. 
+3. From the Schedule Patient screen, complete all relevant fields.  
+Entering even weights may be rounded up to the next odd pound because weights are stored as kilogram units then converted back to pounds.  
+If adding a patient where Exam Split is going to be used, an exam description must be entered for those entries to be used with Hard Exam Split. 
+If desired, add the number of the specific protocol under Protocol Number.  If desired,type in the date and time in appropriate fields to be able to sort the Patient Schedule by scheduled times. 
+4. Click Accept to add the patient to the schedule.
+
+"
+
+  utter_update_patient_screen:
+    - text: "Use this procedure with the ConnectPro option and Modality Work List to update the Patient Schedule.
+1. Click the Patient Schedule icon. 
+2. From the Schedule screen, click Update. 
+3. From the Update Parameters screen, select one of the following options from the Get Patient List to populate the schedule from your HIS/RIS.  
+Select This system to pull the patient schedule for the current scanner.  
+Select All CT Systems to pull the patient schedule for all of the CT systems on the HIS/ RIS connection.  
+Select All Systems to pull the patient schedule for all the systems on the HIS/RIS connection. 
+4. Enter values for the Date Range to populate the Patient Schedule from the defined date range. Use the month/day/year format
+5. Enter a Requested Procedure ID, accession number, patient name or ID to narrow the search. These are optional fields. 
+6. Click Continue Update to continue or click Cancel Update to exit and make no changes.
+"
+      image: (8-2)
+  
+  utter_view_more_patients_info_on_schedule:
+    - text: "Use this feature with the Connect Pro option to view other valuable information about a patient such as allergies, pregnancy status, and medical alerts. This information is pulled from the HIS/RIS using a DICOM connection. 
+1. Click the Patient Schedule icon. 
+2. From the Schedule screen, select a patient. 
+3. Click View More Info. The screen is populated from your HIS/RIS. 
+4. Click Cancel to close the More Information screen
+"
+  utter_select_patient_from_schedule:
+    - text: "Use this procedure to select a patient from the Patient Schedule to begin an exam. 
+1. Click the Exam Rx icon. 
+2. Click the Patient Schedule icon. 
+3. From the Patient schedule list, select the desired patient and click Select Patient.  
+The Patient Information screen fields are populated.  
+Multiple records for the same patient can be selected.  
+Multiple records must be selected in order to use Exam Split.  
+If more than one record with the same Patient ID is found in the Patient schedule   
+                        list a dialog message displays. To avoid having multiple Patient Records with the 
+                        same Patient ID, set the Delete Completed Exams preference to zero. This will
+                        ensure that only new records are in the Patient Schedule list. 
+4. If a protocol is not tied to the patient, select the protocol. The system displays the first series
+
+"
+
+  utter_check_patients_status:
+    - text: "Use this procedure to check the status of a patient. 
+1. Click the Patient Schedule icon. 
+2. View the Status column.  
+     N = New Record or Not Completed 
+     C = Completed 
+3. Click < or > arrows to page through the list.
+"
+#---------------------------------------------------------------------------
+
+  utter_ansr:
+    - text: "ANRT is a reconstruction technology used for decreasing the noise of diagnostic images while preserving the structural detail information of these images. ANRT noise-reduction technology can, while maintaining image noise level, lessen the dose of some X-ray testing, or improve image noise level and image quality.
+"
       
+  utter_anrt_reconstruction:
+    - text: "Reconstruction of ASiR images can be set in advance during Recon1, and can be set in advance during Recon2, Recon3... Recon10, or set during post-reconstruction. If the post-reconstruction method is adopted, a new series should be selected when applying ANRT reconstruction data. 
+
+ANRT is located in the Recon Option area, appearing as XNR 
+"
+      image: 
+      
+  utter_anrt_constraints:
+    - text: "There are several constraints that apply to the acquisition of data where ASiR will be applied:  
+ANRT can only be used for digital tilted images, tilt angle cannot be 0 degree.  
+When ANRT is being applied, 5 reconstruction calculation methods can be used, [STND], [STD+], [BONE], [EDGE] and [DETL].  
+ANRT is not compatible with any real-time interactive image modes, for example the SmartPrep (baseline and monitoring images) and Biopsy modes. 
+ANRT is not compatible with the AutomA mode.  
+ANRT cannot be used when the actual scanning current is less than 50mA
+
+"
+      
+  utter_anrt_image_annotate:
+    - text: "Use ANRT character string annotation on the bottom left corner of images
+"
+      image: 
+  utter_enable_anrt_scanning:
+    - text: "1. Set up a scanning plan. 
+2. In the ViewEdit area, press Recon. 
+3. In the Recon Setting area, press Recon Option.
+4. In the XNR area, press On. 
+5. Continue to proceed with scanning according to the original plan.  XNR will be displayed on the top left corner of an image
+
+"
+      
+  utter_acquire_anrtscan_ma_reduction_guidance:
+    - text: "Applying this program, pressing the Reduce mA value button can make the system's ANRT function automatically effective. Based on scanning protocols, mA reduction percentages will vary. When scanning a head,the default mA value reduction percentage is 20%. When scanning the lumbar and cervical vertebrae, the default mA value reduction percentage is 30%. 
+
+Giving an example, if the reference mA value is 160, pressing [mA Reduction] the actual mA value during lumbar and cervical vertebrae scanning is 110mA, or 130 mA when doing a headscan
+
+"
+      
+  utter_constraints_anrtscan_ma_reduction_guidence:
+    - text: "When utilizing reduced mA values for guidance, pay attention to the following:  
+When the desired mA value is less than 50mA, the mA value reduction function will be ineffective.  
+
+When scanning the lumbar and cervical vertebrae, and the necessary mA value is between 50mAand 75mA, when doing a headscan and the necessary mA value is between 50mA and 65mA, [mA reduction] is effective, but when you press [Ok], [mA reduction] will not be usable and will return an operational message. Further, the actual mA value displayed over the mA table is the necessary mA value. The operational message will be displayed on the Message Board: The mA reduction function cannot be used, because the requested mA value reduction is less than 50mA.
+
+When [mAReduction] is pressed, if the actual mA value and the necessary mA value are inconsistent, DR and the actual mA value will be displayed in the mA row.
+
+When [mAReduction] is pressed,the [ANRT] button located in the ReconOption area will be enabled automatically.
+"
+      image: 
+  utter_conduct_arntscan_ma_reduction_guidance:
+    - text: "1. Set up a scanning plan. 
+2. Press mA in the ViewEdit area. 
+3. Press mA Reduction in the mA control area.
+4. Enter the desired mA value. 
+5. Press OK in mA control. 
+6. Continue scanning according to the original plan
+
+"
+      
+  utter_usage_asir:
+    - text: "ASiR™ is licensed for use with a GE X-ray tube. Use of a third party X-ray tube will require the purchase of an additional license for this feature."
+      
+  utter_asir:
+    - text: "AdaptiveStatisticalIterativeReconstruction(ASiR) is a reconstruction technique designed to reduce noise in diagnostic images while preserving the structure details in the image. ASiR noise reduction technique may allow for the reduction of the x-ray dose in some studies while maintaining image noise levels or be applied to improve images with an unacceptable level of noise.
+
+"
+      
+  utter_snr:
+    - text: "Signal to Noise Ratio (SNR) is equal when no ASiR is applied compared to 40% ASiR at a 40% mA reduction.
+
+"
+      image: 
+      
+  utter_snr_formula:
+    - text: "The SNR1 metric presented relative to the % ASiR in Figure 10-1 was measured on the Low Contrast Section (CTP515 Section) of the CatPhan® 600 phantom. The measurement involves calculating a signal delta divided by the standard deviation (noise).
+
+"     image:
+      
+  utter_roi_measurements_snr:
+    - text: "find the image below"
+      image:
+      
+  utter_mtf:
+    - text: "MTF remains constant as the ASiR level is increased.
+"
+      image:       
+  utter_asir_recon_mode:
+    - text: "A warning is posted when ASiR is set to None reminding the user to check the mA and Noise Index prior to scanning without ASiR enabled.
+
+Reconstruction ASiR images involves defining the level of noise reduction desired for the parameters used for various applications. Image reconstruction is a blending of the original images and a percentage of an image with 100% noise reduction. There are 10 blending levels available which are simply the amount of noise reduction based on the maximum of the 100% image reconstructed with the original image data. It is expected that confidently selecting the optimal amount of noise reduction and integrating the reduction in dose possible will require some adaptation on how this reconstruction technique works.
+
+The software dose not make the noise level changes or mA adjustment automatically when ASiR is enabled. These changes need to be calculated using the following tables to make changes to noise index or manual mA values. 
+Refer to Noise based and Manual mA for guidance in making parameter step adjustments during ASiR evaluation process.
+
+Before using ASiR, the site physicist, in collaboration with the Radiologist, should conduct image quality evaluations with varying degrees of ASiR and different scan techniques, both at routine dose and with decreased dose. This should be done using your site's preferred method and phantoms. Using this information, an appropriate starting point for ASiR level and diagnostic scanning techniques can be incorporated into your site's protocols. 
+
+WhenASiR is used for dose reduction or image quality improvement,parameter settings should be made in steps and then reviewed for diagnostic image quality until the desired clinically appropriate image quality is achieved.
+
+
+Before using ASiR, the site physicist, in collaboration with the Radiologist, should conduct image quality evaluations with varying degrees of ASiR and different scan techniques, both at routine dose and with decreased dose. This should be done using your site's preferred method and phantoms. Using this information, an appropriate starting point for ASiR level and diagnostic scanning techniques can be incorporated into your site's protocols. 
+
+WhenASiR is used for dose reduction or image quality improvement,parameter settings should be made in steps and then reviewed for diagnostic image quality until the desired clinically appropriate image quality is achieved.
+
+"
+      buttons:
+        - payload: calculate dose reduction for Noise Index based on the ASiR level selected for auto mA
+          title: calculate dose reduction for Noise Index based on the ASiR level selected for auto mA
+        - payload: calculate dose reduction for mA based on the ASiR level selected for manual mA
+          title: calculate dose reduction for mA based on the ASiR level selected for manual mA
+      
+  utter_dose_adjustment_factors_noise_index_adjustment_method:
+    - text: "When usingSoft, Standard,Detail, Lung,Bone or BonePlus reconstruction algorithm use the following chart to calculate dose reduction for Noise Index (NI) based on the ASiR level selected.
+The factors were derived based on calculating the relative difference in measured noise standard deviation (SD) with Filtered Back Projection (FBP) and ASiR on a 20cm water phantom"
+      image: 
+  utter_dose_adjustment_factors_ma_adjustment_method:
+    - text: "When using Soft, Standard,Detail, Lung,Bone or BonePlus reconstruction algorithms use the following chart to calculate dose reduction for mA based on the ASiR level selected.
+
+"
+      image: 
+      buttons:
+        - payload: calculate dose reduction for Noise Index based on the ASiR level selected for auto mA
+          title: calculate dose reduction for Noise Index based on the ASiR level selected for auto mA
+
+  utter_non_ASiR_protocol_value:
+    - text: "Multiply the Noise Index or manual mA values that were adjusted for an ASiR applied protocol by the adjustment factors in the given table . Use the following factors to return any Noise Index or manual mA values adjusted for ASiR to non-ASiR values.
+
+To know more about the Noise Index or Manual mA values click here.
+"
+      buttons:
+        - payload: calculate dose reduction for Noise Index based on the ASiR level selected for auto mA
+          title: calculate dose reduction for Noise Index based on the ASiR level selected for auto mA
+        - payload: calculate dose reduction for mA based on the ASiR level selected for manual mA
+          title: calculate dose reduction for mA based on the ASiR level selected for manual mA
+  utter_asir_reconstruction_image_construction:
+    - text: "Reconstruction of  ASiR images involves defining the level of noise reduction desired for the parameters used for various applications. Image reconstruction is a blending of the original images and a percentage of an image with 100% noise reduction. There are 10 blending levels available that are the amount of noise reduction based on the maximum of the 100% image reconstructed with the original image data. 
+"
+      
+  utter_asir_reconstruction_location:
+    - text: "ASiR is located on the Recon tab under Recon Options. 
+"
+      
+  utter_modes_asir_reconstruction:
+    - text: "ASiR modes are None or Slice
+"
+      buttons:
+        - payload: slice mode
+          title: slice mode      
+  utter_slice_mode:
+    - text: "Slice Mode can be applied to acquisitions of any slice thickness and any acquisition mode where noise reduction is in X and Y (2D) and can be applied to a range of slices.
+"
+      
+  utter_asir_reconstruction:
+    - text: "Reconstruction of ASiR images can be prescribed prospectively for Recon 1 or as a PMR1 for R2 to R10 or retrospectively in Retro Recon. If reconstructing data retrospectively, aNew Series should be selected for each reconstruction of the data with ASiR applied so comparisons and identification of series with ASiR can be made more easily.
+
+Choose here to know more about how to perform prospective and retrospective reconstruction.
+"
+      buttons:
+        - payload: prospective reconstruction
+          title: prospective reconstruction  
+        - payload: retrospective reconstruction
+          title: retrospective reconstruction    
+  utter_prospective_reconstruction:
+    - text: "1. Prescribe a scan. 
+2. From the ViewEdit screen, click Recon Tab. 
+3. From the Recon tab, click any prescribed PMR R2 to R10. 
+4. From the Recon Option screen, select an ASiR mode: Slice and an ASiR % value. Click OK. 
+5. Continue with your prescription and proceed to scan
+"
+      
+  utter_retrospective_reconstruction:
+    - text: "1. On the Exam Rx desktop, click Retro Recon. 
+2. From the Retro Recon screen, select exam and series and click Select Series. 
+3. From the Retro Recon Setup screen, click New Series Number. 
+4. Click Recon Options. 
+5. From the Recon Option screen, select an ASiR mode: Slice and an ASiR % value. Click OK. 
+6. ClickConfirm.
+"
+      
+  utter_asir_image_annotate:
+    - text: "ASiR level and mode are annotated on the image using a character string that defines the mode and level. It is displayed in the upper-right corner of the image next to the Recon Type. 
+
+The annotation logic is as follows: 
+SS - Slice mode ASiR  
+10 - 100%, which is the percent of the 100% ASiR image that was reconstructed with the original to reduce the noise in the ASiR images.
+"
+      
+  utter_asir_acquire_scan:
+    - text: "Using the procedure to acquire data where ASiR1 noise reduction reconstruction will be used. ASiR is a reconstruction technique designed to reduce pixel noise standard deviation in clinical images while preserving the structure details intheimage. The ASiR noise reduction technique may allow for the reduction in X-ray dose, while maintaining image noise levels or be selected to improve images with an unacceptable level of noise. ASiR reconstruction is available in Slice Mode. ASiR is prescribe in 10% steps for10 to 100. Slice Mode is annotated SS xx.
+
+"
+      
+  utter_selecting_asir_recon_mode_toacquire_scan:
+    - text: "Keep the following in mind when selecting an ASiR recon mode:  
+ASiR:  is not compatible with Neuro 3D Filters (N1, N2, N3) and with any of the real time interactive image modes such as SmartPreporBiopsymode.  
+Slice Mode:  can be applied to acquisitions of any slice thickness and any acquisition mode where noise reduction is in X and Y (2D) and to a range of slices.
+
+"
+      
+  utter_scan_asir:
+    - text: "1. Prescribe a scan. 
+2. Click Recon Options and from the Recon Options screen, select an ASiR mode (Slice) and an ASiR % value. As the percentage value increases, the noise reduction increases.  
+If you want to use ASiR to maintain image quality but reduce dose, from the mA Control screen, reduce mA or increase noise index value. 
+3. Proceed to scan
+"
+      
+  utter_asir_reconstruction_method:
+    - text: "There are two main methods for asir reconstruction namely,"
+      buttons:
+        - payload: prospective reconstruction
+          title: prospective reconstruction  
+        - payload: retrospective reconstruction
+          title: retrospective reconstruction 
+
+  utter_when_to_acquire_asirscan_dose_reduction_guidance:
+    - text: "The dose reduction guidance procedure can be used to have the system automatically select the ASiR level by selecting a dose reduction percentage.
+"
+      
+  utter_acquire_asirscan_manual_mA_dose_reduction_guidance:
+    - text: "When utilized with manual mA a Reference mA is entered, the Reference mA is the baseline, non dose reduced mA. When a % Dose Reduction value is entered the system calculates the actual mA that will be used for the acquisition and selects the appropriate ASiR level to maintain image quality at the dose-reduced mA. 
+
+For example if a Reference mA value of 200, a % Dose Reduction of 50% is entered, the actual mA for the scan acquisition will be 100.
+"
+      
+  utter_acquire_asirscan_auto_mA_dose_reduction_guidance:
+    - text: "When utilized with Auto mA, a % Dose Reduction value is entered. The system will calculate the mA for the scan taking into account the % Dose reduction value. The dose-reduced mA will be shown in the mA table and the system selects the appropriate ASiR level to maintain image quality at the dose-reduced mA
+"
+      
+  utter_constraints_asirscan_dose_reduction_guidence:
+    - text: "Keep the following in mind when using Dose Reduction Guidance:  
+Dose Reduction is not selectable if ASiR is enabled in Recon Options.  
+Actual mA used is a percentage of the Reference mA and is calculated by the system.  
+ASiR level selected is optimized based on the Standard algorithm and the DFOV prescribed.  
+The maximum Dose reduction percentage is 50%. If more than a 50% dose reduction is desired, set Dose Reduction to 0% and follow the Scan with ASIR procedure.
+A warning is posted when ASiR is set to None reminding the user to check the mA and Noise Index prior to using Dose Reduction Guidance. 
+A warning is posted when ASiR level is modified from the system recommended value
+"
+      buttons:
+        - payload: how to scan with asir?
+          title: how to scan with asir?
+  utter_conduct_asirscan_dose_reduction_guidance:
+    - text: "1. Prescribe a scan.
+2. From the ViewEdit screen, click mA. 
+3. From the mA, control screen click % Dose Reduction in either manual mA or Auto mA. 4. Enter The desired dose reduction percentage. 
+5. From the mA control screen in Manual mA click Reference mA. 
+6. Enter The desired mA value. 
+7. From the mA control screen, click OK. 
+8. Continue with your prescription and proceed to scan.
+
+"
+  utter_biopsy_mode_usage:
+    - text: "Biopsy Mode improves the efficiency of setting up and acquiring slices during a biopsy. All biopsy scan parameters are available on a single screen from which you can launch the biopsy scan. You are able to choose which direction the scanner acquires images from a centering point as well as how many images to acquire. You can change slice thickness and/or interval. You can enter a specific location for a slice if required. All scans taken in Biopsy Mode are the Axial Scan Type
+"
+  utter_biopsy_rx_screen:
+    - text: "From the View Edit screen or the Scan Progress screen, click Biopsy Rx to display the Biopsy Rx screen.
+"
+
+  utter_biopsy_rx_screen_components:
+    - text: "Components of the Biopsy Rx screen"
+      buttons:
+        - payload: Biopsy Reference
+          title: Biopsy Reference
+        - payload: Biopsy Location
+          title: Biopsy Location
+        - payload: Number of Images, Thickness, Image Interval
+          title: Number of Images, Thickness, Image Interval
+
+  utter_biopsy_rx_screen_biopsy_reference:
+    - text: "The Biopsy Reference tells the system how to acquire images based on the Biopsy Location. 
+
+Superior means all images are acquired from the Biopsy Location, superiorly. 
+Centered means the system acquires images above, at and below the Biopsy Location, If you enter an even number of slices, the system places the extra image in the superior portion.  
+Inferior means the images are acquired from the Biopsy Location inferiorly
+"
+
+  utter_biopsy_rx_screen_biopsy_and_alignment_location:
+    - text: " Biopsy Location is Used when you have a specific location chosen from the localizer scans.
+Get Alignment Light Location is Used when a needle is necessary for aligning internal or external alignment lights. This method is especially effective when placing a needle or tubes.
+
+"
+
+  utter_biopsy_rx_screen_NoOfImage_thickness_image_interval:
+    - text: "Any value may be entered, It represents the number of images acquired for each pass. 
+Thickness for axial mode, the slice thickness is restricted to 2.5mm or 5.0mm. 
+Image interval is the distance between images. This value is typically the same value as the Thickness
+
+"
+
+  utter_biopsy_rx_screen_acquire_scan:
+    - text: "Biopsy Mode only allows the Axial scan type. The system automatically sets the scan type to Axial when the Biopsy Mode is selected.
+
+1. From the ViewEdit screen or the Dynaplan screen, click Biopsy Rx.
+2. From the Biopsy Rx screen, complete the following selections
+a. Select a Biopsy Reference.
+b. Select a biopsy location.
+c. Type the number of images for each pass in the Number of Images field
+d. Select a slice thickness. Axial mode only allows 2.5, 5.0, or 10.00 mm.
+3.Click Confirm Biopsy Rx to activate the biopsy scan
+4. When the biopsy scan is finished and if additional groups are being scanned in the same series, re-activate AutomA. is turned off with Biopsy Mode.
+
+"
+  utter_biopsy_suggestions:
+    - text: "Find the suggestions below"
+      buttons:
+        - payload: biopsy rx screen acquire scan
+          title: biopsy rx screen acquire scan
+        - payload: biopsy rx screen
+          title: biopsy rx screen
+        - payload: what is biopsy location
+          title: what is biopsy location
+  utter_DMPR:
+    - text: "Direct Multi Planar Reformat (DMPR) allows reformat protocols to be prescribed prospectively in a scan protocol. Productivity is improved by providing real time display of oblique, sagittal, and coronal images in addition to the axial images. While in DMPR, you can move from the usual 2D image review mode to a prospective 3D image review mode in the axial, sagittal, coronal, and oblique planes and also automatically create batch reformats "
+  utter_parameters_identical_to_combine_groups:
+    - text: "Slice Thickness  
+Interval 
+SFOV  
+DFOV  
+Scan Type  
+Rotation Speed 
+image center  
+algorithm  
+ASiR Level
+"
+  utter_session_selection_screen:
+    - text: "From the ViewEdit screen, click the Recon tab to display the Recon parameters. In the Auto Apps column, click Off to display the Session Selection screen. 
+    "
+      custom: 
+            payload: "collapsible"
+            data: 
+            - title: Direct MPR
+              description: Starts a DMPR session, which allows you to prospectively prescribe reformat protocols in a scan protocol.
+            - title: Neuro 3D
+              description: Starts a Neuro 3D Filter session,which removes noise from the image while preserving image resolution
+      image:
+  utter_filter_strength_dmpr:
+    - text: "find the details below"
+      custom: 
+            payload: "collapsible"
+            data: 
+            - title: Low N1
+              description: Applies a low strength noise filter. The processed images are saved in a series that is the original series number plus 30. 
+            - title: Med N2
+              description: Applies a medium strength noise filter. The processed images are saved in a series that is the original series number plus 40. 
+            - title: High N3
+              description: Applies a high strength noise filter. The processed images are saved in a series that is the original series number plus 50.
+
+      
+  utter_session_setup_dmpr:
+    - text: "From the Session Selection screen, click DirectMPR to display the Session Setup screen, where you can set up the protocols that you want to use and the parameters for filming. 
+"
+      custom: 
+            payload: "collapsible"
+            data: 
+            - title: Start New
+              description: Starts a new DMPR session.
+            - title: Combine Current
+              description: Combines the next group with the prior group. Parameters for the groups to be combined are locked to the previous group prescription. 
+            - title: Off
+              description: Turns DMPR off for the series/group. 
+            - title: Batch Protocols
+              description: This area is where reformat protocols to be used in DMPR are selected from a list of available reformat protocols. Up to five reformat protocols can be selected. Use the Next/Prior
+            - title: Filming Setup
+              description: This allows you to define camera, formats, and start options for filming reformatted images to the Direct Film Composer.
+            - title: Auto Batch
+              description: Automatically creates reformatted images based on the Batch Protocol List once reconstruction is complete. 
+            - title: Auto Store
+              description: Allows you to set up a protocol so the system will automatically archive reformatted images to the default archive device selected for the system after they are created. On enables this feature and Off disables it. 
+            - title: Auto Transfer
+              description: Allows you to set up a protocol so the system will network the reformatted images to desired network location.Up to four remote hosts can be selected. Apply All copies the selected list of hosts to all the protocols prescribed.
+
+  utter_dmprscan_with_auto_batch:
+    - text: "1. Prescribe a scan. 
+2. Click the Recon tab. 
+3. From the Recon tab, click Off for group under the Auto Apps column. 
+4. From the Session Setup screen, click Direct MPR and then click OK. 
+5. From the Session Setup screen in Session Selection, click Start New to setup a DMPR 
+6. To select reformat protocols to be used in the DMPR session, click Unused under Batch Protocol to open the list of available protocols
+7. Select up to five protocols from the Batch Protocol List, and click OK.
+8. Prescribe Filming, Auto Batch, Auto Store, and Auto Transfer as needed for each protocol.
+9. Click OK to close the DMPR Session Setup screen. 
+10. Click Confirm. 
+11. Press Move to Scan.
+12. Press Start Scan
+13. Click Start Direct MPR Review to open the Direct MPR Interactive Review screen.
+14. From the upper-left viewport, use the crosshair cursors, click and drag, or use the review controller to interact with the displayed images. 
+15. Once all tasks are finished, including all Batch Reformats, click Quit and then, click Yes to end the DMPR session. 
+16. For details on manipulating the DMPR image, see Manipulate DMPR images.
+
+"
+  utter_consideration_acquire_dmpr_scan_with_Auto_Batch:
+    - text: "Orientation : DMPR displays image anatomical orientation within a viewport as follows: A is at the top, P is at the bottom, R is on the left and L is on the right. If you have a data set where the patient was scanned prone, the image display is flipped to this orientation.
+
+Sessions: DMPR sessions are limited to 2,000 images. A DMPR Auto Apps session can be programmed for each of the 10 PMR1s. A DMPR session can be a single group or combined groups.
+
+If a scan stops before all DMPR images for a session are acquired, it may not be possible to activate the interactive mode because all the images are not yet available. Quit the DMPR session to return to Exam Rx display and generate any reformatted images you want in Reformat from ImageWorks desktop. 
+
+When multiple sessions of MPR are stacked, you cannot get to the next one until you finish the previous session. Click Start Direct MPR Review to get to the Interactive display screen and select Quit. If you do not want to quit the current DMPR session, you can still see the reconstructed axial images. Click Auto Link and view the images in the viewport.
+
+Protocols: Reformat protocols used in DMPR must be built in Reformat or Volume Viewer in the General category as Single Step protocols. Multiple Step protocols are excluded from the list of available protocols for selection in DMPR. 
+
+For AutoBatch, the reformat protocol cannot use the Oblique viewport. 
+
+If you prescribed auto batch protocols and then quit DMPR before the auto edge detection starts, the reformatted images are not completed
+
+Please refer the manual for all consideration
+"
+  utter_dmpr_interactive_review_screen:
+    - text: "After a DMPR scan with Batch Reformat on is completed, click DMPR to display the Direct MPR Interactive Review screen"
+      image:
+      custom: 
+            payload: "collapsible"
+            data: 
+            - title: Oblique Mode
+              description: Activates the Rotate or Tilt modes to rotate or tilt the reformat model in all directions. 
+            - title: RAS Views
+              description: Sets the image orientation. Click an Image Orientation icon to change the plane.
+                S = Superior A = Anterior L = Left I = Inferior P = Posterior R = Right 
+
+            - title: Annotation Level
+              description: Sets the image annotation level are Full, Partial, Custom, or None. 
+            - title: Measurements
+              description: Allows you to select a tool to apply distance and angle measurements, ROIs, and annotation. You can also choose to hide the applied graphics or erase them from an image.
+            - title: Reformat Save
+              description: Saves the reformat image as a DICOM1 image and lists it as series type RFMT in the browser. It does not save any user added annotation or measurements to the image. 
+            - title: Screen Save
+              description: Saves the image in primary focus, including zoom, cursors, measurements, flip, or annotation. Screen saved images are listed as a series type SSave in the browser.
+            - title: Batch Rx
+              description: Opens the Direct MPR BatchRx screen. 
+            - title: Display Normal
+              description: Restores the image to its original size and orientation
+            - title: Back
+              description:  Returns you to the previous screen or menu.
+            - title: Quit
+              description:  Closes the Direct MPR Interactive Review screen.
+  utter_dmprscan_without_auto_batch:
+    - text: "1. Prescribe a scan. 
+2. Click the Recon tab.
+3. From the Recon tab, click Off for group under the Auto Apps column. 
+4. From the Session Setup screen, click Direct MPR and then click OK. 
+5. From the Session Setup screen, click Start New to setup a DMPR session
+6. To select reformat protocols to be used in the DMPR session, click Unused under Batch Protocol to open the list of available protocols. 
+7. Select up to five protocols from the Batch Protocol List, and click OK.  
+8. Prescribe Filming, Auto Store, and Auto Transfer as needed for each protocol. 
+9. When generation of the DMPR session is complete, the Direct MPR BatchRx screen automatically displays.
+10. From the Direct MPR BatchRx screen, select a protocol from the list of protocols
+11. Set the parameters for Thickness, Spacing Between Views, FOV, and Number of Views. 
+12. Prescribe the Reformat range. For details on manipulating the DMPR image, see Manipulate DMPR images. 
+13. Click Preview and then Apply to review the reformat prescription
+14. Click Save and then Apply to save the prescribed DMPR reformat series
+15. Repeat steps 6 to 14 to create additional batch reformats. 
+16. Click Back to exit Direct MPR BatchRx. 
+17. ClickQuit and then, click Yes to close the DMPR session or click Back to continue to Direct MPR Review at a later time.
+
+"
+  utter_dmpr_batch_rx_screen:
+    - text: "When Batch Reformats is off, the Direct MPR BatchRx screen opens after DMPR generation is complete for you to manually prescribe batch reformats"
+      image: 
+      custom: 
+            payload: "collapsible"
+            data: 
+            - title: Protocols
+              description: Allows you to select the protocol that you prescribed to manipulate, apply, and save.
+            - title: Mode
+              description: Allows you to choose an Oblique or Rotation graphic prescription
+            - title: Average
+              description: Displays the reformat model using the average density values of the slice taken along the lines perpendicular to it.  
+            - title: Min-IP
+              description: Displays the reformat model using the Minimum Intensity Pixel mode. In this mode, the density of each point on the screen in the minimum density along a line perpendicular to the screen. 
+            - title: Preview
+              description: Displays the reformat series in a preview mode
+  utter_DMPR_images_manipulation:
+    - text: "Use the DMPR Review Controller to interact with the DMPR model
+"
+      image: 
+  utter_Split_exams_usage:
+    - text: "Use the Exam Split option to split images from a single acquisition and assign them to a Requested Procedure ID or accession number retrospectively. The smaller image groups can be accessed at reading stations for multiple reads and multiple billings on select patient exams.
+
+"
+  utter_Split_exams_with_Connect_Pro:
+    - text: "1. From the Browser, click the Exam Rx icon.
+2. Click the Patient Schedule icon. 
+3. From the Patient Schedule screen, select the desired patient exams to which you want to apply Exam Split once the images are reconstructed. A maximum of 15 procedures can be selected.
+4. Click Select Patient
+
+"
+  utter_Neuro_3D_filter_Auto_Transfer:
+    - text: "Click OK from the Session Selection screen to display the Filter Auto Transfer By Series Host Selection Screen."
+      image: 
+  utter_Neuro_3D_filter_usage:
+    - text: "Neuro 3D Filter is a noise reduction 1 filter optimized for thin slice data that is intended for past processing in Reformat to create Average and MIP images. Volume Rendering and 3D models for Neurological studies such as Circle of Wills, Carotids, Sinuses,Orbits, Mandible and helical Brain. There are three levels. 
+Low- processed images are saved in a series that is the original series number plus 30.  
+Medium- processed images are saved in a series that is the original series number plus 40.  
+High- processed images are saved in a series that is the original series number plus 50.
+
+NOTE: A minimum of three images are required for Neuro 3D Filter.
+
+"
+      
+  utter_Neuro_3D_filter_application:
+    - text: "1. Prescribe a scan for a neuro application. 
+2. Click the Recon icon , in the Auto Apps column for the group. 
+3. Click off to display the Session Selection screen. 
+4. From the Session Selection screen, under Filters, click Neuro 3D. 
+5. Set the Filter Strength.
+  Click Low N1, Med N2, or High N3
+6. From the Filter Auto Transfer by Series screen, set Auto Transfer destination for up to four network hosts. 
+a. Click Host1. b. Click the network host in the list of available destinations. c. Click OK.
+7. ClickConfirm. 
+8. Press Move to Scan. 
+9. Press Start Scan.
+"
+      
+  utter_Neuro_3D_filter_prerequisites:
+    - text: "Compatibility : Neuro 3D Filter is not compatible with series that have duplicate slice locations. To complete groups the following parameters must be the same: Slice Thickness, Interval, Tilt, SFOV, DFOV, Scan Type, Rotation Speed, image center, and algorithm. The groups must be contiguous.Neuro 3D Filter is not compatible with ASiR
+"
+      
+  utter_SmartPrep_usage:
+    - text: "SmartPrep allows intermittent monitoring of IV1 contrast enhancement in one particular section of anatomy that is in the area of interest. The contrast flow is monitored by low- dose scans until the contrast enhancement reaches the preferred point and the operator initiates the scan prescription. There are three phases
+"
+      
+  utter_SmartPrep_screen:
+    - text: "From the SmartPrep scan desktop, click SmartPrepRx. "
+      custom: 
+            payload: "collapsible"
+            data: 
+            - title: Baseline phase
+              description: a single unenhanced image is acquired in the anatomy where the monitoring occurs and the ROI2 is established
+            - title: Monitor phase
+              description: uses the ROI defined in the baseline phase to display a graph that helps you determine the peak enhancement value. Up to 40 low- dose scans can be taken during the injection of IV contrast. 
+            - title: Scan phase
+              description: acquires the scan data based on the scan setup parameters. You start the scan when the contrast is at the peak on the curve or by a preset Hounsfield value is reached. 
+            - title: DynamicTransition
+              description:  If Dynamic Transition is on,the system will automatically transition from Monitor phase to Scan phase when the contrast enhancement level for the Transition ROI reaches the Enhancement Threshold HU value.
+            - title: MonitorLocation
+              description: The Location where the monitoring images are scanned and where the ROIs are placed. Precede the value with an S or + for superior I or - for inferior. 
+            - title: Auto Batch
+              description: Automatically creates reformatted images based on the Batch Protocol List once reconstruction is complete. 
+            - title: Auto Store
+              description: Allows you to set up a protocol so the system will automatically archive reformatted images to the default archive device selected for the system after they are created. On enables this feature and Off disables it. 
+            - title: Auto Transfer
+              description: Allows you to set up a protocol so the system will network the reformatted images to desired network location.Up to four remote hosts can be selected. Apply All copies the selected list of hosts to all the protocols prescribed.
+
+      
+  utter_SmartPrep_scan_desktop:
+    - text: "The SmartPrep scan desktop displays when a SmartPrep scan is prescribed
+
+"
+      image: 
+      custom: 
+            payload: "collapsible"
+            data: 
+            - title: RealTime Information
+              description: Displays up-to-date information concerning PatientHandling, and imaging during theMonitor Phase (interscan delay time between Monitor images and the total Monitor scan time).
+            - title: Scan Progress
+              description: Displays the progress of the SmartPrep scan. 
+            - title: End Exam
+              description: Stops the scan. Next Series Initiates the next series.
+            - title: Scan Phase
+              description: initializes Scan Phase 
+            - title: Report Last Group
+              description: Allows you to repeat the last group scanned with the same scan parameters
+
+  utter_SmartPrep Display Screen:
+    - custom: 
+            payload: "collapsible"
+            data: 
+            - title: Upper left viewport
+              description: Display the baseline image with the ROIs. 
+            - title: Upper right viewport
+              description: Displays the real time monitoring image as it reconstructs along with the ROIs. 
+            - title: Lower left viewport
+              description: Displays in real time, the time that each monitoring scan was acquired based on the beginning of the monitor delay as well as showing the ROI values for each scan. The lower right quadrant also displays on the elapsed time clock. This displays, in real time, the time from when StartScan was selected for the monitor phase until the Scan Phase icon was selected. This is the inject to scan delay for this series of scans
+
+      
+  utter_SmartPrep_SetUp:
+    - text: "1. From the ViewEdit screen, click SmartPrepRx. 
+2. Click On, if SmartPrep is Off. 
+3. To automatic transition from Monitor Phase to Scan Phase when Transition ROI reaches threshold, click Dynamic Transition. 
+4. From the scout localizer on the display monitor, click and drag the red X on the slice line to define the Monitor location. Alternatively, type in the S/I location in the Monitor Location text field.
+5. From the SmartPrep screen, enter the following values:
+(collapsable)
+mA (range 10 to 100 in 10 mA increments), typically enter 40 mA for most studies.  
+Monitoring Delay (0to 60 seconds in1 second increments) sets the time before monitoring scans begin.  
+Monitoring ISD(1 to 60 seconds in1 second increments) sets the time between monitoring scans.  
+Enhancement Threshold (0 to 1,000 in steps of 1) sets the bar on the graph to monitor threshold enhancement. With Dynamic Transition is On, the Scan Phase starts automatically when the HU value of the Transition ROIreaches the Enhancement Threshold. 
+Diagnostic Delay, (range 3 to 60 in 0.1 second increments) typically set to the minimum value (automatic) for arterial studies and 10 seconds or longer for venous studies.
+
+6. From the SmartPrep screen, click Accept.
+7. Proceed to Acquire a SmartPrep scan.
+
+"
+      
+  utter_Motion_Correction:
+    - text: "This feature minimizes Lateral Motion in Axial Head Scans. Available in all PMRs and RetroRecon. Note : Motion Correction does not apply to the following cases. Helical/Cine scans and Segment Rotation Length"
+      image:      
+  utter_Gray_Scale_Enhancement:
+    - text: "This feature is available for all Head Scans. Improves Gray Scale in Head Images. Available in Prospective and Retro Recon Modes."
+      image:      
+  utter_Image_Filter:
+    - text: "This feature is available for all Scan Modes. Available in Prospective and Retro Recon Modes Smooth (S1, S11, S2, S21, S3), Edge (E1, E2, E21, E22, E23, E3), Lung (Lu)"
+      image:
       
 actions:
 - action_greet_user
-- action_custom_fallback
+# - action_custom_fallback
