@@ -1,32 +1,1400 @@
-intents:
-  - greet
-  - goodbye
-  - affirm
-  - thanks
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-
-responses:
-  utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_welcome:
-  - text: "Cool! You're Welcome"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
-  utter_goodbye:
-  - text: "Bye"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+intents:
+- greet
+- thanks
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- purpose
+- cannot_do
+- usage
+- language
+- prerequisites
+- warning_label
+- precautionary_signs
+- popup
+- legends
+- navigation_bar
+- exam_rx
+- image_works
+- disk_storage
+- daily_preparation
+- scanner_utilities
+- application_configuration
+- service
+- message_bar
+- function_status_area
+- system_status
+- new_patient
+- emergency_patient
+- protocol_selection
+- scan_setup_screen
+- scan_patient_position
+- scan_parameters
+- scan_dosage_info
+- patient_schedule
+- retro_recon
+- recon_management
+- setting_imageworks
+- multitask_bar
+- ui_conv
+- select_items
+- cancel
+- buttons
+- troubleshoot
+- textfield_invalid
+- air_caliberations
+- scan_aborts
+- wrong_screen
+- no_response
+- lowdisk_space
+- harddrive_failure
+- regulation_information
+- system_uses
+- Dose_Check
+- Dose_check_use
+- Setting_Dose_Administrator_Role
+- Setting_AV_Exceeding_User_Role
+- Configure_the_system_for_dose_checking
+- Configure_the_system_for_alert_value_by_age_threshold
+- Configure_the_system_for_protocol_change_control
+- Building_protocols_using_protocol_change_control
+- Building_protocols_with_notification_values
+- Building_protocols_with_notification_values_by_factor
+- Scan_using_alert_value_checking
+- Scan_using_Notification_Value_nv_checking
+- Using_the_dose_audit_tool
+- Dose_Check_Log
+- Protocol_Summary
+- save_Dose_Check_Log
+- Radiation_exposure_sensitivity
+- Dose_reporting_considerations
+- Minimize_pediatric_and_small_patient_doses
+- Pediatric_and_small_patient_scans
+- optimize_pediatric_protocol
+- pediatric_protocols
+- Color_Coding_for_Kids_Protocol
+- Set_up_a_pediatric_or_small_patient_exam
+- Adjust_pediatric_and_small_patient_scan_parameters
+- computer_console_parts
+- Digital_video_disk_read_write_drive
+- USB_connection
+- Computer_power_switch
+- computer_function
+- reconstruction_engine
+- Monitor_stabilization
+- monitor_burn
+- monitor_timeout
+- SCBSV_keyboard
+- SCBSV_keyboard_keys
+- SCBSV_keyboard_function_keys_f1_to_f3
+- SCBSV_keyboard_function_keys_f5_to_f11
+- SCBSV_keyboard_pageup_pagedown_keys
+- SCBSV_keyboard_WL_control_keys
+- mouse_usage
+- mouse_operations
+- gantry_display_usage
+- gantry_display_table_height
+- error_message_in_gantry
+- gantry_internal_components
+- table_max_weight
+- table_functions
+- table_hardware_components
+- table_component_collimator
+- table_component_gantry
+- table_component_matrix_detector
+- table_component_other_changes
+- table_component_coverage
+- table_component_axial_detector_signal_collection
+- table_component_axial_interval
+- table_component_helicalpitch_scanmode_collimation
+- scan_mode_pitches
+- beam_collimation_conversion
+- reduce_helical_artifact
+- axial_detector_usage
+- axial_detector_colors
+- axial_detector_rotation_speed
+- axial_slice_range
+- axial_detector_images_per_rotation
+- axial_detector_coverage_selection
+- axial_detector_retro_recon_selection
+- helical_detector_parameters
+- helical_detector_colors
+- power_distributor_usage
+- power_distributor_buttons
+- Xray_tube_usage
+- out_of_scope
+- high_freqeuncy_generator
+- optimal_restart
+- automatic_software_update
+- shutdown_with_usb
+- login_reason
+- logging_off
+- prepare_system
+- startup
+- login
+- logout
+- shutdown_restart
+- tubeID_verification_fails
+- daily_prep_screen
+- tube_warm_up
+- calibration
+- daily_calibration
+- full_system_caliberation
+- warning_message_air_calibrations
+- non_ge_xray_tube
+- daily_qa_workflow
+- tube_warmup_warning
+- tube_warm-up
+- tube_warmup_usage
+- fast_cal_considerations
+- fast_calibrations
+
+
+responses:
+  utter_greet:
+  - text: Hey Buddy! How can I help you?
+  utter_welcome:
+  - text: Cool! You're welcome.
+  utter_did_that_help:
+  - text: Did that help you?
+    buttons:
+    - payload: YES
+      title: YES
+    - payload: NO
+      title: NO
+  utter_canthelp:
+  - text: I'm still learning. Refer the manual for more info!
+    custom:
+      payload: pdf_attachment
+      title: ACTS Manual
+      url: http://localhost:7000/img/manual.pdf
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_purpose:
+    - text: "It is a replacement to the manual, providing information on the purpose, prerequisite skills, organization, format, and graphic conventions that identify the visual symbols used throughout the MedBot.
+"
+  utter_cannot_do:
+    - text: "The assistant does not identify the following applications 
+
+Common user-interface with Advantage Windows for improved productivity. The OC1 now supports an expanded list of Advanced Application packages such as Volume Viewer, CT Perfusion 4- Multi-Organ or Neuro only, Advantage CTC Pro, AutoBone, AVA Xpress, and Dentascan. Volume Viewer is a prerequisite to support Advantage CTC Pro, AutoBone, and AVA Xpress
+
+It is not intended to teach imaging or to make any type of clinical diagnosis. It is necessary for you to have sufficient knowledge to competently perform the various diagnostic imaging procedures within your modality. 
+"
+  utter_usage:
+    - text: "The MedBot provides the necessary information relating to the proper operation of this system. It is intended to teach you the system components and features necessary to use it to its maximum potential.
+"
+  utter_language:
+    - text: "This user manual is originally written in English and so the MedBot can respond to queries in English only.
+"
+  utter_prerequisites:
+    - text: "The operator profile may be limited to registered CT technologists certified by national registries, state licenses, or organizational certification, physicians with or without specific training in radiology, physicists, or other persons adequately trained to operate the equipment.
+    The MedBot is not intended to teach imaging. This knowledge should be gained prior to the user.
+    "
+  utter_warning_label:
+    - image: http://localhost:7000/img/danger.png
+      text: "DANGER:  Danger is used to identify conditions or actions for which a specific hazard is known to exist that will cause severe personal injury, death, or substantial property damage if the instructions are ignored. 
+
+WARNING: Warning is used to identify conditions or actions for which a specific hazard is known to exist that may cause severe personal injury, death, or substantial property damage if the instructions are ignored.
+
+CAUTION: Caution is used to identify conditions or actions for which a potential hazard may exist that will or can cause minor personal injury or property damage if the instructions are ignored.
+
+For more safety or warning symbols/icons, click here
+"
+      buttons:
+      - payload: More warning labels
+        title: More warning labels
+        
+  utter_precautionary_signs:
+    - text: "
+IMPORTANT Important indicates information where adherence to procedures is crucial or where your comprehension is necessary to apply a concept or effectively use the product
+
+NOTE: Note provides additional information that is helpful to you. It may emphasize certain information regarding special tools or techniques, items to check before proceeding, or factors to consider about a concept or task
+
+TROUBLESHOOTING: Troubleshooting tips provide information that allows you to investigate the resolution of some type of problem, locate the difficulty, and make adjustments to solve the problem.
+"
+  utter_popup:
+    - text: "Pop-up message windows require an acknowledgment typically by clicking OK or Accept. Always respond to the message.
+"
+  utter_legends:
+    - text: "The following has a list of examples and its description for conventions and legends used by the MedBot.
+
+Select - Select an option in a checkbox or radial button and selecting a tab.
+
+Press Enter - Press a hard key on the keyboard or equipment.
+
+Press and hold shift - Press and hold down a hard key on the keyboard.
+
+Click viewer - A button label or Interface button name that you actively click. If there is a reference to a button label that is not actively clicked, it is not displayed in bold or italics.
+
+In the Spacing field - The name of the field in which you can select or type text
+
+Type supine in the Patient Position field - Text you enter into a field.
+
+Select Sort > Sort by date - The pathway of selecting options in a pull-down menu
+
+CtrlX simultaneously - Press and hold the Control button on the keyboard and simultaneously press the X button on the keyboard. Ctrl is the abbreviation used for the Control keyboard button, and ALT is the abbreviation used for the Alternative keyboard keys.
+
+“Messages” - A system message prompt is in quotations
+
+Cancel/Close - Cancel/Close typically closes a screen without executing the changes on the screen. The instructions to Cancel/Close cannot be answered by the MedBot as they are not included in manual procedures.
+"
+#------------------------------------------------chapter 1-------------------------------------------------------------------------
+  utter_navigation_bar:
+    - text: "The Navigation Bar can be considered as the switch for the work environment. When a desktop is open, all the functions related to that desktop are placed on the monitor. The Navigation Bar is divided into three sections
+"
+      buttons:
+      - payload: Exam RX
+        title: Exam RX
+      - payload: ImageWorks 
+        title: ImageWorks 
+      - payload: Disk space and system time display 
+        title: Disk space and system time display 
+
+  utter_exam_rx:
+    - text: "During scanning, display Viewport to view images, and the New Patient and Scan Equipment screen"
+
+  utter_image_works:
+    - text: "Displays a browser from which you can view other exams, archive, network, manual film, apply measurements and apply other features to an image, perform 2D reformations, and access optional software features.
+"
+
+  utter_disk_storage:
+    - text: "The disk space and system time display area displays the date, time, and available system disk space. As a whole, it displays the following
+1. Displays available disk space. 
+2. Current date and time display as per the selected format
+"
+      buttons:
+      - payload: Daily Preparation
+        title: Daily Preparation
+      - payload: Scanner Utilities
+        title: Scanner Utilities 
+      - payload: Protocol Management
+        title: Protocol Management
+      - payload: Service
+        title: Service
+
+  utter_daily_preparation:
+    - text: "Click the Daily Prep icon to start tube warm-up or quick calibration."
+      image: http://localhost:7000/img/daily_preparation.png
+  
+  
+  utter_scanner_utilities:
+    - text: "Click the Scanner Utilities icon to view the Scanner Utilities screen. Utilities are used primarily by service representatives for system calibration activities."
+      image: http://localhost:7000/img/scanner_utilities.png
+
+  utter_application_configuration:
+    - text: "Click the icon, and then click Protocol Management to view the Protocol Management screen, or click Auto Voice Record to record new automated voice messages and click Dose check management to set dose check settings."
+      image: http://localhost:7000/img/application_configuration.png
+  utter_service:
+    - text: "Click Service icon to view study solutions, iLinq, service, and to shut down or restart the system "
+      image: http://localhost:7000/img/service.png
+
+  utter_message_bar:
+    - text: "The status area displays system messages and reconstruction, archive, network, film, and reconstruction status. It is divided into three areas
+    1.Operator Console Information Area
+2.Function and Status Area
+3.System Status Message Area 
+"
+      custom: 
+            payload: "collapsible"
+            data: 
+            - title: Function status Area
+              description: i)The Recon Status displays the status as the percent of images completed for the exam, series, and image range for both prospective and retrospective reconstruction. Click Recon Status to display the Recon management screen. 
+               ii)The Archive/Restore Status displays the status of the exam, series, and images currently being saved or restored as well as the status of the storage media.
+               iii)The Remove Status is displayed as Removing or Removed. The individual exams, series, or images are not listed.  
+               iv)The Network Status displays the status of the exam, series, and images currently being sent or received.
+            - title: System Status Message Area
+              description: i)Click on the area to see a list of system messages. These messages are not necessarily error messages but can be any informational message generated by the system.  
+                ii)View Log opens the system log for more detailed information about messages and errors.  
+                iii)Clear removes messages displayed in the message area.  
+                iv)Close closes the message window.  
+                v)Memo allows you to leave a memo for the service engineer
+
+  utter_function_status_area:
+    - text: "i)The Recon Status displays the status as the percent of images completed for the exam, series, and image range for both prospective and retrospective reconstruction. Click Recon Status to display the Recon management screen. 
+ii)The Archive/Restore Status displays the status of the exam, series, and images currently being saved or restored as well as the status of the storage media.
+ iii)The Remove Status is displayed as Removing or Removed. The individual exams, series, or images are not listed.  
+iv)The Network Status displays the status of the exam, series, and images currently being sent or received.
+"
+
+  utter_system_status:
+    - text: "i)Click on the area to see a list of system messages. These messages are not necessarily error messages but can be any informational message generated by the system.  
+ii)View Log opens the system log for more detailed information about messages and errors.  
+iii)Clear removes messages displayed in the message area.  
+iv)Close closes the message window.  
+v)Memo allows you to leave a memo for the service engineer
+"
+
+  utter_new_patient:
+    - text: "i)Click on the area to see a list of system messages. These messages are not necessarily error messages but can be any informational message generated by the system.  
+ii)View Log opens the system log for more detailed information about messages and errors.  
+iii)Clear removes messages displayed in the message area.  
+iv)Close closes the message window.  
+v)Memo allows you to leave a memo for the service engineer
+"
+      image: http://localhost:7000/img/new_patient.png
+
+  utter_emergency_patient:
+    - text: "Click the Emergency Patient icon to enable emergency protocol options. It is divided into multiple areas:
+Area 1 = patient information area. The Patient ID is always Trauma. The Patient Name is Year/Month/Day/ Time and the CT name. Both fields can be modified.
+Area 2 = protocol selection area. Protocols are set and edited in Protocol Management.
+"
+      image: http://localhost:7000/img/emergency_patient.png
+
+  utter_protocol_selection:
+    - text: "Find the image below"
+      image: http://localhost:7000/img/protocol_selection.png
+
+  utter_scan_setup_screen:
+    - image: http://localhost:7000/img/scan_setup_screen.png
+      text: "The Scan Setup screen displays when an exam is in process. It is divided into multiple areas: "
+      buttons:
+      - payload: Patient Position and Series Level Functions area 
+        title: Patient Position and Series Level Functions area 
+      - payload: ViewEdit Area
+        title: ViewEdit Area
+      - payload: Displays multiple types of content 
+        title: Displays multiple types of content 
+
+  utter_scan_patient_position:
+    - text: "The buttons that display in the Series Level Functions area may vary depending on your system configurations and purchased options."
+
+
+  utter_scan_parameters:
+    - text: "This is the area in which you adjust scan parameters. It also displays real-time scan progress information. 
+ViewEditconventions:  You can edit the fields by row or column. If you edit by column, then the changes will apply to all rows. If you edit by row, any changes only apply to the selected row. 
+
+"
+
+  utter_scan_dosage_info:
+    - text: "Typically, dose information is displayed in this area. It may also display Real-Time information when the active application requires it
+"
+
+  utter_patient_schedule:
+    - text: "Click the Patient Schedule icon to enable the Schedule screen. Here, you can update and select the patients by clicking the appropriate buttons
+Retro Scan
+"
+
+  utter_retro_recon:
+    - text: "Click Retro Recon to open the Retro Recon List Select screen. Select the desired exam and series, then click Select Series to open Retro Recon. Retro ViewEdit conventions. 
+
+ You can edit the fields by row or column. If you edit by column, then the changes will apply to all rows. If you edit by row, the change only applies to the selected row.
+"
+
+  utter_recon_management:
+    - image: http://localhost:7000/img/recon_management.png
+      text: "Click ReconStatus to display the Recon Management screen(1), some options will open the second area (2)."
+
+  utter_setting_imageworks:
+    - image: http://localhost:7000/img/setting_imageworks.png
+      text: "
+Click Image Works to open the browser. Select exam/series/images from the patient list (2) and select an application from the browser list of applications (1).
+"
+
+  utter_multitask_bar:
+    - text: "Click the Film icon to enter film."
+      image: http://localhost:7000/img/multitask_bar.png
+
+  utter_ui_conv:
+    - text: "Please select any one of the following to know its conventions"
+      buttons:
+      - payload: Select items from a list
+        title: Select items from a list
+      - payload: cancel
+        title: cancel
+      - payload: buttons
+        title: buttons
+  utter_select_items:
+    - text: "Single item: Click the item. 
+Multiple contiguous items: Click and drag over to cover a desired list of items. Click a start point in the list, press Shift, click an end point in the list, and all items between start and end are selected. 
+Multiple Non-contiguous: items Press Ctrl and simultaneously click each item."
+
+  utter_cancel:
+    - text: "The Cancel button closes a screen without executing the actions or implementing the parameters given on the screen.
+"
+
+  utter_buttons:
+    - image: http://localhost:7000/img/buttons_grey.png
+      # image: http://localhost:7000/img/buttons_yellow.png
+      # image: http://localhost:7000/img/buttons_red.png
+      text: "Buttons that are gray are currently not available
+Buttons that are selected are yellow
+Buttons that are sensitive and invalid are red. 
+Buttons that are sensitive and the value appearing in the button is updated by the system are orange. 
+"
+  utter_troubleshoot:
+    - text: "please select an option below"
+      buttons:
+      - payload: invalid text field
+        title: invalid text field
+      - payload: air caliberations
+        title: air caliberations
+      - payload: scan abort
+        title: scan abort
+      - payload: wrong screen
+        title: wrong screen
+      - payload: no response
+        title: no response
+      - payload: lowdisk space
+        title: low disk space
+      - payload: hard drive failure
+        title: hard drive failure
+
+
+  utter_textfield_invalid:
+    - text: "If you can no longer type in a field, move the cursor to the field and click the middle mouse to restore functionality. If this does not work, then a system shutdown is required.
+"
+
+  utter_air_caliberations:
+    - text: "Complete all Fast Cal sections. This will ensure the validity of system air calibrations and generator calibrations
+"
+
+  utter_scan_aborts:
+    - text: "Scan aborts may occur during Axial or Helical scanning. Always be aware of the scan progress during an Exam, in the event it stops, select Resume immediately to continue
+"
+
+  utter_wrong_screen:
+    - text: "In general, wait for a screen transition to complete before making another selection. Switching desktops before the user interface is displayed can result in the wrong screen displayed on the desktop."
+
+
+  utter_no_response:
+    - text: "If the console has no response after 2 minutes or longer, please click Shutdown to restart the system. If you cannot select Shutdown, turn off the console power switch, wait 10 seconds, then turn the console power switch back on. The system should come up normally."
+
+
+  utter_lowdisk_space:
+    - text: "A pink warning dialog may appear indicating the system has low disk space due to a full system disk partition. Removing images does not resolve the problem. Contact your service representative to help resolve the problem. If a message to run store log appears, select the option to remove the logs.
+"
+
+  utter_harddrive_failure:
+    - text: "If you see the following message, please contact your service provider: Attention – Scan disk array has encountered a hard drive failure The system is functional, but if another hard drive fails you will lose scan data. Please contact GE service to have the disk array repaired as soon as possible.
+"
+#-------------------------------------------chapter  3 and 4 -----------------------------------------------------------------------
+  utter_Configure_the_system_for_protocol_change_control:
+  - image: http://localhost:7000/img/config_system_for_protocol_change.png
+    text: "Please note that You must have one user that is assigned to a group with\
+      \ the Dose Administrator role to enable Protocol Change Control.\n1. Click DoseCheck\
+      \ Management from Protocol Management. 2. In the Protocol, Change Control section.\
+      \ Click Off to enable PCC. 3. Click Save. "
+  utter_regulation_information:
+  - text: "1. What do the product’s regulations and standards?\nCouncil Directive\
+      \ 93/42/EEC concerning medical devices when it bears the following CE marking\
+      \ of conformity:\nManufacturer and Place of Origin: WIPRO GE HEALTHCARE PRIVATE\
+      \ LIMITED 122, PART 1, Export Promotion Industrial park, WHITEFIELD BANGALORE\
+      \ 560066, INDIA "
+  utter_system_uses:
+  - text: 'This system is designed for CT image scanning of the head and body. '
+  utter_Dose_Check:
+
+  - text: "The DoseCheck feature intends to notify and alert the operating personnel,\
+      \ generally technologists, that prepare and set the scan parameters, prior to\
+      \ starting a scan, whether the estimated dose index is above the value defined\
+      \ and set by the operating group, practice, or institution to warrant notification\
+      \ to the operator.\nBefore using DoseCheck, the site physicist, and/or radiation\
+      \ safety officer in collaboration with the Radiologist, should have an understanding\
+      \ of the current dose levels of site scanning protocols and the maximum dose\
+      \ threshold that should not be exceeded in the sites’ clinical practice. Using\
+      \ this information, an appropriate starting pointfortheNotification Value for\
+      \ each protocol and system Alert Value should be set\nThe various terminologies\
+      \ used are:\n1.Notification Value (NV)2.Alert Value (AV)\
+      \ 3.DoseCheckAdministrator  4.Dose Check AV Exceeding User\
+      \ 5.ProtocolChangeControl "
+    custom:
+          payload: quickReplies
+          data:
+          - title: Setting the Dose Administrator Role
+            payload: Setting the Dose Administrator Role
+          - title: Configure the system for protocol change control
+            payload: Configure the system for protocol change control
+          - title: Building_protocols_using_protocol_change_control
+            payload: Building_protocols_using_protocol_change_control
+          - title: Building_protocols_with_notification_values
+            payload: Building_protocols_with_notification_values
+  utter_Dose_check_use:
+  - text: '1.Checking against a Notification Value if the estimated dose for the scan
+      is above your site typical dose value. Checking against an Alert Value where
+      the user needs specific authority to continue the scan at the currently estimated
+      dose without changing the scan parameters. 2.Defining Alert Values for Adult
+      and Pediatric with age threshold. 3.Audit logging and review 4.ProtocolChangeControl '
+    custom:
+          payload: quickReplies
+          data:
+          - title: Setting the Dose Administrator Role
+            payload: Setting the Dose Administrator Role
+          - title: Configure the system for protocol change control
+            payload: Configure the system for protocol change control
+          - title: Building protocols using protocol change control
+            payload: Building protocols using protocol change control
+          - title: Building protocols using notification values
+            payload:  Building protocols using notification values
+  utter_Setting_Dose_Administrator_Role:
+  - image: http://localhost:7000/img/add_user.png
+    text: "1.Click Dose Check Management from Protocol Management. 2. Click the User\
+      \ Admin Tool. 3. From the EA3 Administration screen, type your Username and\
+      \ Password. Consult your service engineer or Application Representative for\
+      \ user name and password. 4. From the Local Users tab, click Add Local User.\
+      \ 5. From the pop-up panel, type information for each of the following: A unique\
+      \ user ID FullName Password Confirm password\n6. Click Add User. 7. From the\
+      \ Groups tab, click Add Local Group. Alternately, the system can be configured\
+      \ for Enterprise groups if Enterprise authentication has been enabled. 8. From\
+      \ the Add Local Group window, type and enter a unique group name 9. Click Add\
+      \ Group The group is highlighted in the Local Groups list box. All information\
+      \ and buttons in the center panel refer to the highlighted group. 10. To change\
+      \ a group's roles, select the Dose Admin Role option box, and click Apply Roles.\
+      \ a. A green label confirms the applied roles. b. An error message box displays\
+      \ if it is unsuccessful. "
+    custom:
+          payload: quickReplies
+          data:
+          - title: Setting the AV Exceeding user Role
+            payload: Setting the AV Exceeding user Role
+          - title: Configure the system for dose checking
+            payload: Configure the system for dose checking
+          - title: Configure the system for alert value by age threshold
+            payload: Configure the system for alert value by age threshold
+  utter_Setting_AV_Exceeding_User_Role:
+    - text: "1.Click Dose Check Management from Protocol Management.
+2. Click the User Admin Tool. 
+3. From the EA3 Administration screen, type your Username and Password.
+ Consult your service engineer or Application Representative for user name and password. 
+4. From the Local Users tab, click Add Local User.
+5. From the pop-up panel, type information for each of the following:
+A unique user ID
+FullName
+Password
+Confirm password
+
+6. Click Add User. 
+7. From the Groups tab, click Add Local Group. Alternately, the system can be configured for Enterprise groups if Enterprise authentication has been enabled.
+8. From the Add Local Group window, type and enter a unique group name
+9. Click Add Group  
+The group is highlighted in the Local Groups list box.  
+All information and buttons in the center panel refer to the highlighted group.
+10. To change a group's roles, select the Dose Admin Role option box, and click Apply Roles. 
+a. A green label confirms the applied roles. 
+b. An error message box displays if it is unsuccessful.
+"
+  utter_Configure_the_system_for_dose_checking:
+  - image: http://localhost:7000/img/config_system_for_protocol_change.png
+    text: "Please note that you must have one user that is assigned to a group with\
+      \ Dose Administrator role to enable confirm DoseCheck settings\n1. Click DoseCheck\
+      \ Management from Protocol Management 2. Set Checking for Notification Value\
+      \ (NV). a. In the NV Checking section Click CTDIvol and/or DLP. b. Type a value\
+      \ for CTDIvol and/or DLP. The range for NV is 0 to ≤ to the value set for AV.\
+      \ Or, the letter N can be entered to indicate that no checking will be done.\n\
+      The system default is NV checking CTDIvol On and DLP Off. GE reference protocols\
+      \ will not contain any NV values.\n3. Set checking for Alert Value (AV). a.\
+      \ In the AV Checking section Click CTDIvol and/or DLP. b. Type a value for CTDIvol\
+      \ and/or DLP. The maximum AV value for CTDIvol is 2000 mGy. The maximum AV value\
+      \ for DLP is 400,000 mGy-cm.  The system default is AV checking by CTDIvol On\
+      \ with a value of 1000mGy. DLP checking Off with a value of 0 mGy-cm.\nAlert\
+      \ Value should be determined by a collaboration between the Radiologist and\
+      \ Physicist at the site.\n4. Click Save "
+  utter_Configure_the_system_for_alert_value_by_age_threshold:
+  - image: http://localhost:7000/img/config_sys_for_alert_by_age_thershold.png
+    text: "Please note that you must have one user that is assigned to a group with\
+      \ the Dose Administrator role to confirm Dose Check settings.\nAV value used\
+      \ is based on the following criteria: Age value in New Patient. If no age value\
+      \ present then the system will default to the higher age range.\n\n1. Click\
+      \ Dose Check Management from Protocol Management. 2. In the AV (Alert Value)\
+      \ Checking section, click Add Age Threshold. 3. Type the desired Patient Age.\
+      \ 4. Type a value for CTDIvol and/or DLP. The maximum AV value for CTDIvol is\
+      \ 2000 mGy. The maximum AV value for DLP is 400,000 mGy-cm. The system default\
+      \ is AV checking by CTDIvol On with a value of 1000 mGy. DLP checking Off,0\
+      \ mGy  The value must be lower than the Adult AV value. 5. Click save "
+
+  utter_Building_protocols_using_protocol_change_control:
+    - image: http://localhost:7000/img/Building_protocols_using_protocol_change_control.png
+      text: "When PCC is enabled the system will require an authorized user to accept protocol parameter updates. Perform the Following steps.
+
+1. Click DoseCheck Management From Protocol Management. 
+2. Click LogonName.
+3. Type the user name.
+4. ClickPassword.
+5. Type the User password.
+6. Click Logon.
+
+9. Authorized user for building protocols using protocol change control 
+
+HIPAA is enabled and the currently logged in user has Standard User Role. 
+If HIPAA is not enabled, when Protocol Management is selected the user will be presented with a authorization screen
+"     
+
+  utter_Building_protocols_with_notification_values:
+    - image: http://localhost:7000/img/Building_protocols_with_notification_values.png
+      text: "NV values can only be set in Protocol Management. 
+1. From the scan monitor, click the Protocol Management Icon. 
+2. On the Auto Voice and Protocol Management screen, click Protocol Management. 
+3. On the Protocol Selection screen, click User. 
+4. On the User tab click an Anatomical area. 
+5. In the Anatomical Area click on a protocol.
+6. Click Next Series to go to the first non-scout series in the protocol. 
+7. From the Dose Information area click Set Up.
+8. Type the desired CTDIvol or DLP NV value by group.  
+Only one CTDIvol or DLP value can be set for SmartPrep scan groups.
+ 9. Click Info to return to the Dose Information display. 
+10. Click Accept to save the protocol parameters.
+ The system compares all the CTDIvol and DLP values in the scan groups to the entered NV value. 
+The protocol parameters will not be accepted until the NV value is no longer exceeded or the user has entered a Diagnostic Reason for continuing to accept the scan parameters exceeding the NV Value
+Saving a protocol with a dose level exceeding an NV value demands a high degree of consideration for appropriateness. Therefore, in most cases, you will click Cancel to go back to adjust parameters. However, if there is a true clinical reason to save a protocol exceeding an NV value, then enter a diagnostic reason. 
+
+11. Click in theDiagnostic Reason text field. 
+12. Type the reason for scanning exceeding the NV value.  
+The maximum number of characters is 64.  
+Once the maximum number of characters is reached the system will not accept any additional character input.
+13. Click Confirm to accept the protocol scan parameters
+"
+
+  utter_Building_protocols_with_notification_values_by_factor:
+    - image: http://localhost:7000/img/Building_protocols_with_notification_values_by_factor.png
+      text: "If the NV value in a scan group were 5 and a factor of 1.5 was entered, the new NV value for the group would be 7.5
+
+Can by entered in increments of 0.1
+Must be greater than 0  
+Maximum value of 10
+
+1. From the scan monitor, click the Protocol Management Icon. 
+2. On the Auto Voice and Protocol Management screen, click Protocol Management.
+3. On the Protocol Selection screen, click User. 
+4. On the User tab click an Anatomical area. 
+5. In the Anatomical Area click on a protocol. 
+6. Click Next Series to go to the first non-scout series in the protocol. 
+7. From the Dose Information area click Set Up
+8. Click NV column edit. 
+9. Type the desired factor. 
+10. Click Accept. 
+11. Click Info to return to the Dose Information display"
+
+  utter_Scan_using_alert_value_checking:
+    - text: "
+The CTDIvol or DLP value will be highlighted when the estimated dose for the protocol exceeds the AV value set for the system.
+"
+      image: http://localhost:7000/img/scan_using_alert_value_checking_1.png
+      buttons:
+        - title: Scan using notification value checking
+          payload: Scan using notification value checking
+        
+#       text: "Adjust the scan parameters for the series in which the AV value is exceeded to adjust the dose below the prescribed AV value. If the AV value is still exceeded when Confirm is selected a confirmation pop up will be posted. The scan cannot be confirmed until the AV value is no longer exceeded or a user with a Dose Check AV Exceeding user role has authorized the scan. 
+
+# Performing a scan exceeding an AV value demands a high degree of consideration for appropriateness. Therefore, in most cases, you will click cancel to go back to adjust parameters. However, if there is a true diagnostic need to perform a scan exceeding an AV value.
+# "
+#       image: http://localhost:7000/img/Scan_using_alert_value_checking_2.png
+#       text: "
+# 1. Click in the Logon Name text field. 
+# 2. Type the UserName. 
+# 3. Click in the Password text field. 
+# 4. Type the user password. 
+# 5. Click in the Diagnostic Reason text field. 
+# 6. Type the reason for scanning exceeding the AV value. 
+#  The maximum number of characters is 64.  
+#  Once the maximum number of characters is reached the system will not accept any additional character input. 
+# 7. Click Confirm to proceed to scanning.
+# "
+  utter_Scan_using_Notification_Value_nv_checking:
+    - image: http://localhost:7000/img/Scan_using_Notification_value_nv_checking.png
+      text: "The CTDIvol or DLP value will be highlighted when the estimated dose for a scan group exceeds the NV value set for each scan group
+
+Adjust the scan parameters for the scan group in which the NV value is exceeded to adjust the dose below the prescribed NV value. If the NV value is still exceeded when Confirm is selected a confirmation pop up will be posted. The scan cannot be confirmed until the NV value is no longer exceeded or the user has entered a Diagnostic Reason for continuing the scan exceeding the NV Value
+
+1. Click in the Diagnostic Reason text field. 
+2. Type the reason for scanning exceeding the NV value.  
+The maximum number of characters is 64.  
+Once the maximum number of characters is reached the system will not accept any additional character input. 
+3. Click Confirm to proceed to scanning.
+
+"
+      buttons:
+        - title: Scan using alert value checking
+          payload: Scan using alert value checking
+
+  utter_Using_the_dose_audit_tool:
+    - text: "a. Dose Check Log detailing exams which exceeded NV or AV values 
+b. Protocol Summary for protocolNV values
+c. Export to save Dose Check Log data to media
+"
+      custom:
+          payload: quickReplies
+          data:
+          - title: dose check log
+            payload: dose check log
+          - title: protocol summary
+            payload: protocol summary
+          - title: save dose check log
+            payload: save dose check log
+
+  utter_Dose_Check_Log:
+    - text: "1. On the Auto Voice, Protocol Management and Dose Check Management screen, click Dose Check Management. 
+2. On the Dose Check Management screen, click Log List.
+3. From the Dose Audit Tool, click Audit Tool. 
+4. On the Log List click on the desired log. 
+If the log data approaches the maximum size, the system will post a message directing the user to export the log data.
+"
+
+  utter_Protocol_Summary:
+    - image: http://localhost:7000/img/protocol_summary.png
+      text: "1. Click DoseCheck Management from Protocol Management. 
+2. On the Dose Check Management screen, click Audit Tool. 
+3. In the Protocol Summary area, click All Protocols or Invalid Protocols.
+"
+
+  utter_save_Dose_Check_Log:
+    - text: "1. Click DoseCheck Management From Protocol Management. 
+2. Insert CD –R media in the DVD RW drive or insert USB media in the USB port of the media tower. 
+3. On the Dose Check Management screen, click Audit Tool. 
+4. On the Dose Audit Tool, click Export. 
+5. On the Export Media screen, click media type CD/DVD or USB. 
+6. Onthe Export Contents, click 1 or more of the following: DoseCheck Log, Protocol Summary or User Protocols  
+If Protocol Summary is selected click All Protocols or Invalid Protocols. 
+7. On the Export screen, click OK.
+
+"
+#---------------------------------------------------chapter 5-------------------------------------------------------------------
+  utter_Radiation_exposure_sensitivity:
+    - text: "Radiation risk is higher in young patients, as they have more rapidly dividing cells than adults. The younger the patient, the more sensitive they are CT settings can be adjusted to reduce dose significantly while maintaining diagnostic image quality.
+"
+      custom:
+          payload: quickReplies
+          data:
+          - title: Dose reporting considerations
+            payload: Dose reporting considerations
+          - title: pedeatric scans
+            payload: pedeatric scans
+          - title: pediatric protocols
+            payload: pediatric protocols
+  utter_Dose_reporting_considerations:
+    - text: "it is important to recognize that the dose reported by these indices is inversely proportional to phantom size This means that for the same scan technique, smaller phantoms (patients) will produce a higher absorbed dose than larger phantoms(patients). Therefore, it is critical to remember that the body filter uses the 32cmCTDI 1 phantom and the head filter uses the16 cm CTDI phantom for dose reporting purposes (CTDIvol is displayed in the Dose Information area on the ViewEdit screen). The table below indicates the phantom size used for calculating dose for each SFOV2"
+      custom:
+          payload: quickReplies
+          data:
+          - title: radiation exposure sensitivity
+            payload: radiation exposure sensitivity
+          - title: pedeatric scans
+            payload: pedeatric scans
+          - title: minimize doses
+            payload: minimize doses
+  utter_Minimize_pediatric_and_small_patient_doses:
+    - text: "There are several steps that can be taken to reduce the amount of radiation that pediatrics and small patients receive from CT examinations.
+
+Perform only necessary CT examinations 
+Scan only the organ or anatomical region indicated
+Minimize multi-phase contrast CT examinations
+Properly center all patients in the gantry
+Lower mA settings for chest and bone imaging 
+Scan signal-to-noise
+Use pediatric positioning accessories
+Make a kid friendly environment
+
+"
+
+  utter_Pediatric_and_small_patient_scans:
+    - text: "Follow the following steps. Select one to know more information on it
+"
+      buttons:
+      - payload: Optimize pediatric protocols for your facility 
+        title: Optimize pediatric protocols for your facility 
+      - payload: Follow Pediatric protocols
+        title: Follow Pediatric protocols 
+      - payload: Color Coding for Kids Protocol Selection 
+        title: Color Coding for Kids Protocol Selection 
+
+  utter_optimize_pediatric_protocol:
+    - text: "Work with your team of radiologists, medical physicists, and CT technologists to evaluate techniques that may reduce radiation dose and still provide adequate diagnostic information. Here are some links to help you out
+
+AmericanCollegeof Radiology (ACR): http://www.acr.org/  
+Society Of PediatricRadiology(SPR):http://www.pedrad.org/  NationalCancerInstitute(NCI):http://www.nci.nih.gov/aboutnci  ImageGently:http://www.imagegently
+"
+
+  utter_pediatric_protocols:
+    - image: http://localhost:7000/img/prediatric_protocols.png
+      text: "The Pediatric Protocol area was designed to help facilitate protocol selection for pediatric patients by providing age based protocol areas for Head, Orbit, and Miscellaneous and color coding system forNeck, Upper Extremity, Chest, Abdomen, Spine, and Pelvis based on age, height and weight
+
+By entering the pediatric patient's weight in the Exam Rx screen, the system automatically selects the appropriate color code area for the anatomical area selected. 
+"
+
+  utter_Color_Coding_for_Kids_Protocol:
+    - image: http://localhost:7000/img/color_coding_for_kids_protocol.png
+      text: "Based on the Broselow-Luten Pediatric System,theColorCodingforKids system was developed to help you select the correct pediatric CT protocol by dividing the protocols into nine color zones based on height and weight, and incrementally increases scan technique as the patient’s size increases. 
+
+Once the anatomical area is selected, the Pediatric Protocol Category screen displays
+Selectors on the color/weight bar are labeled with the zone ranges for weight and length, with the word of the selected color and with the weight/color zone number.
+
+NOTE: Weight-specific protocols are enforced for all anatomical areas except Head, Orbit, and Miscellaneous
+"
+
+  utter_Set_up_a_pediatric_or_small_patient_exam:
+    - text: "The data can also be input by using Patient Schedule or a bar code reader
+
+The / and control characters are not valid for entries on the Exam screen.
+
+1. On the scan monitor, click the Exam Rx icon.
+ The PATIENT INFORMATION screen displays the new Exam Number. 
+ The maximum Exam Number is 49, 999, which is reset by your Field Engineer.
+2. From the PATIENT INFORMATION area, type data into the appropriate fields.
+Press Enter To advance to the next field. Alternatively, use the mouse to navigate to each field.  
+Patient ID is a required field. If the patient does not have an identification number, type? or the word trauma. 
+3. Click PEDIATRIC. 
+4. From the Pediatric Protocol Selection screen, click an anatomical area. 
+ With the patient's weight entered,the system automatically selects the appropriate pediatric color code area for the anatomical area selected.  
+Use the arrows to scroll through the list. 
+Click a protocol from the list to download the scan parameter values.
+5. From The Pediatric Protocol Category screen, select the weight/length category based on the size of your patient or verify the correct Color category has been selected if you entered a weight.  
+The protocols in the selected color code are then displayed accordingly. 	
+The default weight/color selector displays the patient weight entered on the PATIENT INFORMATION screen,or the last weight/color selection (if no patient information was entered).  
+There is no reference protocol for Pediatric areasNeck, Upper Extremity, Chest, Abdomen, Spine, Pelvis, and Lower Extremity.  
+If you enter a patient weight on the Patient Information screen and select a color/weight that is not consistent with the entered information, an error message displays. You must acknowledge that you have chosen a protocol that does NOT match the patient size.
+
+6. Proceed with the Acquire a Scout scan procedure
+"
+      buttons:
+       - payload: parameter adjustment for children
+         title: parameter adjustment for children
+  utter_Adjust_pediatric_and_small_patient_scan_parameters:
+    - text: "Adjust the parameters by size, age, weight, height, and indications
+Consider decreasing the kVp
+Center the patient properly when using AutomA 
+Increase the pitch
+Use Small SFOV Filters 
+"
+      buttons:
+       - payload: pediatric exam
+         title: pediatric exam
+       - payload: pedeatric scans
+         title: pedeatric scans
+
+#-------------------------------------------Chapter 6---------------------------------------------------------------------
+  utter_computer_console_parts:
+    - text: "computer console comprise of"
+      buttons:
+       - payload: Monitor
+         title: Monitor
+       - payload: Operating SCBSV
+         title: Operating SCBSV
+       - payload: The Keyboard  Mouse
+         title: The Keyboard  Mouse
+       - payload: Computer
+         title: Computer
+      image: (pg 143 pdf pg not manual)
+  utter_Digital_video_disk_read_write_drive:
+    - text: "The CD/DVD option uses the DVD-R drive to write to or restore from CD-R or DVD-R.
+\n The Data Export option can save information to CD-R.  
+\n Used to export protocols. 
+\n Used to save scan files, protocols and service files to DVD-RAM media.  
+\n Used to access the electronic copies of the operator documentation
+"
+      
+  utter_USB_connection:
+    - text: "Located at the front of the Computer.  (Number 2 on the image)
+Supports connecting a USB storage device to save or restore scan files or DICOM images.  Supports connecting a USB storage device to export the data.  
+The storage device should have a minimum size of 4 GB.
+"
+      
+  utter_Computer_power_switch:
+    - text: "Located at the front of the computer. (Number 3 on the image)
+Used to start up the system.
+"
+  utter_computer_function:
+    - text: "The computer is located at the base of the console and it contains all the hardware necessary to operate the system and perform image generation. It uses a PC based computer system running a Linux based operating system. 
+The system includes system, image and scan data disks and stores up to 150,000 512 images and 72 gigabytes for scan data files.
+"
+  utter_reconstruction_engine:
+    - text: "The reconstruction engine provides advanced processing capabilities for the reconstruction of routine imaging modes and ASiR mode"
+  utter_console_suggestions:
+    - text: "Sorry I'm Still learning, Kindly refer the bellow suggestions"
+      buttons:
+       - payload: USB connection
+         title: USB connection
+       - payload: Digital video disk read write drive
+         title: Digital video disk read write drive
+       - payload: Computer power switch
+         title: Computer power switch
+       - payload: reconstruction engine
+         title: reconstruction engine
+       - payload: functions of computer
+         title: functions of computer
+       - payload: computer console parts
+         title: computer console parts
+
+
+  utter_Monitor_stabilization:
+    - text: " If the power is turned off to the monitor by either console off or using the power off button on the monitor, it takes 15 minutes for the monitor to stabilize to their set brightness and contrast levels. During this warm-up time, do not make any adjustments to the brightness or contrast levels. 
+"
+  utter_monitor_burn:
+    - text: " For systems left on overnight, turn the monitor off to minimize the possibility of burn-in. 
+If a monitor has experienced burn-in,turn off the monitor and leave it off for the same amount of time as caused the burn-in to occur.  
+"
+  utter_monitor_timeout:
+    - text: "Adjust the time-out period for the screen saver to initiate depending upon your department workflow using the ScreenSaver Time from the Tool Chest.
+
+"     
+  utter_monitor_suggestions:
+    - text: "find the suggestions below"
+      buttons:
+       - payload: monitor stabilization
+         title: monitor stabilization
+       - payload: monitor burn
+         title: monitor burn
+       - payload: monitor timeout
+         title: monitor timeout
+       - payload: SCBSV keyboard
+         title: SCBSV keyboard
+      
+  utter_SCBSV_keyboard:
+    - text: "The keyboard and SCBSV1 consist of a typical alphanumeric keyboard, 10 number keypad, buttons specifically used for initiating scans, and communication with the patient. Standard keyboard keys and SCBSV functions include: 
+Delete or Backspace erases characters  
+Enter confirms what is typed or selected  
+Tab moves across the areas on the current screen
+"
+      
+  utter_SCBSV_keyboard_keys:
+    - text: "find the image below"
+      image: (pg 146 table)
+  utter_SCBSV_keyboard_function_keys_f1_to_f3:
+    - text: "The F1, F3 and F4 function keys can be used for filming to the Manual Film Composer. 
+
+F1 Film Image 
+F3 Film MID 
+F4 Print Series 
+"
+  utter_SCBSV_keyboard_function_keys_f5_to_f11:
+    - text: "The F5 - F11 function keys are used to apply preset W/L1 values in the following applications:  
+ImageWorks Viewer, Mini-Viewer, and Reformat. The W/L values are defined from the Viewer User Prefs.  
+Exam Rx - The W/L values are defined by pressing Shift and the function key to which you want to assign the value
+
+F5 Previous 
+F6 Abdomen 
+F7 Head 
+F8 Lung 
+F9 Mediastinum 
+F10 Spine 
+F11 Vertebrae
+"
+      
+  utter_SCBSV_keyboard_pageup_pagedown_keys:
+    - text: "The Page Up and Page Down keys allow you to review the next and prior images in a viewport or viewports from the Exam Rx or Image Works desktops."
+
+  utter_SCBSV_keyboard_WL_control_keys:
+    - text: "You can use these keys to manually change the W/L settings for images in the Exam Rx and ImageWorks desktops.The Up/Down keys increase/ decrease the window level and the Left/Right keys decrease/increase the window width.
+"
+  utter_keyboard_suggestions:
+    - text: "find the suggestions below"
+      buttons:
+       - payload: SCBSV keyboard keys
+         title: SCBSV keyboard keys
+       - payload: SCBSV keyboard
+         title: SCBSV keyboard
+       - payload: SCBSV keyboard function keys f1 to f3
+         title: SCBSV keyboard function keys f1 to f3
+       - payload: SCBSV keyboard function keys f5 to f11
+         title: SCBSV keyboard function keys f5 to f11
+       - payload: SCBSV keyboard pageup pagedown keys
+         title: SCBSV keyboard pageup pagedown keys
+       - payload: W/L control keys
+         title: W/L control keys
+
+  utter_mouse_usage:
+    - text: "The three button mouse is used to make selections on the scan and display monitors. It is a hand-operated device that you maneuver across the surface of a pad. As you move it, the on-screen cursor mimics the movement of the mouse, allowing you to move through windows and menus. For example, moving the mouse to the right causes the on-screen cursor to move to the right. The mouse is used to make selections by clicking the left, right, and middle buttons.
+
+"
+  utter_mouse_operations:
+    - text: "Click: Click the left mouse button to select a button or icon.
+Right-click: Click the right mouse button. 
+Middle-click: Click the middle mouse button.
+Click and drag: Click and hold the left mouse button down while dragging the cursor to the desired location. 
+Right-click: and drag Click and hold the right mouse button down while dragging the cursor to the desired location. 
+Middle-click and drag: Click and hold the middle mouse button down while dragging the cursor to the desired location. Double-click Click the left mouse button twice in rapid succession. Triple-click: Click the left mouse button three times in rapid succession
+
+"
+  utter_mouse_suggestions:
+    - text: "find the suggestions below"
+      buttons:
+       - payload: mouse usage
+         title: mouse usage
+       - payload: SCBSV keyboard
+         title: SCBSV keyboard
+       - payload: mouse operations
+         title: mouse operations
+       
+
+  utter_gantry_display_usage:
+    - text: "The gantry display provides gantry status information with 7-segment LED of relative horizontal position of cradle when landmark is set. . The S will light up when positioned higher than the landmark, and the I will light up if the position is lower than the landmark. "
+
+  utter_gantry_display_table_height:
+    - text: "The display will switch to table height display when the table up/down button is pressed.
+
+"
+  utter_error_message_in_gantry:
+    - text: "Except for cradle longitude position and table height, the display can display several Error messages related with table operation.
+1) E-01 indicates the cradle has been unlocked. When the cradle is unlocked, it is free floating 2) E-02 indicates there is a possibility that the table, cradle and gantry comes in contact with each other
+"
+  utter_gantry_internal_components:
+    - text: "find the image below"
+      image: (pg 152 table)
+  
+  utter_gantry_suggestions:
+    - text: "find the suggestions below"
+      buttons:
+       - payload: gantry display usage
+         title: gantry display usage
+       - payload: gantry table height display
+         title: gantry table height display
+       - payload: error message in gantry 
+         title: error message in gantry 
+       - payload: gantry internal components 
+         title: gantry internal components 
+  utter_table_max_weight:
+    - text: "The table has a weight limit of 397 pounds (180 kg) with an incremental accuracy of ± 0.25 mm.
+Scanning range (including axial head holder) is no less than 1200mm. The maximum scan range depends on table height. The mark on the cradle for maximum scannable range is based on the table center at isocenter. Make sure the patient is positioned within the scannable range.
+
+"
+  utter_table_functions:
+    - text: "The table is used to hold and support the patient during scanning. "
+      custom: 
+            payload: "collapsible"
+            data: 
+            - title: Mobile Cradle
+              description: The mobile cradle can be moved into or out of the gantry.
+            - title: Latch Button
+              description: The Latch Button is used to lock or release the mobile cradle.
+                When the mobile cradle's status is unlocked, it can be moved manually.
+            - title: Vertical distance
+              description: 77cm (Mobile cradle height above floor) 
+            - title: Horizontal mobility range of the mobile cradle
+              description: no less than 1500mm
+            - title: Scanning range (including axial head holder)
+              description: no less than 1200mm
+            - title: Scanning range (including axial head holder)
+              description: no less than 1200mm
+            - title: Mobile Cradle Movement speed
+              description: 10mm/second(lowspeedmode),100mm/second(high speed mode)
+            - title: Table load capability
+              description: Maximum weight 180kg table technical indicators
+
+  utter_table_hardware_components:
+    - text: "Find the suggestions below "
+      custom: 
+            payload: "collapsible"
+            data: 
+            - title: Collimator
+              description: A simplified slot collimator is used in Revolution ACTs with optimal bowtie beam filter which filter and shape the beam to optimize dose and image quality 
+            - title: Gantry
+              description: A shorter scan geometry allows for a 20% mAs reduction from HSA CT/i single slice axial scan techniques. Gantry aperture is 65 cm. The distance from focal spot to isocentric is54 cm. The distance from focal spotto the detector is 95 cm
+            - title: MatrixDetector
+              description: Highly innovative segmented panel designs built with advanced packaging and miniaturization technology for lower power consumption and improved thermal performance. 
+            - title: Other changes
+              description: Changes in the DAS, Slip Ring and Scan/Recon Unit have been made. There are also new reconstruction algorithms for the multi-slice data.
+            - title: Coverage
+              description: The Axial Detector Coverage/Beam Collimation for Revolution ACTs system are 1.25, 5, and 10 mm beam collimation/detector coverage. 
+            - title: Axial detector signal collection
+              description: 2, 4, 8, 16* signals/channels are collected per gantry rotation. Each of 2 to 16 signals are collected from an individual detector or combination of detectors. 
+               The number of detectors combined per signal/channel affects the maximum slice thickness.  
+               1, 2, 4, 8 or 16* slices can be generated per rotation. 
+               The slice thickness can be changed retrospectively. 
+               The beam collimation/detector configuration at the time of acquisition affects the retrospective choices.  
+               Multi-slice axial imaging is faster than a single slice helical scanner using a 1:1 pitch.
+            - title: Axial interval
+              description: The interval is equal to the number of images per rotation multiplied by the beam collimation. For example, in 4 x 1.25 mode, 4 images are generated, with each layer 1.25mm thick, for a total coverage range of 5 mm per rotation.
+            - title: Helical pitch, scan mode, and collimation
+              description: Scan modes for helical are expressed in terms of pitch. Helical pitch is defined as the ratio of table travel per rotation in millimeters divided by the beam collimation. 
+  utter_table_suggestions:
+      - text: "please find the suggestions below"
+        custom:
+          payload: quickReplies
+          data:
+          - title: table max weight
+            payload: table max weight
+          - title: Table functions
+            payload: Table functions
+          - title: table hardware components
+            payload: table hardware components
+  # utter_table_component_collimator:
+  #   - text:
+  #     image:
+  #     buttons:
+  # utter_table_component_gantry:
+  #   - text:
+  #     image:
+  #     buttons:
+  # utter_table_component_matrix_detector:
+  #   - text:
+  #     image:
+  #     buttons:
+  # utter_table_component_other_changes:
+  #   - text:
+  #     image:
+  #     buttons:
+  # utter_table_component_coverage:
+  #   - text:
+  #     image:
+  #     buttons:
+  # utter_table_component_axial_detector_signal_collection:
+  #   - text:
+  #     image:
+  #     buttons:
+  # utter_table_component_axial_interval:
+  #   - text:
+  #     image:
+  #     buttons:
+  # utter_table_component_helicalpitch_scanmode_collimation :
+  #   - text:
+  #     image:
+  #     buttons:   
+  utter_scan_mode_pitches:
+      - text: "The following pitches are available:
+1:1 pitch  
+0.75:1 pitch  
+1.5:1 pitch  
+0.625:1 pitch 
+0.875:1 pitch  
+1.35:1 pitch  
+1.675:1 pitch
+"
+        
+  utter_beam_collimation_conversion:
+    - text: "find the table below"
+      image: (pg 161)
+      
+  utter_reduce_helical_artifact:
+    - text: "Interleaved helices minimizes helical artifact, and gives the best detail. Interspaced helices has more interpolation of data and increase helical artifact when compared to interleaved mode.Using interspaced helices compared to interleaved helices will provide lower dose
+"
+      
+  utter_axial_detector_usage:
+    - text: "The User Interface demonstrates slice thickness choices, number of images per rotation, and retrospective options. The parameters selected to set the detector configuration determine the slice thickness and speed determine the detector configuration
+
+"
+      
+  utter_axial_detector_colors:
+    - text: "Button colors change to indicate options.  
+Light yellow color indicates the current selection.
+Dark blue with black text indicates the available parameters.  
+Light gray with black text indicates available parameters, choosing changes other than displayed parameters.  
+Light gray with gray text indicates parameters not available
+"
+      
+  utter_axial_detector_rotation_speed:
+    - text: "Rotation Speed can be adjusted to optimize acquisition time. Rotation Speeds are 0.98, 1.0, 1.2, 1.5, 2.0, 3.0 and 4.0 seconds
+"
+      
+  utter_axial_slice_range:
+    - text: "Axial slice thickness selection range from 0.625 to 10 mm"
+      
+  utter_axial_detector_images_per_rotation:
+    - text: "Number of images per rotation are 1i, 2i, 4i, 8i, 16i"
+      
+  utter_axial_detector_coverage_selection:
+    - text: "Beam Collimation or detector coverage allows selection of 1.25, 5, or 10
+"
+  utter_axial_detector_retro_recon_selection:
+    - text: "Retro recon selection is the result of thickness and image quantity. For example selecting 8 images when thickness is 1.25 mm, the allowable retro selections are 1.25mm*,2.5mm, 5mm and 10mm. When Retro recon is based on 2X0.625, the allowable retro option is 0.625. If the option of Advanced Acquisition is installed, reconstructions based on 16X1.25z can be selected 
+
+"
+  utter_axial_suggestions:
+    - text: " find the suggestions below"
+      buttons:
+       - payload: axial detector colors
+         title: axial detector colors
+       - payload: axial detector rotation speed
+         title: axial detector rotation speed
+       - payload: axial slice range 
+         title: axial slice range 
+       - payload: axial detector images per rotation 
+         title: axial detector images per rotation 
+       - payload: axial detector coverage selection 
+         title: axial detector coverage selection
+       - payload: axial detector retro recon selection 
+         title: axial detector retro recon selection
+      
+  utter_helical_detector_parameters:
+    - text: "There are five main parameter selections for helical
+
+Detector Coverage determines the beam collimation, 5 and10, in the Z-axis direction.  
+Helical Thickness determines the prospective and retrospective image slice thickness. 
+Slice thickness choices range from 0.625 mm to 10 mm. 
+Pitch/Speed Determines the speed of the table per gantry rotation. 
+There are 7 pitch options related to table speed. 
+Rotation Time determines the rotation of the gantry
+
+"
+  utter_helical_detector_colors:
+    - text: "Button colors change to indicate options. 
+Light yellow color indicates the current selection.  
+Dark blue with black text indicates the available parameters.  
+Light gray with black text indicates the available parameters (choosing changes other parameters).  
+Light gray with gray text indicates that it is not available.
+
+"
+  utter_power_distributor_usage:
+    - text: "The PDU supplies power to various parts of the system which includes components in the gantry, table and operator console. On the front of the PDU are controls to indicate that power is on to the unit, a push button to turn power on/off to the gantry and table, and an Emergency Stop button"
+      image: (pg 164)
+      
+  utter_power_distributor_buttons:
+    - text: ""
+      custom: 
+            payload: "collapsible"
+            data: 
+            - title: Power Supply
+              description: Indicates power is On/Off to the unit
+            - title: Gantry Enable
+              description: Enables/disables power to the gantry and table
+            - title: Emergency Stop
+              description:  When pressed, all table and gantry motions are halted, generation of x-ray is stopped, laser alignment lights are turned off. The system aborts any data collection acquisition in progress and attempts to save all data acquired prior to the abort. Use the Emergency Stop for patient related emergencies. The cradle and base also unlatch and need to be latched before starting a scan
+      
+  utter_Xray_tube_usage:
+    - text: "The anode heat capacity of a MX135CT tube is 2.0 million heat units (MHU).  
+The cooling rate is 275,000 heat units per minute (KHU/min).  
+MX135CT 40 operates at powers of 24kW depending on the configuration.
+"
+      
+  utter_high_freqeuncy_generator:
+    - text: "The high frequency generator is composed of the cathode and the anode tanks"
+      images: (pg 118)
+
+  utter_optimal_restart:
+    - text: "To keep your system operating at optimal performance, restart your system once every 24 hours. It is recommended you shutdownandrestartthe system at the end of the last shift. If The system has a persistent problem,record the time, circumstances, and error messages, and then call service
+"
+      
+  utter_automatic_software_update:
+    - text: "Upon startup, you may see evidence that an automatic software download occured. The option to automatically install the updates is provided during system startup. Performing a Quick Snap and/or an IQ Snap provides additional information to aid the service engineer in the resolution of issues.
+Click to see more about downloading softwares
+"
+      buttons:
+        - payload: Download software
+          title: Download Software
+      
+  utter_shutdown_with_usb:
+    - text: "If a save/restore of scan data is in progress, wait for the process to complete, exit Recon      
+       Management, and disconnect the USB device before you reboot or shutdown. If for some              
+       reason the system should shutdown unexpectedly while a USB drive is connected to the 
+       system, disconnect the USB drive before restarting the system.
+"
+  utter_power_suggestions:
+    - text: "find the suggestions below:"
+      buttons:
+        - payload: optimal restart
+          title: optimal restart
+        - payload: automatic software update 
+          title: automatic software update 
+        - payload: shutdown with usb
+          title: shutdown with usb
+  utter_login_reason:
+    - text: "The login feature requires that you login to access the system for Data privacy. It can be turned on or off by your system administrator or Field Engineer. How your site uses this feature depends on if your site has a central userrepository to which the system is connected. Sites with networks are referred to as Enterprise systems, those without are referred to as stand-alone systems. This feature can be used with either configuration, although some features are more applicable to enterprise systems.
+to know more click here"
+      buttons:
+        - payload: data privacy
+          title: data privacy
+      
+  utter_logging_off:
+    - text: "Logging off does not prohibit other users from logging in. Logout is designed to protect patient privacy, not stop approved users from logging in. When you or another user logs back in, the system returns to its last known state.
+
+"
+      
+  utter_prepare_system:
+    - text: "Clean the Accessories and check for damage.  
+Check and remove dried contrast agent from  
+   Mylarring (around the gantry opening)  
+   Table extension and cradle surfaces— especially the  Patient Restraint plastic     
+   channels on the table.  
+   Accessories (Head holders, pads and cushions, etc.)  
+Check supplies
+"
+      
+  utter_startup:
+    - text: ""
+      
+  utter_login:
+    - text: "1. From the logon screen, type your assigned logon name. 
+2. Type Your Password.  
+Click Emergency Logon only if you do not have a valid account set up. The Emergency Logon screen is launched, which does not require an ID or password. 
+3. Click Logon. 
+"
+      
+  utter_logout:
+    - text: "1. From the monitor, click the Shutdown icon. 
+
+2. From the Attention Shutdown pop-up screen, click Logout User andOK.
+
+NOTE: Logging off does not prohibit other users from logging in. Logout is designed to protect patient privacy, not stop approved users from logging in. When you or another user logs back in, the system returns to its last known state.
+"
+      
+  utter_shutdown_restart:
+    - text: "Push the power switch on the front of the operator console and the system automatically rest
+
+If power was turned off via the computer switch and the Main Disconnect Control A1 Power Panel (Breaker),then
+ a. Turn on power to the Main Disconnect Control. 
+ b. Turn on power to the computer. 
+ c. Press Reset on the gantry controls.  
+Click OK and follow the Attention instructions
+"
+      
+  utter_tubeID_verification_fails:
+    - text: "SmartID verifies the tube ID at start up. If the tube ID verification fails, attention screens display indicatingtheX-ray tube installedonthe systemisnotrecognized. Youcan continue scanning;however, you need to contact your service representative. ASiR is disabled when a non-GE tube is installed."
+      image: (pg 172)  
+      
+  utter_turnon_suggestions:
+    - text: "find the suggestions below"
+      buttons:
+        - payload: is logging in compulsory?
+          title: is logging in compulsory?
+        - payload: is logging out compulsory? 
+          title: is logging out compulsory? 
+        - payload: prepare system
+          title: prepare system
+        - payload: Start the system
+          title: Start the system
+        - payload: how to login to the device
+          title: how to login to the device
+        - payload: How to logout
+          title: How to logout
+        - payload: restart the system
+          title: restart the system
+  utter_daily_prep_screen:
+    - text: "From the monitor, click the Daily Prep icon, to display the Daily Preparation screen"
+      
+  utter_tube_warm_up:
+    - text: ""
+      
+  utter_calibration:
+    - text: ""
+      
+  utter_daily_calibration:
+    - text: ""
+      
+  utter_full_system_caliberation:
+    - text: ""
+      
+  utter_warning_message_air_calibrations:
+    - text: ""
+      
+  utter_non_ge_xray_tube:
+    - text: ""
+      
+      
+  utter_daily_qa_workflow:
+    - text: ""
+      
+  utter_tube_warmup_warning:
+    - text: ""
+      
+  utter_tube_warm-up:
+    - text: ""
+      
+  utter_tube_warmup_usage:
+    - text: ""
+      
+  utter_fast_cal_considerations:
+    - text: ""
+      
+  utter_fast_calibrations:
+    - text: ""
+      
+      
+actions:
+- action_greet_user
+- action_custom_fallback
