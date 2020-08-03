@@ -2,7 +2,7 @@
 <html>
   <head>
       <meta name=viewport content="width=device-width, initial-scale=1">
-      <title>Rasa Chatbot Sign Up</title>
+      <title>Rasa Chatbot Sign Un</title>
       <link rel="icon" href="favicon.png" type="image/x-icon">
       <!--Google font -->
       <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@100;200;300;400;500;600;700;800;900&amp;family=Arimo:wght@100;200;300;400;500;600;700;800;900&amp;subset=latin&amp;display=swap" rel="stylesheet">
@@ -37,47 +37,51 @@
               <div class="card card-signin my-5">
                 <div class="card-body">
                   <h5 class="card-title text-center">Sign Up</h5>
-                  <form class="form-signin" >
+                  <form class="form-signin" action= "registration.php" method="POST">
                     
                     <div class="form-label-group">
-                        <input type="firstname" id="inputfirstname" class="form-control" placeholder="First Name" required autofocus>
+                     
+                        <input type="firstname" id="inputfirstname" class="form-control" name="firstname" placeholder="First Name" required autofocus>
                         <label for="inputfirstname">First Name</label>
-                      </div>
+                      
+                    </div>
+
                       
                       <div class="form-label-group">
-                        <input type="lastname" id="inputlastname" class="form-control" placeholder="Last Name" required autofocus>
+                        <input type="lastname" id="inputlastname" class="form-control" name="lastname" placeholder="Last Name" required autofocus>
                         <label for="inputlastname">Last Name</label>
-                      </div>
+                      
+                    </div>
                       
                         
                       <div class="form-gender">
                             <label class="radio-container m-r-45">Male
-                                <input type="radio" checked="checked" name="gender">
+                                <input type="radio" checked="checked" name="gender" value="male" id="male">
                                 <span class="checkmark"></span>
                             </label>
                             <label class="radio-container">Female
-                                <input type="radio" name="gender">
+                                <input type="radio" name="gender" value="female" id="female">
                                 <span class="checkmark"></span>
                             </label>
                         </div>  
 
                       <div class="form-label-group">
-                        <input type="employeeid" id="inputemployeeid" class="form-control" placeholder="Employee ID" required autofocus>
+                        <input type="employeeid" id="inputemployeeid" class="form-control" name = "empid" placeholder="Employee ID" required autofocus>
                         <label for="inputemployeeid">Employee ID</label>
                       </div>
 
                     <div class="form-label-group">
-                      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                      <input type="email" id="inputEmail" class="form-control" name = "email" placeholder="Email address" required autofocus>
                       <label for="inputEmail">Email address</label>
                     </div>
       
                     <div class="form-label-group">
-                      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                      <input type="password" id="inputPassword" class="form-control" name="pass" placeholder="Password" required>
                       <label for="inputPassword">Password</label>
                     </div>
       
                 
-                    <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" id="submitBtn" onclick="window.location.href='login.html'">Sign Up</button>
+                    <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign Up</button>
                  
       
                 
@@ -88,26 +92,8 @@
             </div>
           </div>
         </div>
-      <!--End of Login form-->
 
-       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-         <!----Disabled button--->
-         <script type="text/javascript">
-          $(document).ready(function() {    
-            $('#inputEmail, #inputPassword, #inputemployeeid, #inputfirstname, #inputlastname').keyup(function(){
-                    if ($('#inputPassword').val() != '' && $('#inputEmail').val() != '' && $('#inputemployeeid').val() != '' && 
-                      $('#inputfirstname').val() != '' && $('#inputlastname').val() != '')
-                    {
-                      $('#submitBtn').prop("disabled", false);
-                    }
-                    else
-                    {
-                      $('#submitBtn').prop("disabled", true);
-                    }
-                });
-          });
-         </script>
+      <!--End of Login form-->
 
 </body>
 </html>

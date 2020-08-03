@@ -19,11 +19,12 @@
 <!--Navbar-->
 <nav class="navbar navbar-light navbar-custom navbar-expand-lg">
 	<div class="container-fluid">
-  <a class="navbar-brand" href="index_1.html">
+  <a class="navbar-brand" href="#">
     <img src="logomed.png" alt="">
   </a>
 </div>
 </nav>
+<!--End of Navbar-->
 <!--Start of Login form-->
         <div class="container">
             <div class="row">
@@ -32,14 +33,14 @@
               <div class="card card-signin my-5">
                 <div class="card-body">
                   <h5 class="card-title text-center">Sign In</h5>
-                  <form class="form-signin" id="myForm1">
+                  <form class="form-signin" action="login.php" method="POST">
                     <div class="form-label-group">
-                      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                      <input type="email" id="inputEmail" class="form-control"name = "email" placeholder="Email address" required autofocus>
                       <label for="inputEmail">Email address</label>
                     </div>
       
                     <div class="form-label-group">
-                      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                      <input type="password" id="inputPassword" class="form-control" name="pass" placeholder="Password" required>
                       <label for="inputPassword">Password</label>
                     </div>
       
@@ -48,37 +49,30 @@
                       <label class="custom-control-label" for="customCheck1">Remember password</label>
                     </div>
       
-                    <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" onclick="window.location.href='home.html'" id="submitBtn">Sign in</button>
+                    <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
                     <hr class="my-4">
       
                     <div id="sign-in">
                       <p>Not a member?<a href="Sign Up.html"> Register</a></p>
+
+                      <?php
+                      $fullUrl="http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+                      if(strpos($fullUrl, "login=error")== true)
+                      { 
+                          echo "<div class='error'>Invalid Email id/Password</p>";
+                
+                      }
+                      ?>
                       </div> 
-                    </div>
+                      </div>
                   </form>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <!--End of Login form-->
-        
-         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-         <!----Disabled button--->
-         <script type="text/javascript">
-         	$(document).ready(function() {    
-         		$('#inputEmail, #inputPassword').keyup(function(){
-         		        if ($('#inputPassword').val() != '' && $('#inputEmail').val() != '')
-         		        {
-         		        	$('#submitBtn').prop("disabled", false);
-         		        }
-         		        else
-         		        {
-         		        	$('#submitBtn').prop("disabled", true);
-         		        }
-         		    });
-         	});
-         </script>
+
+      <!--End of Login form-->
+
 </body>
 </html>
