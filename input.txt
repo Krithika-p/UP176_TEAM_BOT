@@ -1,0 +1,17 @@
+buy movie tickets
+how to operate table
+table functions
+table component collimator
+Configure the system for dose checking
+Components of the table
+specify the hardware components of the table
+What is gantry display
+yes
+monitor timeout
+monitor timeout
+no
+add patient to the schedule
+add patient
+performed procedure step
+dose check
+hi

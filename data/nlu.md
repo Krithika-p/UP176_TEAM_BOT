@@ -252,6 +252,13 @@
 - What are the protocols available in the protocol selection area
 - protocols available in the protocol management
 - List of protocols available.
+- protocol selection
+- what is user in protocol selection
+- GE in protocol selection
+- what are the four protocol selection
+- what is displayed in most recent in protocol selection
+- what does service have in it in protocol selection
+- what are the protocol selection
 
 ## intent:scan_setup_screen
 - What is the scan setup screen?
@@ -305,11 +312,7 @@
 - How to edit Retro Scan?
 - Where can I access retro scan?
 
-## intent:recon_management
-- Display reconstruction status.
-- I want to know the recon queue management.
-- How to get the reconstruction status of the patients?
-- How to access the recon management status?
+
 
 ## intent:setting_imageworks
 - How can I access the imageworks?
@@ -677,6 +680,12 @@
 - list down the steps for the parameters to be adjusted for small patients
 - How to change the pediatric parameters
 
+## intent:pediatrics
+- pediatrics
+- small patients
+- young patient
+- kids
+- children
 
 <!-------------------------------------------------------------- CHAPTER 6 -------------------------------------------------------->
 ## intent:computer_console_parts
@@ -1960,3 +1969,1032 @@
 - what are the smooth, edge, lung values in an image filter?
 - what is image filter?
 - when can image filter be used
+
+<!---------------------------------------------CHAPTER 11----------------------------------------------->
+## intent:recon_screen
+- How to open retro recon screen
+- How to display retro recon screen
+- Where is retro recon screen
+- What are the step to open retro recon screen
+
+## intent:list_select
+- How to open retro recon list select screen
+- How to display exams with available scan data
+- How to display the exams available for reconstruction 
+- Steps to open the list select screen
+- List Select
+
+## intent:list_select_screen
+- What are displayed on list select screen
+- what is exams on list select screen
+- what is series
+- what is next prior
+- what is series select
+- what is update
+- options on list select screen
+- List Select Screen
+
+## intent:recon_management
+- How to open recon management screen
+- How to use recon management screen
+- Where can i find recon management screen
+- What is the use of recon management screen
+- Display reconstruction status.
+- I want to know the recon queue management.
+- How to get the reconstruction status of the patients?
+- How to access the recon management status?
+
+## intent:new_image_from_scan
+- How to create image retrospectively
+- Where is the select series option
+- How to create a new image from the scanned data
+- What are the steps to convert scanned data to image
+- What is recon type
+
+## intent:Graphically_prescribe
+- How to graphically prescribe retrospective reconstructions
+- How to display retrospective reconstructions data graphically
+- How to zoom in the graphical view
+- How to click and drag the reference image
+- What is graphically prescribe
+
+## intent:unreconstructed_image
+- How to find unreconstructed image
+- How to find the image that not been reconstructed
+- How to delete images which you don't want to reconstruct 
+- How to update list in retro recon
+- What are the steps involved in finding unreconstructed image
+
+## intent:pause_resume
+- How to pause the recon queue
+- How to resume the recon queue
+- How to restart queue
+- Where is the pause recon option
+- Where is the resume recon option
+- How to pause or resume the recon queue
+
+## intent:remove_data
+- How to remove data from the queue
+- How to delete data from the queue
+- How to delete all the data in the queue
+- How to edit the queue
+
+## intent:reserve_data
+- How to delete raw scanned data
+- How to release  data
+- How to reserve data
+- What are the steps to release data
+- What are the steps to reserve data
+
+## intent:anonymous_scan
+- How to save scan data anonymously
+- How to save scan data without saving the patient information
+- Where will i place the DVD-RAM
+- What is Save Selected Data?
+- How long it will take to store in DVD-RAM
+
+## intent:save_restore
+- What type of usb drive we can use
+- How to save the data in an external storage device
+- How to save data in a DVD or USB
+- How to cancel a save or restore process
+- How to save an exam in an external drive
+
+## intent:prerequisites_data_scan_anonymously
+- what are the conditions before scanning data anonymously?
+- points to be noted before scanning the data privately.
+- prerequisites before scanning data anonymously.
+
+<!--------------------------------------------CHAPTER 13------------------------------------>
+## intent:image_add_subtract
+- What is picture addition and subtraction 
+- How to add image intensity
+- How to subtract image intensity
+- image addition
+- image sub
+- increase image intensity
+- decrease image intensity
+
+## intent:max_min_pixel_value
+- What is maximum and minimum pixel extraction?
+- maximum value of pixel extraction
+- minimum value of pixel extraction
+
+## intent:binding_series
+- What is binding series
+- binding series
+- can save state information mentioned with the binding series?
+- save state information in new series generated by binding series.
+
+## intent:perform_bind_series
+- How to combine series together
+- Where is the select set option
+- How to create new series from different series
+- perform bind series
+
+## intent:procs_comb
+- Difference between procs and comb
+- what are procs and comb
+- comparison of procs and comb
+- what is procs?
+- what is comb?
+
+## intent:accept_negative_pixels
+- Is negative pixel applicable?
+- Can there be a negative pixel for an image?
+- what is the default value of a negative pixel?
+- how do I allow negative pixels?
+- accept negative pixels
+
+## intent:procs_usage
+- what is procs used for?
+- procs usage
+- how can I use procs?
+
+## intent:comb_accuracy
+- Is comb accurate? 
+- what measurements are not accurate in comb?
+- Is absolute anatomical coordinates accurate? 
+- Is relative geometrical measurements accurate?
+- comb accuracy
+
+## intent:ratio_slide
+- what is the ratio slide?
+- ratio slide
+- use of ratio slide
+
+## intent:add_subtract_image_combination
+- How to open add or subtract image combination screen
+- What are the options available in add or subtract combination screen
+- Steps to increase image ratio
+- how to increase image ratio
+- Use of new save series
+- what are the uses of new save series
+- How to use equal operation
+- equal operation
+- What are all the modes available 
+- How to erase the selection
+- What does select set specify 
+- what does select set 1 
+- specify select set 2
+- What does equal operation do
+- Steps to increase image ratio
+- What does ratio slider do
+- What does the save series do?
+- What is the default option if new save series is not selected
+- Use of new save series
+- What are all the modes available 
+- what happens when accept negative pixels is not set to zero
+- what to do to restore select sets values
+
+## intent:add_subtract_image
+- How to create new image set
+- Steps to create a new image set
+- How to select desired images
+- select desired images
+- How to increase pixel weight
+- increase pixel weight
+
+## intent:select_more_than_one_set
+- What happens when one set is selected
+- What happens when two set is selected
+- unpaired images
+- how do 2 sets are paired?
+
+## intent:max_min_ct_number
+- How to create image with maximum or minimum CT number
+- Where is the minimum or maximum value option
+- how to find minimum or maximum value option
+- Step involved in creating a image with maximum CT number
+- how to create a image with minimum CT number
+
+## intent:split_screen
+- Where is the imageworks option
+- display imageworks option
+- How to display split screen
+- How to display exam split screen
+- split screen
+
+## intent:components_split_screen
+- what are the components of split screen
+- options in split screen
+- Screen format
+- Procedure presets
+- Split presets
+- ExamW/L presets
+- Comments
+- Delete All in split screen
+- Delete in split screen
+- Add in split screen
+- Procedure
+- Send
+- Browser
+- split screen components
+
+## intent:split_exam
+- How to split series into separate group
+- Can we split series without ConnectPro
+- How to group the split series
+- Can we add procedure after exam ended
+- Where is the host selection option
+- How to select multiple procedures
+- split exam when scan is completed
+
+## intent:image_sent_VES_HES
+- when to send exams in VES system?
+- exam format send in VES system
+- when to send exams in HES system?
+- exam format send in HES system
+
+## intent:neuro_3d
+- How to add neuro 3D filter
+- What does neuro 3D filter do
+- What are the options available in Neuro 3D filter
+- How to close after the filter is added
+- neuro 3D
+
+## intent:neuro_3d_filter
+- What is the Neuro 3D Filter series numbers?
+- what are the values in neuro 3D filter?
+- what does low, medium, high filter specify?
+- neuro 3D filter
+
+## intent:rules_neuro3D_images
+- Rules selected series in Neuro 3D images must follow
+- What must be kept in mind to select series in Neuro 3D image.
+- points noted for selected series  in neuro 3d images.
+- neuro 3D image constraints
+
+## intent:reformat
+- What is reformat
+- Info about reformat
+- How to reformat
+- reformat
+
+## intent:open_reformat
+- open reformat
+- how to open reformat
+- show the reformat
+- how does reformat open
+
+## intent:reformat_image_controls
+- reformat image controls
+- how to rotate freehand or page images
+- rotate freehand or page images
+- how can I zoom images
+- how to zoom the image
+- how to select the image
+- how to pan any image
+- select image
+- how to activate w/l mode
+- how to move the images
+- how to change image orientation
+- change the image orientation
+- how to activate oblique mode
+
+## intent:keyboard_shortcuts
+- display keyboard shortcuts
+- show keyboard shortcuts
+- what are the keyboard shortcuts
+- list all the keyboard shortcuts
+- keyboard shortcuts
+
+## intent:display
+- how to display 3d view
+- display 3d view
+- what is annotation
+- types of annotation
+- what is text annotation
+- what is preset annotation
+- what is measurement annotation
+- information about ROI
+- what is ROI
+
+## intent:modify_red_annotation
+- modify red annotation
+- what is red annotation
+- list red annotations
+- what is plane or view type annotation
+- image location annotation
+- DFOV annotation
+- image filter annotation
+- image room annotation
+- slice thickness annotation
+- window width and window level annotation
+- patient name annotation
+
+## intent:Review_controller_screen
+- show paging and thickening
+- how to enlarge
+- show movie controls
+- how to link/unlink
+- bookmark scrolling
+- controller control
+- report cursor
+
+## intent:olor_map_table
+- show color map table
+- how to change color or name or values
+- change the color
+- display the percentages
+- how to display the percentage
+- what are min / max values
+- what is the color
+- how to change or display range name
+- show continuous ramp
+- what are color map presets
+- show color map presets
+- how to save
+- how to remove
+- how to delete the user
+
+## intent:ROI_preferences_screen
+- how to display ROI preferences screen
+- display ROI preferences screen
+- display VOI
+- how to display VOI
+- what are statistics
+- how to adjust size
+- can we adjust size
+
+
+## intent:annotate_image
+- how to annotate an image
+- annotate image
+- steps to annotate image
+- how can I annotate images
+- what to do to annotate images
+
+
+## intent:Save_preset_annotation
+- how to Save preset annotation
+- Save preset annotation
+- steps to Save preset annotation
+- how can I Save preset annotation
+- what to do to Save preset annotation
+
+
+## intent:measure_distance
+- how to Measure distance
+- Measure distance
+- steps to Measure distance
+- how can I Measure distance
+- what to do to Measure distance
+
+
+## intent:measure_angle
+- how to Measure angle
+- Measure angle
+- steps to Measure angle
+- how can I Measure angle
+- what to do to Measure angle
+
+
+## intent:measure_area
+- how to Measure area
+- Measure area
+- steps to Measure area
+- how can I Measure area
+- what to do to Measure area
+
+
+## intent:measure_volume
+- how to Measure volume
+- Measure volume
+- steps to Measure  volume
+- how can I Measure  volume
+- what to do to Measure  volume
+
+
+## intent:display_add_an_ROI
+- display add an ROI
+- how to add an ROI on an image
+- add an ROI on an image
+- steps to add an ROI on an image
+- how can I add an ROI on an image
+- what to do to add an ROI on an image
+
+## intent:Set_ROI_preferences
+- how to Set ROI preferences
+- Set ROI preferences
+- steps to Set ROI preferences
+- how can I Set ROI preferences
+- what to do to Set ROI preferences
+
+## intent:view_types
+- what are the available view types
+- display all the view types
+- what are the view types
+- view types
+- display view types in reformat and their function
+
+
+## intent:curved_view
+- curved view
+- how to create a curved view
+- create a curved view
+- display curved view
+- steps create curved views
+
+
+## intent:Create_an_XSection_Histogram_view
+- how to create an X Section Histogram view
+- create an X Section Histogram view
+- display how to create an X Section Histogram view
+- steps create an X Section Histogram view
+
+
+## intent:Create_MPVR_view
+- how to create an MPV Review
+- create an MPV Review
+- display how to MPV Review
+- steps create an MPV Review
+
+
+## intent:Create_Profile_view
+- how to create Profile view
+- create a Profile view
+- display how to create Profile view
+- steps create a Profile view
+
+<!----------------------------------------------------chapter 15-------------------------------------------------->
+
+## intent:AW_server_client_usage
+- AW server client usage
+- what is AW server client
+- describe about AW server client
+- explain AW server client
+- brief AW server client
+- tell me about AW server client
+
+
+## intent:AW_server_client_start
+- AW server client start
+- how to start AW server client
+- start AW server client
+- activate AW server client
+- steps to activate AW server client
+- activate AW server client
+
+## intent:AW_server_client_slow
+- AW server client slow
+- What to do when the console in an AW server client is slow?
+- why does the console slow down?
+- slow aw server client
+- reason for aw server client slow 
+- resolve AW server slow 
+
+## intent:AW_server_upgrade
+- AW server client upgrade
+- how to update the AW server 
+- updation of AW server software
+- what should i do to upgrade the AW server
+- who should i contact to upgrade AW server 
+
+## intent:AW_server_client_close
+- AW server client close
+- how to close AW server client?
+- steps to close AW server client
+- procedure to close AW server
+- logout of AW server
+<!----------------------------------------------------------chapter 16----------------------------------------------------------------------->
+
+## intent:manual_filming_usage
+- manual filming
+- What is the use of film composer
+- use of film composer
+- what is film composer
+- what lets me film images
+- how can the manual filming composer be 
+- List the functions in manual filming
+- function keys in manual filming
+- How can we open film composer
+- steps to open film composer
+
+## intent:manual_filming_function_keys
+- manual filming function keys
+- What are the uses of function keys in manual filming
+- What are all the keys supported by the film composer?
+- functions keys in manual filming
+- what does f1 function key do?
+- what is performed by the f5 key?
+- what can f8 do?
+- function of f2 key?
+- what happens when i press f4
+
+
+## intent:manual_film_composer_screen
+- manual film composer screen
+- What are the options available in film composer screen
+- How to use film composer screen
+- How to change to full screen
+- How to hide the manual film scream
+- What is routine operation
+- What are the options available in film composer screen
+- description for Layout preset in manual film composer 
+- What is routine operation?
+- What is the shortcut to open print series screen?
+
+
+## intent:print_series
+- print series
+- What is the shortcut to open print series screen
+- How to open print series screen
+- What does the current print jobs displays
+- What is use the interval option
+- what is print series screen
+- what are the components of print series screen
+- what does image selection do
+
+
+## intent:print_series_parameters
+- What is the use of print series parameter
+- How to cancel the print series request
+- Where is the lower view port
+- How to set series parameter
+- set up of set series parameter
+- what should sizes of images be in the print series parameter 
+
+
+
+## intent:manually_film_image
+- manual film image
+- What is film screen
+- What is film MID
+- How to set print settings
+- What is film single image
+- How to set print settings?
+- setting print settings
+- procedure to set print settings
+
+
+
+## intent:semi_automatic_filming
+- semi automatic filming
+- How to set up semi automatic filming
+- steps in semi automatic filming
+- how to display semi automatic filming
+- procedure for semi automatic filming
+- How to edit the image in the film composer?
+
+
+## intent:manual_filming_set_print_parameter
+- manual filming set print parameter
+- How to open print settings
+- How to automatically clear the printed page
+- What are all the options available in print settings
+- How to print different patient information in same film 
+- What is the use of expose order
+- what are the components of Set Print parameters 
+- what does Show Page Index do
+- what will Operation Panel Alignment perform
+
+
+## intent:manual_filming_export
+- manual filming export
+- How to export the image 
+- What is the use of cancel option
+- Step involved in exporting
+- What is the use of refresh 
+- components in export in manual filming
+- what does export do?
+
+
+## intent:right_click_function
+- How to open on-view menu
+- What are the options available in the on-view display
+- How to adjust the filter
+- How to display cross reference lines
+- list of items displayed when right clicked
+- what are shown when right click is performed
+- what are the Gray scale enhancement
+
+
+##intent:edit_annotation
+- How to open the edit annotation window
+- How to edit annotation
+- How to edit the font name and font size in edit annotation
+- How to cancel the edit annotation 
+
+
+
+## intent:film_history
+- What is film history
+- How to open film history
+- What is auto deletion job
+- How to use auto deletion job
+- how to view film history
+- i want to see the film history
+
+
+## intent:film_queue
+- What are the options available in the film queue dialog box
+- How to refresh the print job list 
+- How to clear the print job list 
+- How to open film queue dialog box
+- components of the film queue
+- various options in the film queue of manual filming
+
+<!----------------------------------------------------------chapter 17----------------------------------------------------------------------->
+
+<!---------------------------------------------------------chapter 18------------------------------------------------------------->
+
+## intent:protocol_usage
+- protocol usage
+- what is a protocol?
+- why should i use protocol?
+- what is the protocol concept
+- i want to know about protocols
+- why are protocols used
+- advantage of protocols usage
+- how to view a protocol
+- edit a protocol
+- how to use a protocol
+- i want to change a protocol
+- where can i see the protocol
+- can i change a protocol
+- using a protocol
+
+
+
+## intent:protocol_selection_screen
+- protocol selection screen
+- How to open the protocol selection screen?
+- What are the categories in the protocol screen?
+- open protocol selection screen
+- i want to open protocol selection screen
+- what should i do to open protocol selection screen
+
+
+## intent:protocol_built_and_edit
+- protocol built and edit
+- What is the procedure to complete a new protocol or change the established user protocols on the system?
+- i want to build a protocol
+- edit protocol
+- steps to edit an existing protocol
+- procedure to create a new protocol
+- how can i edit a protocol
+- building a new protocol
+
+## intent:protocol_scout_parameter
+- protocol scout parameter
+- How to set up scout parameter
+- What is scout parameter?
+- set up for scout parameter 
+- protocol scout parameter setting up
+- steps to set up scout parameter
+- i want to set up scout parameter
+
+## intent:protocol_set_scan_parameters
+- protocol set scan parameters
+- How to set scan parameters?
+- set up for scan parameters in protocols
+- scan parameters protocol set up
+- setting up a scan parameter
+- how should i set up a scan parameter 
+- steps for setting up scan parameters
+
+## intent:protocol_set_up_auto_voice
+- protocol set up auto voice
+- How to setup auto voice?
+- i want to set up auto voice
+- bring up auto voice
+- steps to set a auto voice
+- procedure to set up auto voice
+- tell me the steps to bring auto voice
+
+## intent:protocol_emergency_patients
+- protocol emergency patients
+- How to link protocol to emergency patients?
+- linking protocols to emergency patients
+- how to form protocol for emergency patient
+- emergency patient protocol set up
+- set up a protocol for emergency patient
+- procedure to be followed to set up protocol for emergency patients
+- what protocol linking should i follow for emergency patients
+- define protocol for emergency patients
+
+
+## intent:protocol_default
+- How to set protocol as default?
+- want to set protocol as default
+- how to set default protocol
+- define a single protocol 
+- default protocol for all scans
+- what should i follow as default protocol
+- default protocol for a single scan
+
+
+## intent:protocol_copy_ paste
+- protocol copy paste
+- How to copy paste a protocol?
+- how to copy protocol from Most Recent selector into the User anatomical selection area
+- GE anatomical selector to user anatomical selection protocol copy
+- how to copy and page a protocol
+- paste an existing protocol
+- copying a protocol to another area
+
+## intent:protocol_delete
+- protocol delete
+- What are the steps to delete a protocol
+- how to delete a protocol
+- i want to delete a protocol
+- deleting an existing protocol 
+- procedure to delete a protocol
+- steps to remove a protocol
+- protocol deletion
+
+## intent:protocol_delete_emergency_patients
+- protocol delete emergency patients
+- How to delete a protocol link from an emergency patient?
+- delete emergency patient link to protocol
+- delete a protocol for emergency patients 
+- steps to delete a protocol for emergency patients
+- removal of protocol of emergency patients
+- emergency patients protocol deletion
+
+
+<!----------------------------------------------------------chapter 19------------------------------------------------------------->
+## intent:privacy_laws
+- what are the privacy laws?
+- privacy laws
+- global privacy laws
+
+## intent:privacy_using_ea3
+- what are the user permissions in ea3?
+- Can a user delete or add another user?
+- permissions using ea3.
+
+## intent:rules_adding_users_to_local_database
+- rules when adding users to the local database?
+- username and passwords when adding users to local database
+- what are the guidelines while adding local users to the database?
+
+## intent:user_groups_privileges
+- what are the users and groups?
+- privileges of groups
+- users and groups privileges
+
+## intent:open_ea3_ui
+- how to open ea3 user interface?
+- access ea3 user interface
+- open ea3 ui
+
+## intent:buttons_disabled_center_panel
+- why are all buttons disabled in the center panel?
+- buttons not working in center panel
+- buttons are disabled in center panel
+
+## intent:add_local_user
+- how to add a local user?
+- adding local user
+- error while adding a local user
+- add local user
+
+## intent:add_local_group
+- how to add a local group?
+- adding local group
+- error while adding a local group
+- add local group
+- change group roles.
+
+## intent:adding_member_to_group
+- What are the steps involved in adding a member?
+- add a member to group
+- how can I add a new member to the group?
+
+## intent:add_enterprise_group
+- What are the steps involved in adding an enterprise group?
+- add an enterprise group
+- how can I add a new enterprise group?
+
+## intent:add_remove_user
+- how to add or remove a user from a group?
+- adding user to local group
+- remove user from local group
+- add user to local group
+- remove user from local group
+
+## intent:change_user_name
+- how to change the user name of a user?
+- changing username
+- change username of the user
+- append username
+
+## intent:change_user_password
+- how to change the password of a user?
+- changing user password
+- change password of the user
+- change password
+
+## intent:rules_change_password
+- rules when changing password of users ?
+- guidelines when changing for password  
+- what are the guidelines while changing password?
+
+## intent:admin_change_password
+- How the admin can force others to change the password?
+- Can the admin change the user password?
+- admin change the user password
+
+## intent:lock_user_privilege
+- how to lock the privilege of a user?
+- locking user privilege 
+- Can I lock the user privilege
+
+## intent:unlock_user_privilege
+- how to unlock the privilege of a user?
+- unlocking user privilege 
+- Can I unlock the user privilege?
+
+## intent:remove_user
+- how to remove a user?
+- can I remove a user?
+- remove a user
+- delete user
+
+## intent:remove_group
+- how to remove a group?
+- can I remove a group?
+- remove a group
+- delete group
+
+## intent:remove_membership
+- how to remove a member?
+- can I remove a member?
+- remove a member
+- delete membership
+
+## intent:config_ea3_application_properties
+- what is the procedure to configure EA3 application properties
+- steps for configuring application properties?
+- configuring ea3 application properties
+- how to configure ea3 application properties.
+
+## intent:options_config_ea3_application_properties
+- What are the options available to configure the EA3 application?
+- various options to configure the ea3 application.
+- options to configure ea3 application
+- enable Authorization 
+- emergency Logon Allowed
+- configurable delay after authentication failure
+- emergency Roles 
+- inactivity Timeout 
+- display Last Logon Name 
+- administrator Message 
+- emergency Prompt 
+- custom message to display on logon page 
+
+## intent:config_enterprise_tab
+- what is the procedure to configure enterprise tab
+- steps for configuring enterprise tab?
+- configuring enterprise tab
+- how to configure the enterprise tab.
+- enable enterprise authentication
+- cache enterprise users
+- enterprise authentication latency 
+
+## intent:auto_config
+- How to use auto configuration?
+- auto configuration
+- can i automatically configure for enterprise
+
+## intent:connection_problem
+- bad connection problem
+- I can’t connect to the directory server
+- network problem
+
+## intent:authentication_type
+- What are the authentication type directory server supports available?
+- how to select the authentication type for different directory servers
+- I want to know about the authentication types.
+- authentication problems
+
+## intent:config_properties_manual_select
+- What are the configuration properties that are need to be manually selected?
+- can I select the configuration properties manually?
+- select the configuration properties manually.
+
+## intent:save_changes_configuration
+- How to save the changes in configuration?
+- save changes in configuration
+- Will the configuration changes be saved automatically?
+
+<!---------------------------------------------------------chapter 20------------------------------------------------------------->
+## intent:system_management_imageworks_tool_chest_location
+- Where is the ImageWorks Tool Chest located?
+- Location of imagework tool chest.
+- Where can I find imageworks tool chest?
+- imageworks tool chest location
+
+## intent:system_management_imageworks_tool_chest_option
+- what are the different imagework tool chest options?
+- various imageworks tool chest option
+- autoVoice Volume 
+- check Security 
+- unix Shell – Left 
+- unix Shell – Right 
+- turn On Extend HU 
+- quick Snap 
+- IQ Snap 
+- Anon Pat. Level 
+- Export Protocols 
+- Screensaver Time
+
+## intent:system_management_service_tool_chest_location
+- Where is the service Tool Chest located?
+- Location of service tool chest.
+- Where can I find service tool chest?
+- service tool chest location
+
+## intent:system_management_control_the_autovoice_volume
+- What is the procedure to adjust the volume level of Auto Voice heard in the scan room?
+- steps to change the volume of autovoice in scan room
+- how can I adjust the volume level of auto voice 
+- control autovoice volume in scan room
+- auto voice cannot be heard
+- auto voice issue
+
+## intent:system_management_open_unix_shell
+- How to display a unix shell on the monitor?
+- view unix shell on the monitor
+- can I view the unix shell on the monitor?
+- open unix shell on the monitor
+
+## intent:system_management_turn_on_turn_off_extended_ct_range
+- How to enable or disable extended CT number range
+- turn off or turn on extended ct number range
+- on and off extended ct number range
+- steps for on and off extended ct number range.
+
+## intent:system_management_collect_data_troubleshooting_system_issues
+- How to collect data for troubleshooting system issues?
+- collecting data for troubleshooting system issues
+- how can I get data for solving system issue?
+
+## intent:system_management_collect_data_troubleshooting_image_quality
+- How to collect data for troubleshooting image quality issues?
+- collecting data for troubleshooting image quality issues
+- how can I get data for solving image quality issues?
+
+## intent:system_management_anonymize_patient_annotation_level
+- What is Patient de-identification or anonymizing an exam?
+- de-identification of patient 
+- anonymize patient annotation level
+- anonumous patient
+
+## intent:system_management_set_annotation_level_patient_anonymize
+- What is the procedure to set the annotation level for patient anonymization?
+- steps to set the annotation level to hide the details of the patient.
+- how to set the annotation level to hide the details of patients?
+- set an annotation level for anonymize patients.
+
+## intent:system_management_export_user_protocol_on_cd
+- How to export user protocol to a CD?
+- can i export the user protocol to CD?
+- exporting user protocol to cd
+
+## intent:system_management_set_screensaver_timeout
+- Procedure to set screensaver timeout
+- how to set screensaver timeout?
+- screensaver timeout
+- default screensaver timeout
+
+## intent:system_management_iLinq
+- what is iLinq?
+- ILinq
+- define iLinq
+
+## intent:system_management_uses_of_iLinq
+- What are the uses of iLinq?
+- usage of iLinq
+- why do we use iLinq?
+- uses of iLinq
+
+## intent:system_management_terminate_iLinq
+- How to Terminate iLinq remote connection?
+- terminate iLinq in remote connection
+- steps to terminate iLinq in remote connection
+
+## intent:system_management_use_of_product_network_filter
+- What is the use of product network filter
+- usage of  product network filter
+- why do we use product network filters?
+- uses of product network filter
+
+## intent:system_management_use_of_software_download_feature
+- What is the use of software download feature
+- usage of  product network filter
+- why do we use software download feature
+- use of software download feature
+
+## intent:system_management_how_to_update_software
+- Procedure to update software
+- how to update software?
+- update software
+
+## intent:system_management_how_to_leave_a_memo_for_service_engineer
+- Procedure to leave a memo for service engineer
+- how to leave a memo for service engineer
+- leave a memo for service engineer
+- can I leave a memo for a service engineer?

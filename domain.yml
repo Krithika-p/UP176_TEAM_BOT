@@ -81,6 +81,7 @@ intents:
 - Color_Coding_for_Kids_Protocol
 - Set_up_a_pediatric_or_small_patient_exam
 - Adjust_pediatric_and_small_patient_scan_parameters
+- pediatrics
 - computer_console_parts
 - Digital_video_disk_read_write_drive
 - USB_connection
@@ -239,9 +240,176 @@ intents:
 - Motion_Correction
 - Gray_Scale_Enhancement
 - Image_Filter
+- recon_screen
+- list_select
+- list_select_screen
+# - recon_management
+- new_image_from_scan
+- Graphically_prescribe
+- unreconstructed_image
+- pause_resume
+- remove_data
+- reserve_data
+- anonymous_scan
+- save_restore
+- prerequisites_data_scan_anonymously
+- image_add_subtract
+- max_min_pixel_value
+- binding_series
+- perform_bind_series
+- procs_comb
+- accept_negative_pixels
+- procs_usage
+- comb_accuracy
+- ratio_slide
+- add_subtract_image_combination
+- add_subtract_image
+- select_more_than_one_set
+- max_min_ct_number
+- split_screen
+- components_split_screen
+- split_exam
+- image_sent_VES_HES
+- neuro_3d
+- neuro_3d_filter
+- rules_neuro3D_images
+- reformat
+- open_reformat
+- reformat_image_controls
+- keyboard_shortcuts
+- display
+- modify_red_annotation
+- Review_controller_screen
+- color_map_table
+- ROI_preferences_screen
+- annotate_image
+- Save_preset_annotation
+- measure_distance
+- measure_angle
+- measure_area
+- measure_volume
+- display_add_an_ROI
+- Set_ROI_preferences
+- view_types
+- curved_view
+- Create_an_XSection_Histogram_view
+- Create_MPVR_view
+- Create_Profile_view
+- AW_server_client_usage
+- AW_server_client_start
+- AW_server_client_slow
+- AW_server_upgrade
+- AW_server_client_close
+- manual_filming_usage
+- manual_filming_function_keys
+- manual_film_composer_screen
+- print_series
+- print_series_parameters
+- manually_film_image
+- semi_automatic_filming
+- manual_filming_set_print_parameter
+- manual_filming_export
+- right_click_function
+- edit_annotation
+- film_history
+- film_queue
+- protocol_usage
+- protocol_selection_screen
+- protocol_built_and_edit
+- protocol_scout_parameter
+- protocol_set_scan_parameters
+- protocol_set_up_auto_voice
+- protocol_emergency_patients
+- protocol_default
+- protocol_copy_ paste
+- protocol_delete
+- protocol_delete_emergency_patients
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- privacy_laws
+- privacy_using_ea3
+- rules_adding_users_to_local_database
+- user_groups_privileges
+- open_ea3_ui
+- buttons_disabled_center_panel
+- add_local_user
+- add_local_group
+- adding_member_to_group
+- add_enterprise_group
+- add_remove_user
+- change_user_name
+- change_user_password
+- rules_change_password
+- admin_change_password
+- lock_user_privilege
+- unlock_user_privilege
+- remove_user
+- remove_group
+- remove_membership
+- config_ea3_application_properties
+- options_config_ea3_application_properties
+- config_enterprise_tab
+- auto_config
+- connection_problem
+- authentication_type
+- config_properties_manual_select
+- save_changes_configuration
+- system_management_imageworks_tool_chest_location
+- system_management_imageworks_tool_chest_option
+- system_management_service_tool_chest_location
+- system_management_control_the_autovoice_volume
+- system_management_open_unix_shell
+- system_management_turn_on_turn_off_extended_ct_range
+- system_management_collect_data_troubleshooting_system_issues
+- system_management_collect_data_troubleshooting_image_quality
+- system_management_anonymize_patient_annotation_level
+- system_management_set_annotation_level_patient_anonymize
+- system_management_export_user_protocol_on_cd
+- system_management_set_screensaver_timeout
+- system_management_iLinq
+- system_management_uses_of_iLinq
+- system_management_terminate_iLinq
+- system_management_use_of_product_network_filter
+- system_management_use_of_software_download_feature
+- system_management_how_to_update_software
+- system_management_how_to_leave_a_memo_for_service_engineer
 
 responses:
+  utter_pediatric_suggestions:
+    - text: "please select any one"
+      buttons:
+        - payload: Minimize pediatric and small patient dose
+          title: Minimize pediatric and small patient doses
+        - payload: Pediatric and small patient scans
+          title: Pediatric and small patient scans
+        - payload: optimize pediatric protocol
+          title: optimize pediatric protocol
+        - payload: pediatric protocols
+          title: pediatric protocols
+        - payload: Color Coding for Kids Protocol
+          title: Color Coding for Kids Protocol
+        - payload: Set up a pediatric or small patient exam
+          title: Set up a pediatric or small patient exam
+        - payload: Adjust pediatric and small patient scan parameters
+          title: Adjust pediatric and small patient scan parameters
   utter_greet:
   - text: Hey Buddy! How can I help you?
   utter_welcome:
@@ -435,9 +603,9 @@ Area 2 = protocol selection area. Protocols are set and edited in Protocol Manag
 "
       image: http://localhost:7000/img/emergency_patient.png
 
-  utter_protocol_selection:
-    - text: "Find the image below"
-      image: http://localhost:7000/img/protocol_selection.png
+  # utter_protocol_selection:
+  #   - text: "Find the image below"
+  #     image: http://localhost:7000/img/protocol_selection.png
 
   utter_scan_setup_screen:
     - image: http://localhost:7000/img/scan_setup_screen.png
@@ -873,6 +1041,30 @@ Use pediatric positioning accessories
 Make a kid friendly environment
 
 "
+      custom: 
+            payload: "collapsible"
+            data: 
+            - title: Perform only necessary CT examinations
+              description: This important communication between the patient's physician and the radiologist is essential in determining the need for the CT examination. The indications and the appropriate technique to be used should be reviewed by the radiologist prior to every scan including the patient’s number of previous scans, reasons for the scan, and consideration of other effective lower dose modalities.
+            - title: Scan only the organ or anatomical region indicated
+              description: Limits can coverage to cover only the organ or anatomical region of the body indicated to avoid unnecessary exposure.
+            - title:  Minimize multi-phase contrast CT examinations
+              description: 1. CT studies with and without contrast material are not always needed.  
+                2. Multiphase imaging may double or triple the dose and may not add diagnostic information to the study
+            - title: Properly center all patients in the gantry
+              description: Center all patients in the gantry to allow the bow tie filters to deliver dose where it is needed and filter more where it is not
+            - title: Lower mA settings for chest and bone imaging
+              description: Consider using a lower mA setting and higher Noise Indexes if AutomA is used for chest and bone imaging. Higher Resolution/dose imaging is typically unnecessary for these types of studies where there is high inherent contrast between the structures being imaged.
+            - title: Scan signal-to-noise
+              description: Limit the highest quality images requiring the highest radiation dose to very specific indications such as angiography or visualizing small subtle lesions. Studies with higher noise may be just as diagnostic and require lower dose. 
+            - title: Use pediatric positioning accessories
+              description: Use papoose boards and neonatal immobilizers, as needed, with certain patients.
+            - title: Make a kid friendly environment
+              description: Help pediatric patients feel less scared.
+      attachment:
+       payload:
+         src: https://www.youtube.com/embed/Hy8VDsCUtHc?t=260
+       type: video
 
   utter_Pediatric_and_small_patient_scans:
     - text: "Follow the following steps. Select one to know more information on it
@@ -949,7 +1141,7 @@ Use Small SFOV Filters
        - payload: pedeatric scans
          title: pedeatric scans
 
-#-------------------------------------------Chapter 6---------------------------------------------------------------------
+#-------------------------------------------Chapter6---------------------------------------------------------------------
   utter_computer_console_parts:
     - text: "computer console comprise of"
       buttons:
@@ -961,7 +1153,7 @@ Use Small SFOV Filters
          title: The Keyboard  Mouse
        - payload: Computer
          title: Computer
-      image: (pg 143 pdf pg not manual)
+      image: http://localhost:7000/img/Images/Chapter6/computer_console_parts.png
   utter_Digital_video_disk_read_write_drive:
     - text: "The CD/DVD option uses the DVD-R drive to write to or restore from CD-R or DVD-R.
 \n The Data Export option can save information to CD-R.  
@@ -1035,7 +1227,7 @@ Tab moves across the areas on the current screen
       
   utter_SCBSV_keyboard_keys:
     - text: "find the image below"
-      image: (pg 146 table)
+      image: http://localhost:7000/img/Images/Chapter6/SCBSV_keyboard_keys_1.png
   utter_SCBSV_keyboard_function_keys_f1_to_f3:
     - text: "The F1, F3 and F4 function keys can be used for filming to the Manual Film Composer. 
 
@@ -1116,7 +1308,7 @@ Middle-click and drag: Click and hold the middle mouse button down while draggin
 "
   utter_gantry_internal_components:
     - text: "find the image below"
-      image: (pg 152 table)
+      image: http://localhost:7000/img/Images/Chapter6/gantry_internal_components.png
   
   utter_gantry_suggestions:
     - text: "find the suggestions below"
@@ -1207,7 +1399,7 @@ Scanning range (including axial head holder) is no less than 1200mm. The maximum
         
   utter_beam_collimation_conversion:
     - text: "find the table below"
-      image: (pg 161)
+      image: http://localhost:7000/img/Images/Chapter6/high_freqeuncy_generator.png
       
   utter_reduce_helical_artifact:
     - text: "Interleaved helices minimizes helical artifact, and gives the best detail. Interspaced helices has more interpolation of data and increase helical artifact when compared to interleaved mode.Using interspaced helices compared to interleaved helices will provide lower dose
@@ -1280,7 +1472,7 @@ Light gray with gray text indicates that it is not available.
 "
   utter_power_distributor_usage:
     - text: "The PDU supplies power to various parts of the system which includes components in the gantry, table and operator console. On the front of the PDU are controls to indicate that power is on to the unit, a push button to turn power on/off to the gantry and table, and an Emergency Stop button"
-      image: (pg 164)
+      image: http://localhost:7000/img/Images/Chapter6/power_distributor_usage.png
       
   utter_power_distributor_buttons:
     - text: ""
@@ -1383,7 +1575,7 @@ Click OK and follow the Attention instructions
       
   utter_tubeID_verification_fails:
     - text: "SmartID verifies the tube ID at start up. If the tube ID verification fails, attention screens display indicatingtheX-ray tube installedonthe systemisnotrecognized. Youcan continue scanning;however, you need to contact your service representative. ASiR is disabled when a non-GE tube is installed."
-      image: (pg 172)  
+      image: http://localhost:7000/img/Images/Chapter7/tubeID_verification_fails_1.png
       
   utter_turnon_suggestions:
     - text: "find the suggestions below"
@@ -1404,7 +1596,7 @@ Click OK and follow the Attention instructions
           title: restart the system
   utter_daily_prep_screen:
     - text: "From the monitor, click the Daily Prep icon, to display the Daily Preparation screen"
-      image: (pg 181)      
+      image: http://localhost:7000/img/Images/Chapter7/daily_prep_screen.png  
   utter_tube_warm_up:
     - text: "The system operates most efficiently within certain parameters. These parameters are established by warming up the tube using a preset group of exposures. When you perform a tube warm-up at least once per24 hour period and at any system prompt,the tube warm-up reduces the possibility of artifacts and may aid in prolonging the life of the tube."
       
@@ -1446,7 +1638,7 @@ The system finishes the Fast Cal procedure by performing the actual Fast Cal air
       
   utter_non_ge_xray_tube:
     - text: "When the system is configured as a non-GE tube or if the tube is unrecognized by the system, one of the following messages may alert you during system start-up,tube warmup,and fast calibrations that a non-GE X-ray tube is detected in the system configuration. System configurations with non-GE X-ray tubes will also be notified on the Dose Report and in protocol selection and management. "
-      image: (179)      
+      image: http://localhost:7000/img/Images/Chapter7/non_ge_xray_tube.png     
       
   utter_daily_qa_workflow:
     - text: "Execute this workflow every day before patients are scanned.
@@ -1577,7 +1769,7 @@ C indicates the record is completed. These patient studies were scheduled and ha
   utter_schedule_screen_display:
     - text: "Click the Patient Schedule icon to display the Schedule screen
 "
-      image: ()
+      image: http://localhost:7000/img/Images/Chapter8/schedule_screen_display.png
   utter_add_patient:
     - text: "Opens the Patient Schedule information screen, where you can enter the patient’s information and add the number of a specific protocol.
 CLICK HERE TO KNOW HOW TO ADD PATIENT MANUALLY"
@@ -1638,7 +1830,7 @@ Close the Preferences screen before switching between Patient Schedule and Exam.
               description: If you have Connect Pro, click Yes to be able to edit any patient informationfromHIS/RIS.
             - title: Default update parameters
               description: Choose a location and date range
-      image: (8-3)
+      image: http://localhost:7000/img/Images/Chapter8/preferences_patients.png
   utter_add_patient_to_schedule_manually:
     - text: "1.Click the Patient Schedule icon. 
 2. From the Schedule screen, click Add Patient. 
@@ -1662,7 +1854,7 @@ Select All Systems to pull the patient schedule for all the systems on the HIS/R
 5. Enter a Requested Procedure ID, accession number, patient name or ID to narrow the search. These are optional fields. 
 6. Click Continue Update to continue or click Cancel Update to exit and make no changes.
 "
-      image: (8-2)
+      image: http://localhost:7000/img/Images/Chapter8/update_patient_screen.png
   
   utter_view_more_patients_info_on_schedule:
     - text: "Use this feature with the Connect Pro option to view other valuable information about a patient such as allergies, pregnancy status, and medical alerts. This information is pulled from the HIS/RIS using a DICOM connection. 
@@ -1706,7 +1898,7 @@ If more than one record with the same Patient ID is found in the Patient schedul
 
 ANRT is located in the Recon Option area, appearing as XNR 
 "
-      image: 
+      image: http://localhost:7000/img/Images/Chapter10/anrt_reconstruction.png
       
   utter_anrt_constraints:
     - text: "There are several constraints that apply to the acquisition of data where ASiR will be applied:  
@@ -1721,7 +1913,7 @@ ANRT cannot be used when the actual scanning current is less than 50mA
   utter_anrt_image_annotate:
     - text: "Use ANRT character string annotation on the bottom left corner of images
 "
-      image: 
+      image: http://localhost:7000/img/Images/Chapter10/anrt_image_annotate.png
   utter_enable_anrt_scanning:
     - text: "1. Set up a scanning plan. 
 2. In the ViewEdit area, press Recon. 
@@ -1748,7 +1940,7 @@ When [mAReduction] is pressed, if the actual mA value and the necessary mA value
 
 When [mAReduction] is pressed,the [ANRT] button located in the ReconOption area will be enabled automatically.
 "
-      image: 
+      image: http://localhost:7000/img/Images/Chapter10/constraints_anrtscan_ma_reduction_guidence.png
   utter_conduct_arntscan_ma_reduction_guidance:
     - text: "1. Set up a scanning plan. 
 2. Press mA in the ViewEdit area. 
@@ -1771,21 +1963,18 @@ When [mAReduction] is pressed,the [ANRT] button located in the ReconOption area 
     - text: "Signal to Noise Ratio (SNR) is equal when no ASiR is applied compared to 40% ASiR at a 40% mA reduction.
 
 "
-      image: 
+      image: http://localhost:7000/img/Images/Chapter10/snr.png
       
   utter_snr_formula:
-    - text: "The SNR1 metric presented relative to the % ASiR in Figure 10-1 was measured on the Low Contrast Section (CTP515 Section) of the CatPhan® 600 phantom. The measurement involves calculating a signal delta divided by the standard deviation (noise).
-
-"     image:
-      
+    - text: " "
   utter_roi_measurements_snr:
     - text: "find the image below"
-      image:
+      image: http://localhost:7000/img/Images/Chapter10/roi_measurements_snr.png
       
   utter_mtf:
     - text: "MTF remains constant as the ASiR level is increased.
 "
-      image:       
+      image: http://localhost:7000/img/Images/Chapter10/mtf_1.png 
   utter_asir_recon_mode:
     - text: "A warning is posted when ASiR is set to None reminding the user to check the mA and Noise Index prior to scanning without ASiR enabled.
 
@@ -1813,12 +2002,12 @@ WhenASiR is used for dose reduction or image quality improvement,parameter setti
   utter_dose_adjustment_factors_noise_index_adjustment_method:
     - text: "When usingSoft, Standard,Detail, Lung,Bone or BonePlus reconstruction algorithm use the following chart to calculate dose reduction for Noise Index (NI) based on the ASiR level selected.
 The factors were derived based on calculating the relative difference in measured noise standard deviation (SD) with Filtered Back Projection (FBP) and ASiR on a 20cm water phantom"
-      image: 
+      image: "http://localhost:7000/img/Images/Chapter10/dose_adjustment_factors_noise_index_adjustment_method_1.png"
   utter_dose_adjustment_factors_ma_adjustment_method:
     - text: "When using Soft, Standard,Detail, Lung,Bone or BonePlus reconstruction algorithms use the following chart to calculate dose reduction for mA based on the ASiR level selected.
 
 "
-      image: 
+      image: http://localhost:7000/img/Images/Chapter10/dose_adjustment_factors_noise_index_adjustment_method_1.png
       buttons:
         - payload: calculate dose reduction for Noise Index based on the ASiR level selected for auto mA
           title: calculate dose reduction for Noise Index based on the ASiR level selected for auto mA
@@ -2032,7 +2221,7 @@ ASiR Level
               description: Starts a DMPR session, which allows you to prospectively prescribe reformat protocols in a scan protocol.
             - title: Neuro 3D
               description: Starts a Neuro 3D Filter session,which removes noise from the image while preserving image resolution
-      image:
+      image: http://localhost:7000/img/Images/Chapter10/session_setup_dmpr.png
   utter_filter_strength_dmpr:
     - text: "find the details below"
       custom: 
@@ -2107,7 +2296,7 @@ Please refer the manual for all consideration
 "
   utter_dmpr_interactive_review_screen:
     - text: "After a DMPR scan with Batch Reformat on is completed, click DMPR to display the Direct MPR Interactive Review screen"
-      image:
+      image: http://localhost:7000/img/Images/Chapter10/session_setup_dmpr.png
       custom: 
             payload: "collapsible"
             data: 
@@ -2155,7 +2344,7 @@ Please refer the manual for all consideration
 "
   utter_dmpr_batch_rx_screen:
     - text: "When Batch Reformats is off, the Direct MPR BatchRx screen opens after DMPR generation is complete for you to manually prescribe batch reformats"
-      image: 
+      image: http://localhost:7000/img/Images/Chapter 10/dmpr_batch_rx_screen.png
       custom: 
             payload: "collapsible"
             data: 
@@ -2172,7 +2361,7 @@ Please refer the manual for all consideration
   utter_DMPR_images_manipulation:
     - text: "Use the DMPR Review Controller to interact with the DMPR model
 "
-      image: 
+      image: http://localhost:7000/img/Images/Chapter 10/DMPR_images_manipulation_1.png
   utter_Split_exams_usage:
     - text: "Use the Exam Split option to split images from a single acquisition and assign them to a Requested Procedure ID or accession number retrospectively. The smaller image groups can be accessed at reading stations for multiple reads and multiple billings on select patient exams.
 
@@ -2186,7 +2375,7 @@ Please refer the manual for all consideration
 "
   utter_Neuro_3D_filter_Auto_Transfer:
     - text: "Click OK from the Session Selection screen to display the Filter Auto Transfer By Series Host Selection Screen."
-      image: 
+      image: http://localhost:7000/img/Images/Chapter 10/Neuro_3D_filter_Auto_Transfer.png
   utter_Neuro_3D_filter_usage:
     - text: "Neuro 3D Filter is a noise reduction 1 filter optimized for thin slice data that is intended for past processing in Reformat to create Average and MIP images. Volume Rendering and 3D models for Neurological studies such as Circle of Wills, Carotids, Sinuses,Orbits, Mandible and helical Brain. There are three levels. 
 Low- processed images are saved in a series that is the original series number plus 30.  
@@ -2246,7 +2435,7 @@ a. Click Host1. b. Click the network host in the list of available destinations.
     - text: "The SmartPrep scan desktop displays when a SmartPrep scan is prescribed
 
 "
-      image: 
+      image: http://localhost:7000/img/Images/Chapter 10/SmartPrep_scan_desktop.png
       custom: 
             payload: "collapsible"
             data: 
@@ -2293,13 +2482,1522 @@ Diagnostic Delay, (range 3 to 60 in 0.1 second increments) typically set to the 
       
   utter_Motion_Correction:
     - text: "This feature minimizes Lateral Motion in Axial Head Scans. Available in all PMRs and RetroRecon. Note : Motion Correction does not apply to the following cases. Helical/Cine scans and Segment Rotation Length"
-      image:      
+      image:  http://localhost:7000/img/Images/Chapter 10/Motion_Correction.png  
   utter_Gray_Scale_Enhancement:
     - text: "This feature is available for all Head Scans. Improves Gray Scale in Head Images. Available in Prospective and Retro Recon Modes."
-      image:      
+      image: http://localhost:7000/img/Images/Chapter 10/Gray_Scale_Enhancement.png 
   utter_Image_Filter:
     - text: "This feature is available for all Scan Modes. Available in Prospective and Retro Recon Modes Smooth (S1, S11, S2, S21, S3), Edge (E1, E2, E21, E22, E23, E3), Lung (Lu)"
-      image:
+      image: http://localhost:7000/img/Images/Chapter 10/Image_Filter.png
+      
+#-----------------------------------------------CHAPTER 11----------------------------------------------
+  utter_recon_screen:
+    - text: "Click the Retro Recon icon, select patient, exam and series. Then, click Select Series to display the Retro Recon 
+    screen"
+      custom: 
+            payload: "collapsible"
+            data: 
+            - title: Scan (raw) data
+              description: With each rotation of the gantry, X-rays are emitted that pass through a portion of anatomy and strike 
+                the detectors. It contains all of the information gathered during an exposure.
+            - title: Suspended entries
+              description: Sometimes the system for a variety of reasons may not be able to complete the reconstruction of a 
+                particular image. This data is then automatically placed in a queue, where you can attempt to reconstruct it 
+                again or delete it.
+
+            - title: Save scan data
+              description: The media scan data is saved to be dependent on your operator console type. Personal computer-based 
+                systems save scan data to DVD2 -RAM3 media.
+
+            - title: Restore scan data
+              description: Scan data that has been stored on a DVD-RAM or external USB hard drive can be placed back onto the 
+                system disk.Once On the system disk,the scan data can be reconstructed using any of the scan parameters
+
+            - title: Reserve scan data
+              description:  It is important that when the scan data files are reserved, the remaining number of available scan 
+                files for use are reduced by the number reserved. If you do reserve scan files, when you no longer need the scan 
+                data you should release the scan files.
+
+            - title: Release scan
+              description: Once scan data files that have been reserved are no longer needed, you can release them so they can 
+                be overwritten with new data. Releasing the files increases the available scan data files accordingly
+
+            - title: Graphic Retro
+              description: Graphic Retro provides the capability to graphically prescribe your retrospective reconstructions 
+                using an existing axial plane image as a reference image.
+
+            - title: New Series
+              description: New Series can be used to assign a new series number to a retro reconstruction. Normally 100 is added 
+                to the series number of the original scan. If multiple reconstructions are done, they will be all added to this 
+                series.
+
+            - title: Overlapped axial imaging mode (w/ Advanced Acquisition)
+              description: PMR 2-10 and RetroReconsupports the reconstruction of overlapped data from Axial scan type 10 mm 
+                detector coverage. The reconstruction of overlapped axial data can improve formatted data. The interval cannot be 
+                adjusted.
+
+  utter_list_select:
+    - text: "Click the Retro Recon icon to display the exams with available scan data on the Retro Recon List Select screen."
+
+  utter_list_select_screen:
+    - text: "Find the options below"
+      custom: 
+            payload: "collapsible"
+            data: 
+            - title: Exams
+              description: Displays the list of exams available for reconstruction. 
+
+            - title: Series 
+              description: Displays a list of series associated with the selected exam. 
+
+            - title: Next /Prior 
+              description:  Use the arrows to scroll through the exams or series if more than one screen of data exists.
+
+            - title: Select Series
+              description: Adds the series to the retro reconstruction queue.
+
+            - title: Update
+              description:  Updates the list to include any exams added since entering the Retro Recon LIst Select screen
+
+  utter_list_select_suggestions:
+    - text: "Sorry I'm Still learning, Kindly refer the bellow suggestions"
+      buttons:
+            - payload: List Select
+              title: List Select
+            - payload: List Select Screen
+              title: List Select Screen
+
+  # utter_recon_management:
+  #   - text: "On the monitor, click Recon Status to display Recon Management"
+
+  utter_new_image_from_scan:
+    - text: "1. Click Retro Recon. 
+     2. From the Retro Recon List Select screen, select the appropriate patient, exam, and series.
+     3. Click Select Series.
+     4. On the Retro Recon screen, type a new series description in the Series Description area if desired. 
+     5. Click New Series Number To reconstruct images in a system-assigned new series number between 301 and 399
+     6. Click Retro to select all groups and click Yes or click Y for an individual group
+     7. Type in Retro Start and Retro End locations.
+     8. Click Thick and select an image thickness. Click 0.625Z to generate overlapped 0.625 mm thickness axial images
+     9. Click Time and type the Start and End times 
+     10.Click Interval and type in an image interval. 
+     11. Click DFOV and type in desired value. 
+     12. Click R/L Center and/or A/P Center to set image offset. 
+     13. Click Recon Option and select one of the options on the Recon Option screen
+     14. Click Recon Type and select one of the available algorithms
+     15. Click Graphic Retro Y to graphically prescribe the reconstructions, one group at a time
+     16. Click Confirm to generate images"
+
+  utter_Graphically_prescribe:
+    - text: "1. Select an exam and series from the Patient List. 
+  2. Click Retro Recon. 
+  3. Click Graphic Retro so that the button reads Y. 
+  4. Click and drag on the blue boxes (seen inside the red squares on the image below) to change the size of the circle which 
+  represents the DFOV for your reconstruction. 
+  5. Click on the + (seen inside the yellow square on the image below) to define the RL and AP centers for your reconstruction. 
+  6. Click Hide SFOV to hide the red circle which indicates the scan field of view. 
+  7. Click Roam so you can click and drag the reference image. 
+  8. Click Zoom to magnify the image.  
+  Display the image where you want the reconstruction to begin and click Set Retro Start.  
+  Display the image where you want the reconstruction to end and click Set Retro End."
+
+  utter_unreconstructed_image:
+    - text: "1. Click Recon Status to display the Recon Management screen. 
+2. On The Recon Management screen, click Delete Suspended Entries if you do not want to reconstruct the images or 
+Unsuspend Entries. 
+Unsuspend Entries retries the reconstruction and places images in the correct exam and series if reconstruction was successful.  
+Delete Suspended Entries displays a window to confirm deletion. Click OK to remove the selected entry. 
+3. Click Update List to see images that may have been deleted or added. 
+4. Click Quit to exit."
+
+  utter_pause_resume:
+    - text: "Click below"
+      custom: 
+            payload: "collapsible"
+            data: 
+            - title: Pause the recon queue
+              description: Pause Images being prospectively reconstructed cannot be deleted from the queue. 
+                Images being produced retrospectively can be removed from the queue. 
+                1. Click Recon Status to display the Recon Management screen. 
+                2. On the Recon Management screen, click Pause Queue. The recon queue can always be paused or restarted. 
+                Only the entries listed in the Retro queue can be deleted. 
+                3. Click Quit To exit Recon Management screen.
+
+            - title: Resume the recon queue
+              description: The reconstruction queue is not automatically started, you mustresume the queue for reconstruction to 
+               restart.
+               1. Click Recon Status to display the Recon Management screen. 
+               2. On the Recon Management screen, click Restart Queue. 
+               3. Click Quit To exit Recon Management screen.
+
+  utter_remove_data:
+    - text: "1. Click Recon Status to display the Recon Management screen. 
+  2. On the Recon Management screen, click Pause Queue. 
+  3. ClickDelete Retro Recon Entries. 
+  4. On the Delete Retrospective Entries screen, click on each job you want to remove and click Delete Selected.
+  5. Click Restart Queue. 
+  6. Click Quit to exit."
+
+  utter_reserve_data:
+    - text: "1. Click Recon Status to display the Recon Management screen. 
+  2. On the Recon Management screen, click Reserve Scan data. 
+  3. To reserve exams, click Reserve All Scanfiles, Select All Exams Listed or select individual exams.
+  4. To reserve series, click Select All Series Listed or select individual series. 
+  5. To reserve scans, click Select All Scan Files Listed or select individual scans. 
+  6. ClickReserve SelectedScanfiles.
+  7. Click Quit to exit."
+
+  utter_anonymous_scan:
+    - text: "Scan must be idle when you start this procedure. This procedure can take from 60 seconds (helical scan) to 1.5 hours 
+  to save to DVD-RAM. Make sure the selected scan files do not exceed the space available on the DVD1-RAM2. 
+  Only one scan file fits on one side of the DVD-RAM
+    1. Place a DVD-RAM media into the DVD-RAM drive or connect a USB3 device into the USB port on the front of the 
+    media tower. 
+    2. Click Recon Status to display the Recon Management screen. 
+    3. From the Recon Management screen, select USB orDVD. 
+    4. Click Save ScanData. 
+    5. Select The exam/series/scans you wish to save anonymously. 
+    6. Click Save Selected Annon.Data.
+    7. Click Quit to exit. 
+    8. Do not eject the device until the light is out on the DVD-RAM drive. 
+    9. Once the save is complete to the USB device, exit Recon Management and disconnect the USB device. 
+    Then, scanning can resume."
+
+  utter_save_restore:
+    - text: "NOTE : The only validated USB drive is the Seagate 1 terabyte drive. If the device is not formatted correctly,
+  software asks if you want to format it. It takes about 1 minute per 100 GB, so a 1 terabyte device takes 10 minutes to 
+  format.Make sure the selected scan files do not exceed the space available on the DVD-RAM. 
+  Scan data can only be restored on the same system model that it was acquired on
+  STEPS: 
+  1. Verify that you have enough time to complete the save uninterrupted. You cannot scan while saving scan files.  
+  2. Connect the external USB device to the USB port or insert the DVD-RAM.
+  3. Click Recon Status to display the Recon Management screen. 
+  4. Select the USB or DVD. 
+  5. Click Save ScanData. 
+  6. Select the exam you wish to save in the exam screen. 
+  7. Select the individual scan files for the series in the series screen. 
+  8. Select individual scans or click the scans you want to save by clicking Select All Scan Files Listed. 
+  9. Optional, click Save Selected Anon. Data to save the data with no patient information in the image header. 
+  10. Click Quit when the save is complete."
+
+  utter_prerequisites_data_scan_anonymously:
+    - text: "Scan must be idle when you start this procedure. This procedure can take from 60 seconds (helical scan) to 1.5 hours 
+  to save to DVD-RAM.
+  Make sure the selected scan files do not exceed the space available on the DVD1 -RAM2 . 
+  Only one scan file fits on one side of the DVD-RAM." 
+
+#--------------------------------------------CHAPTER 13----------------------------------------------
+  utter_image_add_subtract:
+    - text: "Expand down to know about IMAGE ADDITION AND IMAGE SUBTRACTION"
+      custom: 
+            payload: "collapsible"
+            data: 
+            - title: Image addition
+              description: This adds image intensity values by pixel and is useful for adding thin slices together to get a thicker 
+               slice
+            - title: Image subtraction
+              description: This subtract image intensity values pixel by pixel and is useful to evaluate contrasted vessels.
+
+  utter_max_min_pixel_value:
+    - text: "Expand down to know about IMAGE ADDITION AND IMAGE SUBTRACTION"
+      custom: 
+            payload: "collapsible"
+            data: 
+            - title: Maximum pixel
+              description: The value extraction consists of finding minimum image intensity values pixel by pixel and 
+               is useful for contrasted vessels or calcifications. 
+            - title: Minimum pixel
+              description: value extraction consists of finding minimum image intensity values pixel by pixel. 
+               This could be useful to evaluate soft tissue.
+
+  utter_binding_series:
+    - text: "Binding Series creates a new series which consists of copies of selected images from one or more existing series. 
+      This could be useful if you had images in two separate series and wanted to have them in one series to perform 3D Reformat.
+      Save State information is not maintained in the new series generated with Binding Series."
+
+  utter_perform_bind_series:
+    - text: "Open ImageWorks
+      1. From the browser list of applications, click Add/Sub. 
+      2. Select the desired images. 
+      3. On the Image Combination menu, click Select Set on the left side of the menu. 
+      4. Click Select Set on the right side of the menu. 
+      5. ClickBind. 
+      6. Typically,use the system provided series number, ortype a new series description and number in the Save Series textfield. 
+      7. Click = (equal) to generate the images in the exam defined by the left Select Set button."
+
+  utter_bind_series_suggestions:
+    - text: "Sorry I'm Still learning, Kindly refer the bellow suggestions"
+      buttons:
+            - payload: binding series
+              title: binding series
+            - payload: perform bind series
+              title: perform bind series
+
+  utter_procs_comb:
+    - text: "Click below to know about procs and comb"
+      custom: 
+            payload: "collapsible"
+            data: 
+            - title: Proc
+              description: Proc appears in the browser series list type column if the images in the series are the result of 
+               processing pairs of images that have identical locations in the patient’s body
+            - title: Comb
+              description: Comb appears in the browser series list type column if the images in the series are the result of a 
+               combination of images having different locations in the patient's body.
+
+  utter_accept_negative_pixels:
+    - text: "Accept negative pixels allows negative pixel values in the resulting image. If this function is not enabled, 
+      all negative pixel values are set to zero."
+
+  utter_procs_usage:
+      - text: "Proc series can be used like any other series of acquisition images, i.e., geometrical measurements,reformatting, 
+         3Dreconstructions, etc"
+
+  utter_comb_accuracy:
+      - text: " The absolute anatomical coordinates accompanying Comb series are not accurate.Only relative geometrical 
+          measurements (i.e., distance, angle, or area) made within a resulting image are accurate."
+
+  utter_ratio_slide:
+      - text: "When both Select Set buttons are used during addition or subtraction, equal weighting is applied to the two pixels 
+          in each pair. You can change it via the Ratio slider."
+
+  utter_add_subtract_image_combination:
+    - text: "On the right side of the browser, click Add/Subtract to open the Add/Subtract (ImageCombination) screen"
+      custom: 
+            payload: "collapsible"
+            data: 
+            - title: Select Set 1 
+              description: Defines the first image set
+            - title: Select set 2
+              description: Defines the second image set
+            - title: Equal
+              description: Performs the selected operation and generate the new images.
+            - title: Ratio slider
+              description: Increases pixelweightingof the left(first) image when moced to the left and increases pixel weighting 
+                of the right(second) image when moved to the right. The slider is only available during addition and subtraction
+                when both Select Set buttons are selected.
+            - title: Save series
+              description: Displays the current series and starting image number of the saved series.By default, images 
+                resulting from subsequent operations are added onto the end of the same series unless you click New Save Series.
+            - title: New save series
+              description: Places images resulting from subsequent operations into a new series in the Patient List. If you do 
+                not select this option, the images are saved in the current saved series.
+            - title: Modes
+              description: 1. Max creats a new series that finds the highest corresponding signal intensity values in the selected 
+                set or sets of images.
+                2. Plus (+) creates a new series that adds the image intensity values of the selected image sets. 
+                3. Minus(-) creates a new series that subtracts the image intensity values of the selected image sets. 
+                4. Min creates a new series that finds the lowest corresponding signal intensity values in the selected set or sets 
+                of images. 
+                5. Bind creates a new series that consists of copies of the selected images from one or more existing series. 
+            - title: Accept negative pixels
+              description: Allows negative pixel values in the resulting images. If this function is not enabled, all negative 
+                pixel values are set to zero. This operation is useful on pre-and post- contrast studies of the same slice location. 
+            - title: Clear Selection
+              description: Erases the selections so that both Select Set buttons have no prior values associated with them.
+
+  utter_add_subtract_image:
+      - text: "Open ImageWorks
+      1. From the browser list of applications, click Add/Sub.
+      2. Select the desired images
+      3. On the Image Combination screen, click Select Set on the left.
+      4. If you are adding/subtracting two sets of images, select the second set of images, and click Select Set on the right.
+      By default, equal weighting is applied to the two pixels in each pair, but you can change the weighting via the Ratio slider
+      5. Click+(addition) or-(subtraction). 
+      6. For subtraction, click Accept Negative Pixels unless you want the negative pixel values set to 0 in the resulting image. 
+      7. Typically, use the system provided series number. 
+      8. Click = (equal) to generate the images in the exam defined by the left Select Set button."
+
+  utter_select_more_than_one_set:
+      - text: "If only one set is selected, each operation performed produces one resulting image. 
+      If two sets are selected, images in the two sets are paired according to physical location in the patient’s body. 
+      Unpaired images in either set are ignored. "
+
+  utter_max_min_ct_number:
+      - text: "Open ImageWorks
+      1. From the browser list of applications, click Add/Sub. 
+      2. Select the desired images. 
+      3. On the Image Combination menu, click Select Set on the left side of the menu. 
+      4. Click Min (minimum) or Max (maximum). 
+      5. Typically, use the system provided series number. 
+      6. Click =(equal). 
+      7. Optional:Click New Save Series to repeat the add/subtract procedure with a new series number and description."
+
+  utter_split_screen:
+      - text: "Click the ImageWorks icon . From the browser list of applications, click Exam Split to display the Exam Split 
+      screen."
+
+        image: http://localhost:7000/img/Images/Chapter13/split_exam.png
+
+  utter_components_split_screen:
+      - text: "Components of Exam Split screen"
+        custom: 
+            payload: "collapsible"
+            data: 
+            - title: Screen format
+              description: Lists the Exam Split display options.
+            - title: Produre/Split/Exam
+              description: Displays a list of Trquested Procedure IDs or Accession Numbers for the same patient.
+            - title: W/L presets
+              description: Allows selection from a Preset menu and to Reset the W/L to the last selected values.
+            - title: Comments
+              description: An area in which you can add a comment that is attached to the file you hace selected to solit.
+            - title: Delete All/Delete/Add
+              description: After a range of images has been selected, click an option to define how you want your primary port
+               displayed.
+            - title: Procedure
+              description: A list Requested Procedure ID or Accession numbers.
+            - title: Send
+              description: Saves your selections sends the files to the selected host
+            - title: Browser
+              description: Cancels your selection, ends theSpilt Exam sessionm and returns you to the browser.
+
+  utter_split_screen_suggestions:
+          - text: " Kindly refer the bellow suggestions"
+            buttons:
+            - payload: split screen
+              title: split screen
+            - payload: split screen components
+              title: split screen components
+
+  utter_split_exam:
+      - text: "1. Complete an exam where multiple Requested Procedure ID or Accession Numbers have been selected.
+2. Click the ImageWorks icon.
+3. From the browser, click the exam you wish to split.
+4. Select the series to split.
+5. Select the series to split.
+6. From the Exam Split screen, click firstimage, press Shift, and click the lastimage to select the desired range of images to 
+be grouped together per procedure code.
+7. From the Procedures list area, select the desired procedure from the available list,which reflects the procedures selected 
+from Patient Schedule.
+8. From the Exam Split control panel, click Add. 
+9. Adjust the W/L as needed in the exam area of the display. 
+10. From the Exam Split control panel, click Host Selection. 
+11. Select the receiving host and click Save.
+12. From The list of procedures on the Exam Split control panel, select the procedures you wish to send to the host and click 
+Send.
+13. Click Browser to exit from Exam Split
+NOTE : To select multiple procedures, simultaneously press Shift and click each procedure. "
+
+  utter_image_sent_VES_HES:
+  - text: "For systems configured for VES, send exams prior to splitting and it sends GSPS objects.  
+For systems configured as HES, images are sent after splitting and send a new series."
+
+  utter_neuro_3d:
+  - text: "Neuro 3D Filter removes noise from an image while preserving image resolution. Neuro 3D Filter is optimized for thin 
+  slice data that is intended for post processing in Reformat to create Average and MIP1 images, Volume Rendering and 3D models 
+  for Neurological studies such as Circle of Willis, carotids, sinuses, orbits, mandible, and helical brain.
+1. Click the ImageWorks icon. 
+2. Select the desired exam/series/images. 
+3. From the browser list of applications, click Neuro 3D Filter. 
+4. Click Low, Med, or High. 
+5. Click Go.
+6. Click the Close icon to close the screen when filtering is complete. "
+
+  utter_neuro_3d_filter:
+  - text: "Low filter = series number plus 30 (for example, series 427 becomes 457).  
+  Medium filter = series number plus 40 (for example, series 427 becomes 467).  
+  High filter = series number plus 50 (for example, series 427 becomes 477).  
+  The series description is 3DFiltered. "
+
+  utter_rules_neuro3D_images:
+  - text: "1. Must have at least three non-duplicate location images.
+  2. Must be less than 500 images.
+  3. Must be a single group or multiple groups if the following parameters are the same : slice thickness, interval, tilt, SFOV, 
+DFOV, scan type,rotation, speed, image center, and algorithm. The groups must be contiguous. "  
+
+  utter_neuro_3d_suggestions:
+          - text: " Kindly refer the bellow suggestions"
+            buttons:
+            - payload: neuro 3D
+              title: neuro 3D
+            - payload: neuro 3D filter
+              title: neuro 3D filter
+            - payload: neuro 3D image constraints
+              title: neuro 3D image constraints
+  utter_reformat:
+    - text: "Reformatting allows you to define and display cross-sections of a 2D stack or 3D volume of image data that are oriented differently from the original acquisition images"
+  
+  utter_open_reformat:
+    - text: "1. Click the ImageWorks icon. 
+             2. From the browser, select the desired exam/series/images to reformat. 
+             3. From the browser list of applications, click Reformat.
+             4. Change the view type by selecting a view type from the red annotation"
+  
+  utter_reformat_image_controls:
+    - text: "1. Rotate freehand or page images
+    2. Zoom (magnify) images 
+    3. Pan (roam) images 
+    4. Select objects 
+    5. W/L images 
+    6. Change the image orientation 
+    7. Activate the Oblique mode"
+      image: http://localhost:7000/img/Images/Chapter14/reformat_image_controls.png
+      custom: 
+            payload: "collapsible"
+            data: 
+            - title: Rotate freehand or page images
+              description: 1. Click the Zoom icon to activate zoom mode. 
+                           2. Click and drag to zoom the image in or out
+            - title: Zoom (maginify) images
+              description: 1. Click the Rotation/Paging icon to activate a freehand rotation orto page through images. 
+                           2. Click and drag to rotate 3D/Oblique views and page axial/sagittal/coronal views.
+
+            - title: Select objects
+              description: Click the Selection icon to activate the selection mode
+
+            - title: W/L images 
+              description: 1. Click the W/L icon to activate the W/L mode. 
+                            2. Click and drag over an image to adjust the window width (left-right motion) or the window level (updownmotion). 
+
+            - title: Change the image orientation 
+              description: 1. Click an Image Orientation icon to change the plane or a 3D or oblique reformat image. S = Superior A = Anterior L = Left I = Interior P = Posterior R = Right 
+
+            - title: Activate the Oblique mode"
+              description: The Multiple Oblique Mode button left displays three oblique planes defined by three adjustable color axis
+                            orange,green, blue).
+                            1. Adjust any axis to update the two other oblique planes.
+                            2. Click again to deactivate theMultipleOblique mode,which keeps the orientations defined in oblique viewports.
+                            The Single Oblique Mode button(right) displays a line cursor in Reformat, which is used to define a new plane.
+                            1. Set the function of one viewport to Oblique.
+                            2. Make another viewport primary and then click the Single Oblique Mode button.
+                            A solid yellow line appears, which represents the plane of theOblique reformat.
+                            3. Place the cursor on the solid yellow line and click and drag it to tilt the yellow line to the desired plane
+        
+  utter_keyboard_shortcuts:
+      - text: "Please refer the image below"
+        
+  utter_display: 
+      - text: "A 3D view is different in that it displays an image of the 3D model (which may consist of one or more 3D
+              objects), and that you can manipulate this 3D model.
+              
+              There are two types of annotation:
+              System annotation which is automatically supplied by t he system and is always displayed in the
+              same place. The type and amount of annotation displayed can be modified but not moved.
+              User annotation which is annotation you add. This annotation can be text or measurements and can
+              be placed anywhere on the viewport
+              1. Text annotation
+              2. Preset annotation
+              3. Measurement annotation
+              4. ROI"
+        custom: 
+            payload: "collapsible"
+            data: 
+            - title:  Text annotation
+              description: You can add notes and comments directly on the views, and use a marker with the annotation to point out
+                          anatomical features. User text annotations can be edited, moved or deleted as necessary. When images are
+                          saved, any annotations shown on the images are saved with them.
+
+            - title: Preset annotation
+              description: Preset annotations are those which have already been created and saved forfuture use. These annotations
+                          can consist of text ortext with measurement annotations. The preset measurement annotations varu
+                          depending on the urrent protocal. In addition to the supplied default annotations supplied, you can create
+                          andsave annotations.
+
+
+            - title: Measurement annotation
+              description: You can create and view various measurements(voxel value,distance,angle,area,volume) on the views. Like text annotations, they can be moved, deleted or edited as necessary.
+
+            - title: ROI
+              description: The ROI
+                          tools exist in 2D and 3D. Several shapes are available to measure a region of interest in any view
+                          plane/volume, ie, circle, elliptic, rectangle, and cubic for 3D ROIs. You can use the ROI tools to obtain
+                          information, volumes, areas and statistics of anatomy or pathology
+
+
+
+
+  utter_modify_red_annotation:
+      - text: "All active (red) annotations on the image indicate adjustable fields. Red Numerical values can also be
+              adjusted with left/right-click to decrease/increase values. Otherred annotations can be modified selecting
+              options from menu."  
+        image: http://localhost:7000/                    
+  utter_Review_controller_screen:
+      - text: "The Review Controller screen contains the following selections."
+        image: http://localhost:7000/
+  utter_color_map_table:
+      - text: "When you draw a colored ROI, the Color Map Table screen displays."
+        image: (pg 555)
+        # image: (pg 557)
+        # image: (pg 559)
+  utter_ROI_preferences_screen:
+      - text: "From the Review Controller, click the ROI icon to display the ROI Preferences screen
+              VOI display Sets the display of the VOI on one or all viewports for 3D images.
+              Statistics Allows any combination of minimum, maximum, average, standard deviation and volume values.
+              Size Type in a height, width and depth. There is no depth for the sphere ROI. This will become the default size of
+              the ROI, but it can be modified directly on the image."
+  utter_annotate_image:
+      - text: "1. Click the Display tab.
+              2. Click the Annotation icon .
+              3. On the Annotation screen, click the annotation type (simple, linked or measure).
+              4. Place the cursor on the image and click to deposit the cursor and default text.
+              5. Enter new text in the Annotation text screen."
+  utter_Save_preset_annotation:
+      - text: "1. From the Display tab, click the Annotation icon .
+              2. On the Annotate screen, type text in the Annotation Text field.
+              3. Change the preset name.
+              4. Select the text.
+              5. PressBackspace.
+              6. Type in a new name.
+              7. Click Use for other anatomy if you want the annotation available for other anatomies or Use for
+              other protocol if you want the annotation available for other protocols.
+              8. Click Save as preset to add annotation to preset annotation list"
+    
+
+
+  utter_measure_distance:
+      - text: "1. Click the Measure Distance icon.
+              2. Make one selection for each menu choice
+              3. Position cursorfor start of measurement and move cursor to end point of measurement and click."
+  utter_measure_angle:
+      - text: "1. Click the Measure Angle icon.
+              2. Click and drag the squares to adjust the three points."
+  utter_measure_area:
+      - text: "1. Click the Measure Area icon.
+              2. Click and drag the squares to adjust the points around the region of interest.
+              3. Right-click to display results"
+
+  utter_measure_volume:
+      - text: "1. Click the Measure Volume icon.
+              2. Segment an object of interest.
+              3. Click the viewport of the segmented object.
+              4. Click any of the corners to size the volume"
+
+  utter_display_add_an_ROI:
+      - text: "1. Click the Display tab to view the ROI selections
+              2. Click the desired ROI tool.
+
+              3. Set the ROI statistics, default size, and display location on the ROI preferences screen.
+              4. Click the desired anatomy to deposit an ROI and view the measurements atthe bottom ofthe image.
+              5. Adjust the size by clicking and dragging on an ROI corner"
+
+
+  utter_Set_ROI_preferences:
+      - text: "1. From the Main Control screen, click More Tools.
+              2. Click Display to view the measurement tools.
+              3. Select the desired view on which you want to place the ROI.
+              4. Click the ROI icon on the Review Controller to view the ROI preferences screen.
+              5. For a 3D ROI, one of the following options.
+              6. Click oneormore Statistics option buttons to view any combination of minimum, maximum,average,
+              standard deviation and area (2D) or volume (3D).
+              7. Type in the Vertical and Horizontal direction fields: (2D) or ROI height,width anddepth(3D). The sphere
+              VOI does not have a depth entry.
+              8. To hide the ROI statistics, click on the edge of the ROI to make it active, then at the center of the ROI,
+              right-click on the center dot, and select Hide/Show statistics."
+  utter_view_types:
+      - text: "Please find the table below"
+        image: http://localhost:7000/
+  utter_curved_view:
+      - text: "The curved view does not need to lie along a single orthogonal or oblique plane but can follow anatomical lines.
+              1. In one of the viewports, right-click on the view type active annotation and select Curved.
+              2. On an axial, sagittal, or coronal image, press and hold Shift as you deposit points along the anatomy.
+              3. As you trace, the curved image updates automatically in the curved reformat viewport."
+  utter_Create_an_XSection_Histogram_view:
+      - text: "A histogram graph shows the percentage of occurrence of each voxel value, either in a user-defined surface area on a reformatted slice or in the entire 3D object
+              1. In one of the viewports, right-click on the view type active annotation and select Histo or X Section
+              2. For a cross-section (X Section) histogram, in the viewport containing the anatomy of interest, press
+              Shift and simultaneously click the image to deposit points on the area of interest to create a trace.
+              3. Click Exit.
+              4. Click OK."
+    
+  utter_Create_MPVR_view:
+      - text: "1. Click the red annotation in the upper-left corner of the viewport and select 3D or MIP render mode.
+              The selections available are dependent on the view type.
+              2. Click the Oblique Mode icon.
+              3. Click and drag the yellow line on the image.
+              4. Place the cursor over the red thickness annotation do one the following options.
+              5. Click Exit and OK to finish."
+  utter_Create_Profile_view:
+      - text: "1. Select the Profile Layout preset, if available.
+              2. In one of the viewports, right-click the view type active annotation and select Profile.
+              3. Onanaxial, sagittal, or coronal image, press and hold Shift as youdepositpoints alongthe anatomy.
+              4. On the profile view:
+              5. Click Exit and OK to return to the browser."
+
+  utter_reformat_suggestions:
+    - text: " Kindly refer the below suggestions"
+      buttons:
+       - payload: reformat
+         title: reformat
+       - payload: open reformat
+         title: open reformat
+       - payload: reformat image controls
+         title: reformat image controls
+
+
+  utter_annotation_suggestions:
+    - text: " Kindly refer the below suggestions"
+      buttons:
+       - payload: modify red annotation
+         title: modify red annotation
+       - payload: annotate image
+         title: annotate image
+       - payload: Save preset annotation
+         title: Save preset annotation
+       
+
+  utter_ROI_suggestions:
+    - text: " Kindly refer the below suggestions"
+      buttons:
+       - payload: ROI preferences screen
+         title: ROI preferences screen
+       - payload: display add an ROI
+         title: display add an ROI
+       - payload: Set ROI preferences
+         title: Set ROI preferences
+       - payload: AW server client upgrade
+         title: AW server client upgrade
+       - payload: AW server client close
+         title: AW server client close
+
+  utter_view_suggestions:
+    - text: " Kindly refer the below suggestions"
+      buttons:
+       - payload: view types
+         title: view types
+       - payload: curved view
+         title: curved view
+       - payload: create an X Section Histogram view
+         title: create an X Section Histogram view
+       - payload: create an MPV Review
+         title: create an MPV Review
+       - payload: create Profile view
+         title: create Profile view
+
+  utter_measure_suggestions:
+    - text: " Kindly refer the below suggestions"
+      buttons:
+       - payload: Measure angle
+         title: Measure angle
+       - payload: Measure area
+         title: Measure area
+       - payload: Measure volume
+         title: Measure volume
+       - payload: Measure distance
+         title: Measure distance
+      
+  
+
+#-------------------------------------------chapter15------------------------------------------------------------------------------------------------------------
+
+  utter_AW_server_client_usage:
+    - text: "The AW Server client on the CT console is a software option that
+              provides access to applications hosted on an AW Server, from the CT console. 
+              It offers customers the use of applications on the CT console for improved
+              workflow and productivity.Some of the benefits of having access to the applications
+              on the AW Server is reduces the need to have applications installed on the CT console 
+              or having to go to a workstation which might be in another area."
+
+  utter_AW_server_client_start:
+      - text: "1. Select ImageWorks desktop.
+              2. From the exam list browser, select the exam and series of interest for post processing.
+              3. Click Applications in the Data Apps list.
+              4. The AW Server client main window is opened and the same exam selected in the browser is
+                selected automatically in the AW Server exam list. If the exam and series selected in the console
+                exam list browser doesn’t exist in the AW Server exam list, a pop-up warning is displayed."
+  utter_AW_server_client_slow:
+    - text: "When the console becomes slow, exit the AW Server client and login again.
+                Loading images with the Results Viewer application within the AW Server client on the CT 
+                console may slow down the console processing because the images are transferred to the memory of the CT console.
+                Avoid launching the Results Viewer while other processing steps are executed, such as scanning or image
+                reconstruction. When the console becomes slow, exit the AW Server client and login again."
+
+  utter_AW_server_upgrade:
+    - text: "Use this procedure to exit the AW Server client on the CT console.
+              1. Exit the applications that are running.
+              2. Click the Close button to log out of the AW Server client"
+                        
+  utter_AW_server_client_close:
+    - text: "If the AW Server software version needs to be upgraded, please contact GE Service."          
+
+  utter_AW_server_client_suggestions:
+    - text: " Kindly refer the below suggestions"
+      buttons:
+       - payload: modify red annotation
+         title: modify red annotation
+       - payload:open reformat
+         title:open reformat
+       - payload: reformat image controls
+         title: reformat image controls
+       - payload: AW server client upgrade
+         title: AW server client upgrade
+       - payload: AW server client close
+         title: AW server client close
+
+
+
+ # <!----------------------------------------------------------chapter 16----------------------------------------------------------------------->
+  utter_manual_filming_usage:
+    - text: "The Film Composer is the interface with your camera that allows you to film images.
+             The Film Composer can be opened from the browser,the Viewer, the Mini Viewer, Exam Rx, and Reformat
+             The manual film composer supports following functions:
+              1.Select the images from image browser by exam, series or image level.
+              2.Organize the multiple patients’ filming jobs at the film interface.
+              3.Setup the film layout easily.
+              4.Copy/cut/paste/insert/delete the images on the composer.
+              5.Review the film job from the film history.
+              6.Edit the image annotation "
+
+  utter_manual_filming_function_keys:
+    - text: "F1- Film image
+    F2- Film screen
+    F3- Film MID
+    F4- Print series
+    The manual film composer features support existing F keys (F5-F11) for Setting Window Width and Level. "
+
+  utter_manual_film_composer_screen:
+    - text: "The Film Composer can be opened from the browser, the Viewer, the Mini Viewer, Exam Rx, and Reformat "
+      image: http://localhost:7000/img/Images/Chapter16/manual_film_composer_screen_1.png
+
+  utter_print_series:
+    - text: "Press F4 to open the Print Series screen."
+      custom: 
+            payload: "collapsible"
+            data: 
+            - title: Format
+              description: Select the format of the printed series, using either the same format as the Film Composer or the Viewer.
+            - title:  ImageSelection
+              description: Move the Image Selection slider to include the number of images to be printed.
+            - title:  Interval
+              description: Select an Interval to print the images or choose to print all images in the series. 
+            - title: Current Print Jobs
+              description: The Current Print Jobs area displays messages about the job currently being executed and gives you the option to cancel the print job
+            - title:  Print Last Sheet
+              description:  Yes automatically prints the last sheet of film. Select No to manually click the Print button on the Film Composer. 
+            - title:  Print Series
+              description: Prints the series with the chosen selections. 
+            - title:  Close
+              description: Closes the Print Series screen without printing the series
+
+  utter_print_series_parameters:
+    - text: "Any portion of a series may be filmed using the Print Series (F4) key. All images need to 
+    be filmed in the same window width and level. If multiple window widths and levels are needed (i.e., soft tissue and bone) the Print Series can be used for each window width and level.
+    1. On the display monitor, click in one of the lower viewports.
+    2. Click List Select.
+    3. Select an exam, series, and image.
+    4. Click the Manual Film Composericon.
+    5. Place the cursor in the image/series to be used for Print Series.
+    6. Press F4.
+    7. Set The Print Series parameters.
+    8. Click Print Series."
+
+  utter_manually_film_image:
+    - text: "Select layout.
+    Place the cursor over the image you want to film and use one of the following film methods:
+              a.Film single image: press F1 and the currently active image is placed in the next available film frame.
+              b.Film Screen: Set the image display format to the number of views you want displayed according to the layout you have opened, then press F2.
+              c.Film MID: set the image display format to the number of views you want displayed within each film frame, then press F3."
+  
+  utter_semi_automatic_filming:
+    - text: "1.Click the ImageWorks icon. 
+    2.From the browser patient list, select the desired images. 
+    3.Click [Filming] button from theData Apps area. Film composer will display and the selected images will be loaded to film composer. 
+    4.Edit the images in the film composer. 
+    5.When the Film Composer screen is ready for print, click Print."
+
+  utter_manual_filming_set_print_parameter:
+    - text: "The system retains the changes until next change is made. Settings may be changed prior to actual printing of the images in the composer.Click [Print Settings] button. A dialog window opens allowing you to set up the print preferences. "
+
+      image: http://localhost:7000/img/Images/Chapter16/manual_filming_set_print_parameter.png
+
+      custom: 
+            payload: "collapsible"
+            data: 
+            - title: Print PatientID Name
+              description: Print the Patient Name and Patient ID
+            - title:  AutoClear
+              description: Automatically clears the printed pages of the Film Composer after printing. When off, you must click Delete to manually clear the film composer.
+            - title:  ShowBorder
+              description:  Show border lines for each image frame 
+            - title: Show Page Index
+              description: Show age index
+            - title: MixPatients
+              description:  Allow to print different patients on a film
+            - title: No. Of Copies
+              description: Adjust the number of copies to be printed.
+            - title: Spacing
+              description:  Adjust The vertical and horizontal blank space between images.
+            - title: Expose Order
+              description: 
+                Left to right / Top to bottom - Images fill in the pages from left to right, row by row and top to bottom.
+                Top to bottom / Left to right - Images fill in the pages from up to down, column by column and left to right.
+            - title: Operation Panel Alignment
+              description: Set the operation panel on left side or right side.
+            - title: Tick Marks
+              description: Horizontal, image show horizontal
+               Vertical, image show vertical.
+
+  utter_manual_filming_export:
+    - text: "To export images in the film composer to jpeg format and copy to USB device, click [Export] button. A dialog window opens, allowing the export of each film to 1 jpeg file. If you wish to export each images as a jpeg file set the film format to 1 X1."
+  
+      image: http://localhost:7000/img/Images/Chapter16/manual_filming_export.png
+
+  utter_right_click_function:
+    - text: "Place the cursor over the viewport and right-click to display the on-view menu."
+      custom: 
+            payload: "collapsible"
+            data: 
+            - title: Cut
+              description: Removes the image you select.  
+            - title: Copy
+              description: Copies one image
+            - title: Paste
+              description: Pastes one image to the desired location, covering any image already there.
+            - title: Insert empty
+              description: Inserts an empty image allowing the desired image to be pasted.
+            - title: Insert patient info
+              description: Inserts one blank image containing only patient information.
+            - title: Gray scale enhancement
+              description: Select g1, g2, g3 scale levels or a scale level of none to adjust the gray scale within the image.
+            - title: Filter
+              description: Adjust the images by selecting a smooth filter (s1, s2, s3) and edge enhancement level (e1, e2, e3)
+            - title: Cross Reference
+              description: Displays the cross reference lines for different series.
+            - title: Editor
+              description: Edit the image.
+
+  utter_edit_annotation:
+    - text: "Right click on the mouse and then select the Edit Annotation. A window with image and editing function will open. 
+The Font Name and Font Size can be edited from the drop down menu. The annotation location can be changed by dragging
+the annotation to the location with the red frame; Desired image annotations can be selected from the drop down menu too.
+When finished, click the [Apply] button again. Click [Cancel] to exit. "
+
+  utter_film_history:
+    - text: "Click [Film History] button to display a history of what jobs have been printed, the history window opens. 
+View the list jobs you have printed, or remove jobs by Patient Name or ID from the history list which have finished printing. 
+Click [Setting] button, to set up the auto delete period in days. For example, if you set 30, the system will delete jobs from the history list after 30 days. "
+  
+  utter_film_queue:
+    - text: "Click [Film Queue] button, the printing queue window opens. Click [Pause] to pause the selected printing jobs.
+Click [Resume] to resume the jobs which be paused. Click [Refresh] to refresh the printing job list.
+Click [Clear] to delete the selected printing jobs.
+Click [Close] to close. "
+            
+#<!----------------------------------------------------------chapter 17----------------------------------------------------------------------->
+
+#<!---------------------------------------------------------chapter 18------------------------------------------------------------->
+  
+  utter_protocol_usage:
+    - text: "A protocol must be selected in order to initiate the scanning sequence. Protocols are used
+as a basis for routine or established procedures. They save time by using preset established
+factors. "
+      custom: 
+             payload: "collapsible"
+             data: 
+             - title: Use protocols
+               description: After entering the patient information in the Exam Rx area, you choose a protocol from one of the four protocol locations (User, GE, Service, or Most Recent).
+                Once you choose the area you wish to get the protocol from, then you select an anatomical area and the protocol you wish to use. Once the protocol is chosen,the scanning sequence is activated. All parameters for scanning a patient can be set up in a protocol. This saves you time when prescribing scan parameters for each patient.
+             - title: Edit protocol.
+               description: Once a protocol is chosen, any factor in the individual exam may be adjusted without affecting the established protocol. 
+                If an established protocol has a factor or factors you wish to permanently change, this can be done through the Protocol Management feature. If your system has been configured for EA3 Login, you must have permission to accept any changes in Protocol Management.
+             - title: View Protocols
+               description: Protocols can be viewed with the Protocol Management feature. Each series can be viewed and scan values may be changed to see the effect on other values or other available options.
+
+  utter_protocol_selection:
+    - text: "There are different Protocol selections available"
+      custom: 
+             payload: "collapsible"
+             data: 
+             - title: User
+               description:  location where protocols can be built in either adult or pediatric models. These protocols are custom protocols that your radiologist or physician likes to use.
+             - title: GE
+               description:  location for a set of predefined protocols that cannot be modified but can be copied and used. 
+                These protocols are factory installed. They have been developed in collaboration with clinical partners to provide users with a convenient and clinical relevant starting point for tailoring your departmental protocols.
+             - title: Service
+               description:  location for protocols used by a service representative.
+             - title: Most Recent
+               description:  location where a copy of the last 90 protocols reside exactly as they were used. 
+                These protocols can be copied and used but cannot be modified or deleted.
+
+  utter_protocol_selection_screen:
+    - text: "Click Protocol Management, to view the Protocol Selection screen. See Applications Configuration.
+      The protocol area has 10 adult and 10 pediatric protocol categories. Protocols 1 to 10 are adult protocol areas and 11 to 20 are pediatric protocol areas. Each protocol area allows up to 90 different protocols."
+      
+      image: 
+
+  utter_protocol_built_and_edit:
+    - text: "1. Click Protocol Management.
+2. On the Protocol Selection screen, click User.
+3. Select an anatomical region.
+4. Click Edit if you are making changes to an existing protocol.
+5. Select a blank protocol space, click New type the name of protocol and press Enter.
+6. The system defaults to Scout series the first time you are building/editing a protocol. For subsequent series, click Create New Series and select the type of series to be built.
+In most cases, a scout series is built first because this allows for more precise scanning. A scout must be programmed first if it is to be displayed automatically with Show Localizer.
+AutomA and SmartmA require a scout to be acquired in order to generate a mA table.
+7. Click OK.
+8. Set the patient position.
+9. Click Anatomical Reference and assign a two letter abbreviation for the zero point (landmark). Click
+OK to confirm your change or click Cancel to exit the Anatomical Reference screen with no change.
+10. Select series parameters: archive, network, filming options, if desired.
+11. Set the Scout parameters. Set the technique factors low
+12. Click Create New Series.
+13. Click Axial and Create After.
+14. Prescribe the parameters for the series. "
+
+  utter_protocol_scout_parameter:
+    - text: "Scout Parameters include Scout Image number, Start and End Locations to set the length of the scout, technique factors of kVp and mA, scout plane, Auto Voice and use of the Window Width/Level feature. Selecting an individual cell under a parameter column allows you to adjust only the factor in that group. Selecting the parameter the column from the top row highlights all of the factors directly below the selected column and allows you to adjust that factor in all of the images.
+a.Define the Start/End locations.
+b.Select the kV.
+c.Select the mA.
+The Scout Plane designates what type of scout is being acquired. Only 0, 90, 180, and 270 can be used with Show Localizer.
+d.Choose an Auto Voice message.
+e. The language is set by the service engineer.
+f. Multiple languages are available for Auto Voice messages 1, 2, or 3.
+g. Set the W/L. "
+ 
+  utter_protocol_set_scan_parameters:
+    - text: "Set the scan parameters.
+   a. Adjust the Graphic Rx.
+   b. Set the timing parameters.
+   If any of the values in Start/End Location, Number 
+   of Images, Slice Thickness, or Image Interval are changed from the original value, 
+   the system automatically adjusts any necessary values to maintain the signal to noise. 
+
+   For example, if the number of images is decreased, the system automatically adjusts the end location. 
+   The system highlights any adjusted value in orange and changes any necessary graphic representations on the scout. "
+ 
+  utter_protocol_set_up_auto_voice:
+    - text: "Set up Auto Voice.
+c. Set the recon parameters.
+d. Set the film parameters.
+e. Apply any additional scan features.
+The data acquired for all other series is different than data acquired for scout images. This means that features such as Patient
+ Position and Auto Voice must be set or activated again for this series.
+If the patient orientation does not match the scout for the current series, AutomA/SmartmA are not enabled.
+Click Copy Orientation, Patient Position, Anatomical Reference, to copy the patient orientation from the previously scanned series, 
+regardless of what is in the protocol.
+If Auto Store/AutoTransfer were set for the exam scout image, they are automatically set for this series. "
+ 
+  utter_protocol_emergency_patients:
+    - text: "1. Click Protocol Management.
+2. On the Protocol Selection screen, click Emergency Patient Protocol.
+If you wish to build or edit adult or pediatric protocols, refer to Build or edit a protocol section.
+3. On the Emergency Protocol screen, click one Protocol title button from the nine icon selections.
+4. Click Link.
+5. On the Protocol Selection screen, select an anatomical region.
+Click the arrow up or down to view a list of 15 protocols at a time.
+Click and drag the scroll bar to move quickly through all 90 protocols.
+Only the protocols in User tab are available.
+6. Select an existing protocol, then click OK.
+Click Cancel to cancel the protocol link.
+7. On the icon selection screen, select the desired icon.
+Displays Adult icon selection popup when the linked protocol is in 1.x to 10.xx.
+Displays Pediatric icon selection popup when the linked protocol is in 11.x to 20.xx.
+Please select an appropriate icon according to the Protocol patient position and entry selection.
+8. Click Quit. "
+
+  utter_protocol_default:
+    - text: "1. Click Protocol Management.
+2. On the Protocol Selection screen, click GE or User.
+3. Click the desired anatomical body part to view the protocols.
+4. From the Anatomical Protocol list, click a protocol and then click Set as Default.
+a. Only one protocol in each list can be set as the default.
+b. Default protocols can not be set in the Pediatric color coded areas.
+c. The default protocol is highlighted in yellow. "
+
+  utter_protocol_copy_ paste:
+    - text: "1. Click Protocol Management.
+2. From the Protocol Selection screen, click the anatomical selector you want to copy from (GE, User, or Most Recent).
+3. Select the protocol you want to copy.
+4. Click Copy.
+5. Click the anatomical selector to where you want to paste the protocol.
+6. Click on an empty protocol list number and then click Paste.
+7. Rename the protocol, if necessary.
+a. Click the protocol.
+b. Highlight the text and type and Enter a new name.
+8. Click Done. "
+ 
+  utter_protocol_delete:
+    - text: "1. Click Protocol Management.
+2. From the Protocol Selection screen, click the anatomical selector from where you want to delete a protocol.
+You can only delete from the User or Service protocol selectors.
+3. Select the protocol you want to delete.
+4. Click Delete.
+5. Click OK to the confirmation prompt.
+6. Click Done. "
+ 
+  utter_protocol_delete_emergency_patients:
+    - text: "1. Click Protocol Management.
+2. On the Protocol Selection screen, click Emergency Patient Protocol.
+3. On the Emergency Protocol screen, click one Protocol title button of nine selections.
+4. Click Delete Link. "
+
+#<!----------------------------------------------------------chapter 19------------------------------------------------------------->
+  utter_privacy_laws:
+    - text: "a. Health Insurance Portability and Accountability Act (HIPAA)
+b. Directive 95/46/EC on Data Protection (the Data Protection Directive)
+c. Personal Information Protection and Electronic Documents Act (PIPEDA)
+
+"
+      
+  utter_privacy_using_ea3:
+    - text: "
+Data Privacy using EA3 requires you to log on to the scanner and log off when you are done scanning for a period of time. If you do not log off, the system will log you off and you will have to log back on. Data Privacy using EA3 contains the following permissions. You can have Administrative, GE Service, Standard User or Limited User. Standard User can perform scanning functions and modify protocols. Administrator can setup and delete users. Limited users can perform all scanning functions. You must have Administrative permission to add or delete users. 
+ 
+The Standard User permission can scan and modify protocols in Protocol Management. 
+The Limited User can only scan. 
+Emergency User login has Limited User permission
+"
+      custom: 
+            payload: "collapsible"
+            data: 
+            - title: The Administrator permission can add users.
+              description:  
+            - title: The Standard User permission can scan and modify protocols in Protocol Management.
+              description: 
+            - title: The Limited User can only scan.
+              description: 
+            - title: Emergency User login has Limited User permission
+              description:  
+  utter_rules_adding_users_to_local_database:
+    - text: "a. Users/Groups – Lower case letters and numbers only
+b. Users/ Groups – Cannot start with a number
+c. Users/Groups – No limit on length
+d. Passwords – Must be at least on character long, no Null characters
+e. Passwords – Can contain uppercase letters, numbers and special characters
+
+"
+      
+  utter_user_groups_privileges:
+    - custom: 
+            payload: "collapsible"
+            data: 
+            - title: Users and groups
+              description: Every person who has permission to use the system is a user. Users are set up by system administrators. These administrators may be IT personnel in an enterprise environment, or a site manager or lead tech in stand-alone environments. The administrator adds new users and assigns the users to a group, which dictates the level of privileges a person will have. For example, a person named Sue Smith could belong to a group called technologists, radiologists, administrators,or any combination. 
+
+            - title: Groups and privileges
+              description: The Group To which a person belongs has privileges. If you don't have an enterprise system,the assignment of group privileges is probably limited to those who have administrator privileges and those who do not. Additionally, permission for protocol edit may be assigned to groups. If your system is set up for enterprise login, your IT person or administrator uses more of the features.
+
+
+      
+  utter_open_ea3_ui:
+    - text: "Use this procedure to open the EA3 user interface.
+1. Click the Service icon.
+2. From the Service desktop, click Utilities icon.
+3. From the Utilities screen, click EA3 Admin Browser.
+4. From the EA3 Administration screen, type your Username and Password.
+    a. Consult your service engineer or application representative for username and login
+5. Click Login.
+6. From the Local Users or Group tab, select a group or user.
+"
+      
+  utter_buttons_disabled_center_panel:
+    - text: "If there are no users or groups, then there is no items in context. All of the buttons in the center panel are disabled until a user or group is added.
+
+"
+      
+  utter_add_local_user:
+    - text: "1. From the Local Users tab, click Add Local User.
+2. From the pop-up panel, type information for each of the following:
+    a. A unique user ID
+    b. Full Name
+    c. Password
+    d. Confirm Password
+    e. If an error occurs, a message box displays, and your changes are not committed to the database. Correct your errors and try again. Common errors include:
+    f. User name and password cannot be the same.
+    g. Password does not meet the minimum length requirements. Choose a longer password.
+    h. Password and Confirm Password box do not match. Make sure the passwords match.
+3. Click Add User.
+"
+      
+  utter_add_local_group:
+    - text: "Open EA3.
+1. From the Group tab, click Add Local Group.
+2. From the Add Local Group window, type and Enter a unique group name.
+      a. If an error occurs, a message box displays, and your changes are not committed to the database. Correct your errors and try again. Common errors include:
+      b. Group name already exists in the database
+      c. Application session timeout
+3. Click Add Group.
+      a. The group is highlighted in the Local Groups list box. All information and buttons in the center panel refer to the highlighted group.
+4. To change a group's roles, select the Roles option boxes and click Apply Roles.
+     a. A green label confirms the applied roles.
+     b. An error message box displays if it is unsuccessful
+"
+      
+  utter_adding_member_to_group:
+    - text: "Open EA3. 
+1. From the Groups tab, select a group in the Local Groups area. 
+2. In the Group Members area, click Add Membership. 
+     a. A panel lists all the users that are eligible to be added to the selected group. 
+3. Select the users you want to add to the group. 
+     b. If no users are eligible to be added to this group, an error message displays. 
+4. Click Add To Group. 
+"
+      
+  utter_add_enterprise_group:
+    - text: "Open EA3. 
+1. From the Group tab, click Add Enterprise Group. 
+2. From the Add Enterprise Group pop-up window, type and Enter a unique group name. 
+     a. If an error occurs, a message box displays, and your changes are not committed to the database. Correct your errors and try again. Common errors include: 
+     b. Group name already exists in the database 
+     c. Application session timeout 
+
+3. Click Add Group. 
+"
+      
+  utter_add_remove_user:
+    - text: "Open EA3. 
+1. Select the Local Users tab. 
+2. In the Local Users area, select the user you want to modify. 
+     a. The groups that this user is currently a member are listed in the Groups area. 
+3. In the Groups area, click Add to Groups or Remove from Groups. 
+4. Select the group you wish to add remove for this user. 
+5. Click Add Membership or Remove Membership. 
+"
+      
+  utter_change_user_name:
+    - text: "Open EA3. 
+1. From the Local Users tab, select a user. 
+2. Click Change Name. 
+3. From the Change Name window, type a new name. 
+4. Click Confirm Change. 
+
+"
+      
+  utter_change_user_password:
+    - text: "Open EA3. 
+1. From the Local Users tab, select a user. 
+2. Click Change Password. 
+3. From the Change Password window, enter a password and confirm the password. 
+a.	A password can contain uppercase letters, numbers, and special characters. 
+b.	An error message displays if the password does not meet the minimum length requirements. The minimum requirement are displayed in the Minimum Password Length field located in the top area of the Local Users tab. Change the password to an acceptable length. 
+4. Click Confirm Change to accept the new password or Cancel to exit without changing your password. 
+"
+      
+  utter_rules_change_password:
+    - text: "a.	A password can contain uppercase letters, numbers, and special characters. 
+b.	An error message displays if the password does not meet the minimum length requirements. The minimum requirement are displayed in the Minimum Password Length field located in the top area of the Local Users tab. Change the password to an acceptable length. 
+
+"
+      
+  utter_admin_change_password:
+    - text: "1. From the Local Users tab, select a user. 
+2. From the bottom of the Local Users tab, select the Change Password on Next Login option. 
+3. Click Apply Configuration. 
+a.	The next time the user logs in, he will be required to enter a new password. 
+b.	 Once the new password is entered, the Change Password on Next Login option is de-selected 
+
+"
+      
+  utter_lock_user_privilege:
+    - text: "Open EA3. 
+1. From the Local Users tab, select a user. 
+2. From the bottom of the Local Users tab, select the Locked toggle option. 
+
+   a. When the Locked box is checked the user is locked from login even if he has a valid password. 
+   b. If Emergency User is enabled on your system, the locked user can login as an Emergency User. 
+
+3. Click Apply Configuration. 
+
+"
+      
+  utter_unlock_user_privilege:
+    - text: "Open EA3. 
+1. From the Local Users tab, select a user. 
+2. From the bottom of the Local Users tab, select the Locked toggle option. 
+
+        a. When the Locked box is checked the user is locked from login even if he has a valid password. 
+        b. If Emergency User is enabled on your system, the locked user can login as an Emergency User. 
+
+3. Click Apply Configuration. 
+
+"
+      
+  utter_remove_user:
+    - text: "Open EA3. 
+1. From the Local Users tab, select a user. 
+2. Click Remove User. 
+3. From the Confirm Removal window, click Confirm Removal. 
+
+"
+      
+  utter_remove_group:
+    - text: "Open EA3. 
+1. From the Group tab, select a group. 
+2. Click Remove Group. 
+3. From the Confirm Removal window, click Confirm Removal
+"
+      
+  utter_remove_membership:
+    - text: "Open EA3. 
+1. From the Group tab, select a group 
+
+2. Click Remove Membership. 
+
+       a. A panel lists all users that are eligible to be removed from the highlighted group. Select users you want to remove from the group. 
+       b. If no users are eligible to be removed from this group, an error message box displays. 
+
+3. Click Remove From Group. 
+"
+      
+  utter_config_ea3_application_properties:
+    - text: "Open EA3. 
+1. From the Applications screen, enter the desired selections. 
+2. Click Apply Configuration to accept your configuration changes. Alternatively, click Restore Configuration to undo any changes made that have not yet been saved. 
+"
+      
+  utter_options_config_ea3_application_properties:
+    - custom: 
+            payload: "collapsible"
+            data: 
+            - title: Enable Authorization
+              description: enable or disable authorization. If authorization is enabled, anyone logging in through EA3 (both local and enterprise users) must have a role. Anyone without a role is denied access, if authorization is turned on. The User role does not matter for logging into EA3, however, other EA3 client applications may restrict which roles can login. 
+                 Logon Allowed - enable or disable emergency access. If EA3 is used in GUI mode, this entry decides whether or not to display the Emergency login button. If this is disabled, emergency user access is prevented. 
+ 
+            - title: Configurable delay after authentication failure (second)
+              description: is delay defined by administrator for number of seconds delay after system failed to authenticate logon. 
+            - title: Emergency Roles
+              description: the roles assigned to the emergency user. The defaults allow an admin to assign a Standard user role, Limited User role, or both roles. 
+            - title: Inactivity Timeout (minutes)
+              description:  The minutes that must elapse without any mouse/keyboard, etc. activity before a timeout is generated. When a timeout is generated, the EA3 logon screen is displayed. This value can be any positive integer, or it can be 0. If the value is 0, this indicates NO inactivity timeout; regardless of how much time has elapsed the system does not timeout. 
+            - title: Display Last Logon Name
+              description:  enable or disable to display the username of the last user that has logged in on the EA3 logon screen. 
+            - title: Administrator Message
+              description:  under certain circumstances / error conditions, the user of EA3 is asked to contact an administrator. This field allows the administrator to specify contact details for himself / herself and a custom message. 
+            - title: Emergency Prompt
+              description:  the text that is displayed to any user logging in as emergency. The user is asked to enter information (usually their actual user name). This text appears in that prompt for information. 
+      
+  utter_config_enterprise_tab:
+    - text: "Open EA3. 
+1. From the Enterprise tab, enter desired selections. 
+
+2. Modify properties in the lower two boxes of the Enterprise tab to make the Enterprise directory server connection. 
+3. Click Apply Configuration to accept your configuration changes. Alternatively, click Restore Configuration to undo any changes made that have not yet been saved.
+"
+      
+  utter_auto_config:
+    - custom: 
+            payload: "collapsible"
+            data: 
+            - title: Enable Enterprise Authentication.
+              description: login authorization. If it is unchecked, only local EA3 users can log in. If it is checked, both local users and enterprise EA3 users can log in and local EA3 user database is tried first 
+            - title: Cache Enterprise Users
+              description: enables Enterprise users to be cached once they successfully login. If the Enterprise directory server is not available due to network or other issues the following scenarios occur
+               a.	If it is checked, a local record of an Enterprise user is kep and the you can login.  
+               b. If it is unchecked, an Enterprise user is denied access. 
+               c. Hashed passwords are cached, the actual password is not cached. 
+
+            - title: Enterprise Authentication Latency (Seconds).
+              description: the time the EA3 login process wait for a response from the Enterprise directory server. Often times, there is a network latency when connecting to servers, which is dependent on your network configuration. If the amount of time is reached without a response from the directory server, the EA3 login process returns a failed login. A value of 5 seconds is typically enough time to allow a properly configured directory server to respond, without causing undue user annoyance. 
+      
+  utter_connection_problem:
+    - text: "If the connection is bad, then there is a problem connecting to the directory server. Check the following: 
+a.	IP/server name 
+b.	 if system has DNS running 
+c.	if the system can resolve the IP address / server name 
+
+"
+      
+  utter_authentication_type:
+    - text: "a.	If it is a Microsoft Active Directory Server, typically select Kerberos. If it is a Novell eDirectory Server, typically select LDAP. If you do not know, check with the owner of the directory server for information. 
+b.	If the enterprise server supports SSL connections, select the 'Use SSL' option. 
+c.	 If you use LDAP authentication without SSL, passwords are sent in the clear. This is not recommended. An alert is posted for this configuration. With kerberos and non-SSL, the authentication is encrypted, but the LDAP traffic is not. 
+
+
+"
+      
+  utter_config_properties_manual_select:
+    - text: ""
+      
+  utter_save_changes_configuration:
+    - text: "No changes are saved to EA3 on a tab unless you click Apply Configuration before you navigate to another tab or click Confirmation on a popup panel. If there is more than one Apply Configuration button on a tab, click the one associated with the data you changed (the buttons are grouped with the data they manage in a bordered panel).
+"
+      custom: 
+            payload: "collapsible"
+            data: 
+            - title: Format.
+              description:  set to domain or dn. 
+                a.	 domain is the 'MSAD' way of doing LDAP authentication (i.e <userId>@<realm name>). 
+                b.	 dn is the eDirectory, and most other directory servers use (i.e. loginAttribute=<userId>,<ldap base dn>) way of doing LDAP authentication. If you are connecting to a non-MSAD directory server, more than likely use dn. 
+            - title: DN
+              description: is the LDAP base DN of the LDAP server to which you are connecting. Typically this is the fully qualified domain name separated by a bunch of 'DC='. For example, if the fully qualified domain name of the directory server is 'example.com', it is likely that the DN is 'DC=example,DC=com'. 
+            - title: Login Attribute
+              description: is the LDAP attribute to be used for the unique user identifier, that is the user id to login. Set it to the unique identifier your server uses. 
+               a.	 On MSAD it is sAMAccountName 
+               b.	 On eDirectory, it is typically cn 
+
+            - title: First Name Attribute
+              description:  is the LDAP attribute that is used for the user's first name.
+            - title: last Name Attribute
+              description: is the LDAP attribute that is used for the user's first name.
+            - title: Group Attribute
+              description:  is the LDAp attribute that is used to find group memberships for the user. On MSAD, it is memberOf.
+      
+#<!---------------------------------------------------------chapter 20------------------------------------------------------------->
+  utter_system_management_imageworks_tool_chest_location:
+    - text: "The ImageWorks Tool Chest is located on the ImageWorks desktop.
+"
+      
+  utter_system_management_imageworks_tool_chest_option:
+    - custom: 
+            payload: "collapsible"
+            data: 
+            - title: AutoVoice Volume
+              description: AutoVoice Volume displays a screen with volume sliders that allow you to adjust the left and right audio volume levels for AutoVoice in the scan room. See Control the Auto Voice volume.
+
+            - title: Check Security
+              description: Check Security is used by service personnel.
+            - title: Unix Shell
+              description: Displays a Unix Shell on the monitor. This area is used by service personnel. See Open a Unix shell. 
+            - title: Turn On Extend HU
+              description:  Displays the extended Houndsfield Units. See Turn on/off extended CT numbers.
+            - title: Quick Snap
+              description: Quick Snap takes a snapshot of all the parameters you have prescribed and information for processes touched by the prescription. This is useful when you are having system issues for service personnel to recall the system issues. See Collect data with Quick Snap.
+            - title: Export Protocols
+              description: User protocols for adult and pediatric categories can be copied to CD-R in an Excel format with the Export Protocols feature.
+                The file can be edited once it is saved to a PC with Excel software. See Export protocols.
+      
+  utter_system_management_service_tool_chest_location:
+    - text: "The Service Tool Chest is located on the Service browser. It contains several of the same features that are in the ImageWorks 
+Tool Chest
+"
+      
+  utter_system_management_control_the_autovoice_volume:
+    - text: "1. Click the ImageWorks icon.
+2. On the Tool Chest, click Auto Voice Volume.
+3. Click and drag the right or left slider to adjust the Auto Voice volume levels in the scan room.
+4. Make a selection:
+   a. Click Accept to accept the values but not save the values.
+   b. Click Save to save the values.
+   c. Click Default to reset the values to the system default values.
+5. Click Quit to exit.
+
+If Auto Voice cannot be heard, check the settings for the Auto Voice Volume listed in the Tool Chest on the Image Works desktop. Click Auto Voice Volume on ImageWorks desktop in the toolbar. Use the sliders to set the value between 50 to 85%, click Save, and then Default to set the new saved value as the new default. Click Reset to reset the system default values. 
+AutoVoice may fail to function, especially during system simultaneity.Make sure that you can hear the Auto Voice to recognize if Auto Voice has quit. Manually breathe the patient when this occurs.
+"
+      
+  utter_system_management_open_unix_shell:
+    - text: "
+1. Click the ImageWorks icon.
+2. From the Tool Chest screen, click Unix Shell - Left or Unix Shell-Right to open a Command Line window on the monitor.
+3. Click File > Close Window or type exit to close the Unix shell window
+"
+      
+  utter_system_management_turn_on_turn_off_extended_ct_range:
+    - text: "1. Verify that the system is idle and that all reconstructions are complete.
+2. Click the ImageWorks icon.
+3. From the Tool Chest, click Turn On Extend HU or Turn Off Extend HU.
+       a.The action that occurs is described on the button and does not reflect the state of the sytem.
+4. Click OK on the message prompt.
+       b.The system automatically shuts down and reboots as part of the extended CT numbers procedure.
+"
+      
+  utter_system_management_collect_data_troubleshooting_system_issues:
+    - text: "1. Click the ImageWorks icon.
+2. From the Tool Chest, click Quick Snap.
+3. Click OK to the message prompt located on the left monitor. The pop-up screen closes when the snap is complete.
+4. Record the time and date of the QuickSnap for debugging by the service engineer
+
+"
+      
+  utter_system_management_collect_data_troubleshooting_image_quality:
+    - text: "1. Click the ImageWorks icon.
+2. From the browser, select all the images for the investigation.
+3. Click Utilities
+4. Select the anonymous exam.
+  a.Maximum of 500 images.
+5. From the Tool Chest, click IQ Snap.
+  a.If you did not make the images anonymous or did not select the anonymous exam, a pop-up displays instructing
+    you to make the images anonymous. You cannot proceed until the selected images are anonymous.
+6. Click OK to the warning and the message prompts located on the left monitor.
+  a.If you get a message at the end of IQ Snap that indicates it failed, contact service.
+  b.This message closes once the IQ Snap is complete
+
+"
+      
+  utter_system_management_anonymize_patient_annotation_level:
+    - text: "Patient de-identification or anonymizing an exam electronically removes certain exam information and replaces it with anonymous information. There are two levels to anonymizing patient information: Full and Partial. 
+
+CLICK HERE TO KNOW ABOUT THE PROCEDURE TO SET ANNOTATE LEVEL FOR PATIENT ANONYMIZE
+"
+      buttons:
+        - payload: set the annotation level for patient anonymize
+          title: set the annotation level for patient anonymize
+      
+  utter_system_management_set_annotation_level_patient_anonymize:
+    - text: "1. Click the ImageWorks icon.
+2. From the Tool Chest, click Anon. Pat. Level.
+3. Respond to the message prompt that defines the currently active anonymous state.
+  a.Click OK to change the patient anonymous annotation level.
+  b.Click Cancel to keep the current patient anonymous annotation level.
+4. Set the desired level: Full or Partial.
+  a.Full mode is the most HIPAA compliant mode.
+  b.ANON and the exam number are added to the Patient List
+
+"
+      
+  utter_system_management_export_user_protocol_on_cd:
+    - text: "Use this procedure to export user protocols to aCDso that you can load CD on a PC and print. The format is excel. The system must be idle when exporting protocols.
+1. Click the ImageWorks icon.
+2. From the Tool Chest screen, click Export Protocols.
+3. The CD/DVD tray opens and the system prompts you to place a blank CD media in the CD/DVD drive.
+4. Place a CD inserted in the tray.
+5. Click OK to close the drive and initiate the save process.
+The User adult and pediatric protocols are saved.
+6. The CD tray opens automatically when the save is complete. Remove the CD and click OK to the message prompt, which
+closes the tray.
+
+"
+      
+  utter_system_management_set_screensaver_timeout:
+    - text: "1. Click Service.
+2. From the Service browser, click the Service browser title bar to move it so you can see the service Tool Chest.
+3. From the Tool Chest, click Screensaver Time.
+4. From the Set Screensaver Timeout screen, click and drag the slider to adjust the time that the screensaver mode starts
+to between 5 to 60 minutes.
+   a. Click on either side of the slider grab bar to increment in steps of 1 minute.
+   b. The default is 30 minutes.
+5. Click Save.
+"
+      
+  utter_system_management_iLinq:
+    - text: "The iLinq tools are designed so you can get information yourself, rather than having to always rely on a FE or an Online Center Engineer. The Applications Self Help feature provides automated expert advice from a database of application problems and solutions
+
+"
+      
+  utter_system_management_uses_of_iLinq:
+    - text: "a. Answer questions - Top 10 FAQs.
+b. Search the Knowledge Database.
+c. Share the knowledge with co-workers by saving the results
+
+"
+      
+  utter_system_management_terminate_iLinq:
+    - text: "1. Click Exam Rx .
+  a.A message is posted that the scan hardware resource is not available.
+2. Wait three minutes and click Exam Rx again to begin scanning
+"
+      
+  utter_system_management_use_of_product_network_filter:
+    - text: "Product Network filters allow you to place a site firewall in front of the CT scanner. Filters may be configured
+to restrict which computers may access the system and which system services are allowed to be controlled by other 
+devices trying to access the operator console such as ftp, telnet and rlogin. This access is determined by configuring 
+IP addresses allowed to access the system. DICOM1 access to the system can also be configured. The system default is for 
+no services enabled, no IP addresses authorized and DICOM port 4006 enabled.
+"
+      
+  utter_system_management_use_of_software_download_feature:
+    - text: "The Software Download feature allows systems that have a service contract with Broadband connected to automatically 
+download software updates. These updates can be configured to Auto Install or Manual install. A pop up indicating that 
+this capability is installed on the system is displayed at every reboot for the first 3 weeks after a software load from cold.
+
+"
+      
+  utter_system_management_how_to_update_software:
+    - text: "1.From the Automatic Software Updates screen, click Continue.
+2.As updates become available, from the Automatic Software Updates screen, click Install Later or
+Install Now.
+3.If Install Now is selected, view the progress bar, which indicates the install progress. If Install 
+Later ischosen, you will be asked again on the next reboot to install the software update
+"
+      
+  utter_system_management_how_to_leave_a_memo_for_service_engineer:
+    - text: "1. From the Feature Status area, click message area.
+2. From the message screen, click Memo.
+3. Place the cursor in the menu area and type and Enter a message.
+4. Click Save.
+   a. The message displays in the log file.
+- "
       
 actions:
 - action_greet_user

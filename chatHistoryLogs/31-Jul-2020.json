@@ -1,0 +1,3012 @@
+[
+  {
+    "sender_id": "krithika",
+    "slots": {},
+    "latest_message": {
+      "intent": {},
+      "entities": [],
+      "text": null,
+      "message_id": null,
+      "metadata": {}
+    },
+    "latest_event_time": null,
+    "followup_action": "action_listen",
+    "paused": false,
+    "events": [],
+    "latest_input_channel": null,
+    "active_form": {},
+    "latest_action_name": null
+  },
+  {
+    "sender_id": "krithika",
+    "slots": {},
+    "latest_message": {
+      "intent": {},
+      "entities": [],
+      "text": null,
+      "message_id": null,
+      "metadata": {}
+    },
+    "latest_event_time": 1596193842.6347697,
+    "followup_action": "action_listen",
+    "paused": false,
+    "events": [
+      {
+        "event": "action",
+        "timestamp": 1596193840.1733449,
+        "name": "action_session_start",
+        "policy": null,
+        "confidence": null
+      },
+      {
+        "event": "session_started",
+        "timestamp": 1596193840.1733449
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193840.1733449,
+        "name": "action_listen",
+        "policy": null,
+        "confidence": null
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193842.6347697,
+        "name": "action_greet_user",
+        "policy": "MappingPolicy",
+        "confidence": "0.98"
+      },
+      {
+        "event": "bot",
+        "timestamp": 1596193842.6347697,
+        "text": "Hey there I am your MEDBOT \ud83d\udc68\ud83c\udffd\u200d\u2695\ufe0f, How may I help you today",
+        "data": {
+          "elements": null,
+          "quick_replies": null,
+          "buttons": null,
+          "attachment": null,
+          "image": null,
+          "custom": null
+        },
+        "metadata": {}
+      },
+      {
+        "event": "rewind",
+        "timestamp": 1596193842.6347697
+      }
+    ],
+    "latest_input_channel": null,
+    "active_form": {},
+    "latest_action_name": null
+  },
+  {
+    "sender_id": "krithika",
+    "slots": {},
+    "latest_message": {
+      "intent": {
+        "name": "greet",
+        "confidence": 0.9789350032806396
+      },
+      "entities": [],
+      "intent_ranking": [
+        {
+          "name": "greet",
+          "confidence": 0.9789350032806396
+        },
+        {
+          "name": "goodbye",
+          "confidence": 0.01314576342701912
+        },
+        {
+          "name": "purpose",
+          "confidence": 0.002369318623095751
+        },
+        {
+          "name": "scan_parameters",
+          "confidence": 0.0014750799164175987
+        },
+        {
+          "name": "warning_label",
+          "confidence": 0.0009635488968342543
+        },
+        {
+          "name": "popup",
+          "confidence": 0.0007304187165573239
+        },
+        {
+          "name": "wrong_screen",
+          "confidence": 0.0007241149432957172
+        },
+        {
+          "name": "recon_management",
+          "confidence": 0.000632933690212667
+        },
+        {
+          "name": "message_bar",
+          "confidence": 0.0005389282014220953
+        },
+        {
+          "name": "ui_conv",
+          "confidence": 0.00048490057815797627
+        }
+      ],
+      "response_selector": {
+        "default": {
+          "response": {
+            "name": null,
+            "confidence": 0.0
+          },
+          "ranking": [],
+          "full_retrieval_intent": null
+        }
+      },
+      "text": "hey"
+    },
+    "latest_event_time": 1596193847.4469357,
+    "followup_action": null,
+    "paused": false,
+    "events": [
+      {
+        "event": "action",
+        "timestamp": 1596193840.1733449,
+        "name": "action_session_start",
+        "policy": null,
+        "confidence": null
+      },
+      {
+        "event": "session_started",
+        "timestamp": 1596193840.1733449
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193840.1733449,
+        "name": "action_listen",
+        "policy": null,
+        "confidence": null
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193842.6347697,
+        "name": "action_greet_user",
+        "policy": "MappingPolicy",
+        "confidence": "0.98"
+      },
+      {
+        "event": "bot",
+        "timestamp": 1596193842.6347697,
+        "text": "Hey there I am your MEDBOT \ud83d\udc68\ud83c\udffd\u200d\u2695\ufe0f, How may I help you today",
+        "data": {
+          "elements": null,
+          "quick_replies": null,
+          "buttons": null,
+          "attachment": null,
+          "image": null,
+          "custom": null
+        },
+        "metadata": {}
+      },
+      {
+        "event": "rewind",
+        "timestamp": 1596193842.6347697
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193846.9053853,
+        "name": "action_session_start",
+        "policy": null,
+        "confidence": null
+      },
+      {
+        "event": "session_started",
+        "timestamp": 1596193846.9053853
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193846.9053853,
+        "name": "action_listen",
+        "policy": null,
+        "confidence": null
+      },
+      {
+        "event": "user",
+        "timestamp": 1596193847.4010592,
+        "text": "hey",
+        "parse_data": {
+          "intent": {
+            "name": "greet",
+            "confidence": 0.9789350032806396
+          },
+          "entities": [],
+          "intent_ranking": [
+            {
+              "name": "greet",
+              "confidence": 0.9789350032806396
+            },
+            {
+              "name": "goodbye",
+              "confidence": 0.01314576342701912
+            },
+            {
+              "name": "purpose",
+              "confidence": 0.002369318623095751
+            },
+            {
+              "name": "scan_parameters",
+              "confidence": 0.0014750799164175987
+            },
+            {
+              "name": "warning_label",
+              "confidence": 0.0009635488968342543
+            },
+            {
+              "name": "popup",
+              "confidence": 0.0007304187165573239
+            },
+            {
+              "name": "wrong_screen",
+              "confidence": 0.0007241149432957172
+            },
+            {
+              "name": "recon_management",
+              "confidence": 0.000632933690212667
+            },
+            {
+              "name": "message_bar",
+              "confidence": 0.0005389282014220953
+            },
+            {
+              "name": "ui_conv",
+              "confidence": 0.00048490057815797627
+            }
+          ],
+          "response_selector": {
+            "default": {
+              "response": {
+                "name": null,
+                "confidence": 0.0
+              },
+              "ranking": [],
+              "full_retrieval_intent": null
+            }
+          },
+          "text": "hey"
+        },
+        "input_channel": "rest",
+        "message_id": "7827420321b544e98143cd6ff5793cc6",
+        "metadata": {}
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193847.4259965,
+        "name": "utter_greet",
+        "policy": "policy_0_MemoizationPolicy",
+        "confidence": 1.0
+      },
+      {
+        "event": "bot",
+        "timestamp": 1596193847.4259965,
+        "text": "Hey! How are you?",
+        "data": {
+          "elements": null,
+          "quick_replies": null,
+          "buttons": null,
+          "attachment": null,
+          "image": null,
+          "custom": null
+        },
+        "metadata": {}
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193847.4469357,
+        "name": "action_listen",
+        "policy": "policy_0_MemoizationPolicy",
+        "confidence": 1.0
+      }
+    ],
+    "latest_input_channel": "rest",
+    "active_form": {},
+    "latest_action_name": "action_listen"
+  },
+  {
+    "sender_id": "krithika",
+    "slots": {},
+    "latest_message": {
+      "intent": {
+        "name": "purpose",
+        "confidence": 0.7032028436660767
+      },
+      "entities": [],
+      "intent_ranking": [
+        {
+          "name": "purpose",
+          "confidence": 0.7032028436660767
+        },
+        {
+          "name": "goodbye",
+          "confidence": 0.13610586524009705
+        },
+        {
+          "name": "greet",
+          "confidence": 0.059900861233472824
+        },
+        {
+          "name": "cannot_do",
+          "confidence": 0.025791173800826073
+        },
+        {
+          "name": "function_status_area",
+          "confidence": 0.015765199437737465
+        },
+        {
+          "name": "Setting_Dose_Administrator_Role",
+          "confidence": 0.013897400349378586
+        },
+        {
+          "name": "usage",
+          "confidence": 0.012970768846571445
+        },
+        {
+          "name": "warning_label",
+          "confidence": 0.011263897642493248
+        },
+        {
+          "name": "scan_parameters",
+          "confidence": 0.010699017904698849
+        },
+        {
+          "name": "scan_patient_position",
+          "confidence": 0.010402975603938103
+        }
+      ],
+      "response_selector": {
+        "default": {
+          "response": {
+            "name": null,
+            "confidence": 0.0
+          },
+          "ranking": [],
+          "full_retrieval_intent": null
+        }
+      },
+      "text": "purupose of medbot"
+    },
+    "latest_event_time": 1596193860.6764264,
+    "followup_action": null,
+    "paused": false,
+    "events": [
+      {
+        "event": "action",
+        "timestamp": 1596193840.1733449,
+        "name": "action_session_start",
+        "policy": null,
+        "confidence": null
+      },
+      {
+        "event": "session_started",
+        "timestamp": 1596193840.1733449
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193840.1733449,
+        "name": "action_listen",
+        "policy": null,
+        "confidence": null
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193842.6347697,
+        "name": "action_greet_user",
+        "policy": "MappingPolicy",
+        "confidence": "0.98"
+      },
+      {
+        "event": "bot",
+        "timestamp": 1596193842.6347697,
+        "text": "Hey there I am your MEDBOT \ud83d\udc68\ud83c\udffd\u200d\u2695\ufe0f, How may I help you today",
+        "data": {
+          "elements": null,
+          "quick_replies": null,
+          "buttons": null,
+          "attachment": null,
+          "image": null,
+          "custom": null
+        },
+        "metadata": {}
+      },
+      {
+        "event": "rewind",
+        "timestamp": 1596193842.6347697
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193846.9053853,
+        "name": "action_session_start",
+        "policy": null,
+        "confidence": null
+      },
+      {
+        "event": "session_started",
+        "timestamp": 1596193846.9053853
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193846.9053853,
+        "name": "action_listen",
+        "policy": null,
+        "confidence": null
+      },
+      {
+        "event": "user",
+        "timestamp": 1596193847.4010592,
+        "text": "hey",
+        "parse_data": {
+          "intent": {
+            "name": "greet",
+            "confidence": 0.9789350032806396
+          },
+          "entities": [],
+          "intent_ranking": [
+            {
+              "name": "greet",
+              "confidence": 0.9789350032806396
+            },
+            {
+              "name": "goodbye",
+              "confidence": 0.01314576342701912
+            },
+            {
+              "name": "purpose",
+              "confidence": 0.002369318623095751
+            },
+            {
+              "name": "scan_parameters",
+              "confidence": 0.0014750799164175987
+            },
+            {
+              "name": "warning_label",
+              "confidence": 0.0009635488968342543
+            },
+            {
+              "name": "popup",
+              "confidence": 0.0007304187165573239
+            },
+            {
+              "name": "wrong_screen",
+              "confidence": 0.0007241149432957172
+            },
+            {
+              "name": "recon_management",
+              "confidence": 0.000632933690212667
+            },
+            {
+              "name": "message_bar",
+              "confidence": 0.0005389282014220953
+            },
+            {
+              "name": "ui_conv",
+              "confidence": 0.00048490057815797627
+            }
+          ],
+          "response_selector": {
+            "default": {
+              "response": {
+                "name": null,
+                "confidence": 0.0
+              },
+              "ranking": [],
+              "full_retrieval_intent": null
+            }
+          },
+          "text": "hey"
+        },
+        "input_channel": "rest",
+        "message_id": "7827420321b544e98143cd6ff5793cc6",
+        "metadata": {}
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193847.4259965,
+        "name": "utter_greet",
+        "policy": "policy_0_MemoizationPolicy",
+        "confidence": 1.0
+      },
+      {
+        "event": "bot",
+        "timestamp": 1596193847.4259965,
+        "text": "Hey! How are you?",
+        "data": {
+          "elements": null,
+          "quick_replies": null,
+          "buttons": null,
+          "attachment": null,
+          "image": null,
+          "custom": null
+        },
+        "metadata": {}
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193847.4469357,
+        "name": "action_listen",
+        "policy": "policy_0_MemoizationPolicy",
+        "confidence": 1.0
+      },
+      {
+        "event": "user",
+        "timestamp": 1596193860.6343603,
+        "text": "purupose of medbot",
+        "parse_data": {
+          "intent": {
+            "name": "purpose",
+            "confidence": 0.7032028436660767
+          },
+          "entities": [],
+          "intent_ranking": [
+            {
+              "name": "purpose",
+              "confidence": 0.7032028436660767
+            },
+            {
+              "name": "goodbye",
+              "confidence": 0.13610586524009705
+            },
+            {
+              "name": "greet",
+              "confidence": 0.059900861233472824
+            },
+            {
+              "name": "cannot_do",
+              "confidence": 0.025791173800826073
+            },
+            {
+              "name": "function_status_area",
+              "confidence": 0.015765199437737465
+            },
+            {
+              "name": "Setting_Dose_Administrator_Role",
+              "confidence": 0.013897400349378586
+            },
+            {
+              "name": "usage",
+              "confidence": 0.012970768846571445
+            },
+            {
+              "name": "warning_label",
+              "confidence": 0.011263897642493248
+            },
+            {
+              "name": "scan_parameters",
+              "confidence": 0.010699017904698849
+            },
+            {
+              "name": "scan_patient_position",
+              "confidence": 0.010402975603938103
+            }
+          ],
+          "response_selector": {
+            "default": {
+              "response": {
+                "name": null,
+                "confidence": 0.0
+              },
+              "ranking": [],
+              "full_retrieval_intent": null
+            }
+          },
+          "text": "purupose of medbot"
+        },
+        "input_channel": "rest",
+        "message_id": "ac39aeb77ac04fcc8b688830d3779028",
+        "metadata": {}
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193860.653311,
+        "name": "utter_purpose",
+        "policy": "policy_1_TEDPolicy",
+        "confidence": 0.892544686794281
+      },
+      {
+        "event": "bot",
+        "timestamp": 1596193860.653311,
+        "text": "It is a replacement to the manual, providing information on the purpose, prerequisite skills, organization, format, and graphic conventions that identify the visual symbols used throughout the MedBot. ",
+        "data": {
+          "elements": null,
+          "quick_replies": null,
+          "buttons": null,
+          "attachment": null,
+          "image": null,
+          "custom": null
+        },
+        "metadata": {}
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193860.6764264,
+        "name": "action_listen",
+        "policy": "policy_1_TEDPolicy",
+        "confidence": 0.9741061329841614
+      }
+    ],
+    "latest_input_channel": "rest",
+    "active_form": {},
+    "latest_action_name": "action_listen"
+  },
+  {
+    "sender_id": "krithika",
+    "slots": {},
+    "latest_message": {
+      "intent": {
+        "name": "troubleshoot",
+        "confidence": 0.9948024153709412
+      },
+      "entities": [],
+      "intent_ranking": [
+        {
+          "name": "troubleshoot",
+          "confidence": 0.9948024153709412
+        },
+        {
+          "name": "Building_protocols_using_protocol_change_control",
+          "confidence": 0.0013001938350498676
+        },
+        {
+          "name": "pediatric_protocols",
+          "confidence": 0.0007051911088638008
+        },
+        {
+          "name": "optimize_pediatric_protocol",
+          "confidence": 0.0006090280367061496
+        },
+        {
+          "name": "Adjust_pediatric_and_small_patient_scan_parameters",
+          "confidence": 0.0005139139830134809
+        },
+        {
+          "name": "Dose_reporting_considerations",
+          "confidence": 0.0004996454226784408
+        },
+        {
+          "name": "deny",
+          "confidence": 0.000434864399721846
+        },
+        {
+          "name": "Configure_the_system_for_protocol_change_control",
+          "confidence": 0.0004098733770661056
+        },
+        {
+          "name": "Color_Coding_for_Kids_Protocol",
+          "confidence": 0.00040813646046444774
+        },
+        {
+          "name": "popup",
+          "confidence": 0.0003166958049405366
+        }
+      ],
+      "response_selector": {
+        "default": {
+          "response": {
+            "name": null,
+            "confidence": 0.0
+          },
+          "ranking": [],
+          "full_retrieval_intent": null
+        }
+      },
+      "text": "troubleshoot"
+    },
+    "latest_event_time": 1596193870.6866975,
+    "followup_action": null,
+    "paused": false,
+    "events": [
+      {
+        "event": "action",
+        "timestamp": 1596193840.1733449,
+        "name": "action_session_start",
+        "policy": null,
+        "confidence": null
+      },
+      {
+        "event": "session_started",
+        "timestamp": 1596193840.1733449
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193840.1733449,
+        "name": "action_listen",
+        "policy": null,
+        "confidence": null
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193842.6347697,
+        "name": "action_greet_user",
+        "policy": "MappingPolicy",
+        "confidence": "0.98"
+      },
+      {
+        "event": "bot",
+        "timestamp": 1596193842.6347697,
+        "text": "Hey there I am your MEDBOT \ud83d\udc68\ud83c\udffd\u200d\u2695\ufe0f, How may I help you today",
+        "data": {
+          "elements": null,
+          "quick_replies": null,
+          "buttons": null,
+          "attachment": null,
+          "image": null,
+          "custom": null
+        },
+        "metadata": {}
+      },
+      {
+        "event": "rewind",
+        "timestamp": 1596193842.6347697
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193846.9053853,
+        "name": "action_session_start",
+        "policy": null,
+        "confidence": null
+      },
+      {
+        "event": "session_started",
+        "timestamp": 1596193846.9053853
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193846.9053853,
+        "name": "action_listen",
+        "policy": null,
+        "confidence": null
+      },
+      {
+        "event": "user",
+        "timestamp": 1596193847.4010592,
+        "text": "hey",
+        "parse_data": {
+          "intent": {
+            "name": "greet",
+            "confidence": 0.9789350032806396
+          },
+          "entities": [],
+          "intent_ranking": [
+            {
+              "name": "greet",
+              "confidence": 0.9789350032806396
+            },
+            {
+              "name": "goodbye",
+              "confidence": 0.01314576342701912
+            },
+            {
+              "name": "purpose",
+              "confidence": 0.002369318623095751
+            },
+            {
+              "name": "scan_parameters",
+              "confidence": 0.0014750799164175987
+            },
+            {
+              "name": "warning_label",
+              "confidence": 0.0009635488968342543
+            },
+            {
+              "name": "popup",
+              "confidence": 0.0007304187165573239
+            },
+            {
+              "name": "wrong_screen",
+              "confidence": 0.0007241149432957172
+            },
+            {
+              "name": "recon_management",
+              "confidence": 0.000632933690212667
+            },
+            {
+              "name": "message_bar",
+              "confidence": 0.0005389282014220953
+            },
+            {
+              "name": "ui_conv",
+              "confidence": 0.00048490057815797627
+            }
+          ],
+          "response_selector": {
+            "default": {
+              "response": {
+                "name": null,
+                "confidence": 0.0
+              },
+              "ranking": [],
+              "full_retrieval_intent": null
+            }
+          },
+          "text": "hey"
+        },
+        "input_channel": "rest",
+        "message_id": "7827420321b544e98143cd6ff5793cc6",
+        "metadata": {}
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193847.4259965,
+        "name": "utter_greet",
+        "policy": "policy_0_MemoizationPolicy",
+        "confidence": 1.0
+      },
+      {
+        "event": "bot",
+        "timestamp": 1596193847.4259965,
+        "text": "Hey! How are you?",
+        "data": {
+          "elements": null,
+          "quick_replies": null,
+          "buttons": null,
+          "attachment": null,
+          "image": null,
+          "custom": null
+        },
+        "metadata": {}
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193847.4469357,
+        "name": "action_listen",
+        "policy": "policy_0_MemoizationPolicy",
+        "confidence": 1.0
+      },
+      {
+        "event": "user",
+        "timestamp": 1596193860.6343603,
+        "text": "purupose of medbot",
+        "parse_data": {
+          "intent": {
+            "name": "purpose",
+            "confidence": 0.7032028436660767
+          },
+          "entities": [],
+          "intent_ranking": [
+            {
+              "name": "purpose",
+              "confidence": 0.7032028436660767
+            },
+            {
+              "name": "goodbye",
+              "confidence": 0.13610586524009705
+            },
+            {
+              "name": "greet",
+              "confidence": 0.059900861233472824
+            },
+            {
+              "name": "cannot_do",
+              "confidence": 0.025791173800826073
+            },
+            {
+              "name": "function_status_area",
+              "confidence": 0.015765199437737465
+            },
+            {
+              "name": "Setting_Dose_Administrator_Role",
+              "confidence": 0.013897400349378586
+            },
+            {
+              "name": "usage",
+              "confidence": 0.012970768846571445
+            },
+            {
+              "name": "warning_label",
+              "confidence": 0.011263897642493248
+            },
+            {
+              "name": "scan_parameters",
+              "confidence": 0.010699017904698849
+            },
+            {
+              "name": "scan_patient_position",
+              "confidence": 0.010402975603938103
+            }
+          ],
+          "response_selector": {
+            "default": {
+              "response": {
+                "name": null,
+                "confidence": 0.0
+              },
+              "ranking": [],
+              "full_retrieval_intent": null
+            }
+          },
+          "text": "purupose of medbot"
+        },
+        "input_channel": "rest",
+        "message_id": "ac39aeb77ac04fcc8b688830d3779028",
+        "metadata": {}
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193860.653311,
+        "name": "utter_purpose",
+        "policy": "policy_1_TEDPolicy",
+        "confidence": 0.892544686794281
+      },
+      {
+        "event": "bot",
+        "timestamp": 1596193860.653311,
+        "text": "It is a replacement to the manual, providing information on the purpose, prerequisite skills, organization, format, and graphic conventions that identify the visual symbols used throughout the MedBot. ",
+        "data": {
+          "elements": null,
+          "quick_replies": null,
+          "buttons": null,
+          "attachment": null,
+          "image": null,
+          "custom": null
+        },
+        "metadata": {}
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193860.6764264,
+        "name": "action_listen",
+        "policy": "policy_1_TEDPolicy",
+        "confidence": 0.9741061329841614
+      },
+      {
+        "event": "user",
+        "timestamp": 1596193870.6487978,
+        "text": "troubleshoot",
+        "parse_data": {
+          "intent": {
+            "name": "troubleshoot",
+            "confidence": 0.9948024153709412
+          },
+          "entities": [],
+          "intent_ranking": [
+            {
+              "name": "troubleshoot",
+              "confidence": 0.9948024153709412
+            },
+            {
+              "name": "Building_protocols_using_protocol_change_control",
+              "confidence": 0.0013001938350498676
+            },
+            {
+              "name": "pediatric_protocols",
+              "confidence": 0.0007051911088638008
+            },
+            {
+              "name": "optimize_pediatric_protocol",
+              "confidence": 0.0006090280367061496
+            },
+            {
+              "name": "Adjust_pediatric_and_small_patient_scan_parameters",
+              "confidence": 0.0005139139830134809
+            },
+            {
+              "name": "Dose_reporting_considerations",
+              "confidence": 0.0004996454226784408
+            },
+            {
+              "name": "deny",
+              "confidence": 0.000434864399721846
+            },
+            {
+              "name": "Configure_the_system_for_protocol_change_control",
+              "confidence": 0.0004098733770661056
+            },
+            {
+              "name": "Color_Coding_for_Kids_Protocol",
+              "confidence": 0.00040813646046444774
+            },
+            {
+              "name": "popup",
+              "confidence": 0.0003166958049405366
+            }
+          ],
+          "response_selector": {
+            "default": {
+              "response": {
+                "name": null,
+                "confidence": 0.0
+              },
+              "ranking": [],
+              "full_retrieval_intent": null
+            }
+          },
+          "text": "troubleshoot"
+        },
+        "input_channel": "rest",
+        "message_id": "79d7fb703c4b457ea5b390a68646de8d",
+        "metadata": {}
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193870.668744,
+        "name": "utter_troubleshoot",
+        "policy": "policy_1_TEDPolicy",
+        "confidence": 0.9448961019515991
+      },
+      {
+        "event": "bot",
+        "timestamp": 1596193870.668744,
+        "text": "please select an option below",
+        "data": {
+          "elements": null,
+          "quick_replies": null,
+          "buttons": [
+            {
+              "payload": "invalid text field",
+              "title": "invalid text field"
+            },
+            {
+              "payload": "air caliberations",
+              "title": "air caliberations"
+            },
+            {
+              "payload": "scan abort",
+              "title": "scan abort"
+            },
+            {
+              "payload": "wrong screen",
+              "title": "wrong screen"
+            },
+            {
+              "payload": "no response",
+              "title": "no response"
+            },
+            {
+              "payload": "lowdisk space",
+              "title": "low disk space"
+            },
+            {
+              "payload": "hard drive failure",
+              "title": "hard drive failure"
+            }
+          ],
+          "attachment": null,
+          "image": null,
+          "custom": null
+        },
+        "metadata": {}
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193870.6866975,
+        "name": "action_listen",
+        "policy": "policy_1_TEDPolicy",
+        "confidence": 0.9750581979751587
+      }
+    ],
+    "latest_input_channel": "rest",
+    "active_form": {},
+    "latest_action_name": "action_listen"
+  },
+  {
+    "sender_id": "krithika",
+    "slots": {},
+    "latest_message": {
+      "intent": {
+        "name": "affirm",
+        "confidence": 0.4465080201625824
+      },
+      "entities": [],
+      "intent_ranking": [
+        {
+          "name": "affirm",
+          "confidence": 0.4465080201625824
+        },
+        {
+          "name": "scan_aborts",
+          "confidence": 0.3378986716270447
+        },
+        {
+          "name": "scan_setup_screen",
+          "confidence": 0.06454119831323624
+        },
+        {
+          "name": "harddrive_failure",
+          "confidence": 0.04488891735672951
+        },
+        {
+          "name": "mood_unhappy",
+          "confidence": 0.034815043210983276
+        },
+        {
+          "name": "save_Dose_Check_Log",
+          "confidence": 0.023495102301239967
+        },
+        {
+          "name": "Setting_Dose_Administrator_Role",
+          "confidence": 0.016829844564199448
+        },
+        {
+          "name": "Pediatric_and_small_patient_scans",
+          "confidence": 0.013042766600847244
+        },
+        {
+          "name": "Using_the_dose_audit_tool",
+          "confidence": 0.010853943414986134
+        },
+        {
+          "name": "buttons",
+          "confidence": 0.007126492913812399
+        }
+      ],
+      "response_selector": {
+        "default": {
+          "response": {
+            "name": null,
+            "confidence": 0.0
+          },
+          "ranking": [],
+          "full_retrieval_intent": null
+        }
+      },
+      "text": "scan abort"
+    },
+    "latest_event_time": 1596193873.9277155,
+    "followup_action": null,
+    "paused": false,
+    "events": [
+      {
+        "event": "action",
+        "timestamp": 1596193840.1733449,
+        "name": "action_session_start",
+        "policy": null,
+        "confidence": null
+      },
+      {
+        "event": "session_started",
+        "timestamp": 1596193840.1733449
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193840.1733449,
+        "name": "action_listen",
+        "policy": null,
+        "confidence": null
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193842.6347697,
+        "name": "action_greet_user",
+        "policy": "MappingPolicy",
+        "confidence": "0.98"
+      },
+      {
+        "event": "bot",
+        "timestamp": 1596193842.6347697,
+        "text": "Hey there I am your MEDBOT \ud83d\udc68\ud83c\udffd\u200d\u2695\ufe0f, How may I help you today",
+        "data": {
+          "elements": null,
+          "quick_replies": null,
+          "buttons": null,
+          "attachment": null,
+          "image": null,
+          "custom": null
+        },
+        "metadata": {}
+      },
+      {
+        "event": "rewind",
+        "timestamp": 1596193842.6347697
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193846.9053853,
+        "name": "action_session_start",
+        "policy": null,
+        "confidence": null
+      },
+      {
+        "event": "session_started",
+        "timestamp": 1596193846.9053853
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193846.9053853,
+        "name": "action_listen",
+        "policy": null,
+        "confidence": null
+      },
+      {
+        "event": "user",
+        "timestamp": 1596193847.4010592,
+        "text": "hey",
+        "parse_data": {
+          "intent": {
+            "name": "greet",
+            "confidence": 0.9789350032806396
+          },
+          "entities": [],
+          "intent_ranking": [
+            {
+              "name": "greet",
+              "confidence": 0.9789350032806396
+            },
+            {
+              "name": "goodbye",
+              "confidence": 0.01314576342701912
+            },
+            {
+              "name": "purpose",
+              "confidence": 0.002369318623095751
+            },
+            {
+              "name": "scan_parameters",
+              "confidence": 0.0014750799164175987
+            },
+            {
+              "name": "warning_label",
+              "confidence": 0.0009635488968342543
+            },
+            {
+              "name": "popup",
+              "confidence": 0.0007304187165573239
+            },
+            {
+              "name": "wrong_screen",
+              "confidence": 0.0007241149432957172
+            },
+            {
+              "name": "recon_management",
+              "confidence": 0.000632933690212667
+            },
+            {
+              "name": "message_bar",
+              "confidence": 0.0005389282014220953
+            },
+            {
+              "name": "ui_conv",
+              "confidence": 0.00048490057815797627
+            }
+          ],
+          "response_selector": {
+            "default": {
+              "response": {
+                "name": null,
+                "confidence": 0.0
+              },
+              "ranking": [],
+              "full_retrieval_intent": null
+            }
+          },
+          "text": "hey"
+        },
+        "input_channel": "rest",
+        "message_id": "7827420321b544e98143cd6ff5793cc6",
+        "metadata": {}
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193847.4259965,
+        "name": "utter_greet",
+        "policy": "policy_0_MemoizationPolicy",
+        "confidence": 1.0
+      },
+      {
+        "event": "bot",
+        "timestamp": 1596193847.4259965,
+        "text": "Hey! How are you?",
+        "data": {
+          "elements": null,
+          "quick_replies": null,
+          "buttons": null,
+          "attachment": null,
+          "image": null,
+          "custom": null
+        },
+        "metadata": {}
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193847.4469357,
+        "name": "action_listen",
+        "policy": "policy_0_MemoizationPolicy",
+        "confidence": 1.0
+      },
+      {
+        "event": "user",
+        "timestamp": 1596193860.6343603,
+        "text": "purupose of medbot",
+        "parse_data": {
+          "intent": {
+            "name": "purpose",
+            "confidence": 0.7032028436660767
+          },
+          "entities": [],
+          "intent_ranking": [
+            {
+              "name": "purpose",
+              "confidence": 0.7032028436660767
+            },
+            {
+              "name": "goodbye",
+              "confidence": 0.13610586524009705
+            },
+            {
+              "name": "greet",
+              "confidence": 0.059900861233472824
+            },
+            {
+              "name": "cannot_do",
+              "confidence": 0.025791173800826073
+            },
+            {
+              "name": "function_status_area",
+              "confidence": 0.015765199437737465
+            },
+            {
+              "name": "Setting_Dose_Administrator_Role",
+              "confidence": 0.013897400349378586
+            },
+            {
+              "name": "usage",
+              "confidence": 0.012970768846571445
+            },
+            {
+              "name": "warning_label",
+              "confidence": 0.011263897642493248
+            },
+            {
+              "name": "scan_parameters",
+              "confidence": 0.010699017904698849
+            },
+            {
+              "name": "scan_patient_position",
+              "confidence": 0.010402975603938103
+            }
+          ],
+          "response_selector": {
+            "default": {
+              "response": {
+                "name": null,
+                "confidence": 0.0
+              },
+              "ranking": [],
+              "full_retrieval_intent": null
+            }
+          },
+          "text": "purupose of medbot"
+        },
+        "input_channel": "rest",
+        "message_id": "ac39aeb77ac04fcc8b688830d3779028",
+        "metadata": {}
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193860.653311,
+        "name": "utter_purpose",
+        "policy": "policy_1_TEDPolicy",
+        "confidence": 0.892544686794281
+      },
+      {
+        "event": "bot",
+        "timestamp": 1596193860.653311,
+        "text": "It is a replacement to the manual, providing information on the purpose, prerequisite skills, organization, format, and graphic conventions that identify the visual symbols used throughout the MedBot. ",
+        "data": {
+          "elements": null,
+          "quick_replies": null,
+          "buttons": null,
+          "attachment": null,
+          "image": null,
+          "custom": null
+        },
+        "metadata": {}
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193860.6764264,
+        "name": "action_listen",
+        "policy": "policy_1_TEDPolicy",
+        "confidence": 0.9741061329841614
+      },
+      {
+        "event": "user",
+        "timestamp": 1596193870.6487978,
+        "text": "troubleshoot",
+        "parse_data": {
+          "intent": {
+            "name": "troubleshoot",
+            "confidence": 0.9948024153709412
+          },
+          "entities": [],
+          "intent_ranking": [
+            {
+              "name": "troubleshoot",
+              "confidence": 0.9948024153709412
+            },
+            {
+              "name": "Building_protocols_using_protocol_change_control",
+              "confidence": 0.0013001938350498676
+            },
+            {
+              "name": "pediatric_protocols",
+              "confidence": 0.0007051911088638008
+            },
+            {
+              "name": "optimize_pediatric_protocol",
+              "confidence": 0.0006090280367061496
+            },
+            {
+              "name": "Adjust_pediatric_and_small_patient_scan_parameters",
+              "confidence": 0.0005139139830134809
+            },
+            {
+              "name": "Dose_reporting_considerations",
+              "confidence": 0.0004996454226784408
+            },
+            {
+              "name": "deny",
+              "confidence": 0.000434864399721846
+            },
+            {
+              "name": "Configure_the_system_for_protocol_change_control",
+              "confidence": 0.0004098733770661056
+            },
+            {
+              "name": "Color_Coding_for_Kids_Protocol",
+              "confidence": 0.00040813646046444774
+            },
+            {
+              "name": "popup",
+              "confidence": 0.0003166958049405366
+            }
+          ],
+          "response_selector": {
+            "default": {
+              "response": {
+                "name": null,
+                "confidence": 0.0
+              },
+              "ranking": [],
+              "full_retrieval_intent": null
+            }
+          },
+          "text": "troubleshoot"
+        },
+        "input_channel": "rest",
+        "message_id": "79d7fb703c4b457ea5b390a68646de8d",
+        "metadata": {}
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193870.668744,
+        "name": "utter_troubleshoot",
+        "policy": "policy_1_TEDPolicy",
+        "confidence": 0.9448961019515991
+      },
+      {
+        "event": "bot",
+        "timestamp": 1596193870.668744,
+        "text": "please select an option below",
+        "data": {
+          "elements": null,
+          "quick_replies": null,
+          "buttons": [
+            {
+              "payload": "invalid text field",
+              "title": "invalid text field"
+            },
+            {
+              "payload": "air caliberations",
+              "title": "air caliberations"
+            },
+            {
+              "payload": "scan abort",
+              "title": "scan abort"
+            },
+            {
+              "payload": "wrong screen",
+              "title": "wrong screen"
+            },
+            {
+              "payload": "no response",
+              "title": "no response"
+            },
+            {
+              "payload": "lowdisk space",
+              "title": "low disk space"
+            },
+            {
+              "payload": "hard drive failure",
+              "title": "hard drive failure"
+            }
+          ],
+          "attachment": null,
+          "image": null,
+          "custom": null
+        },
+        "metadata": {}
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193870.6866975,
+        "name": "action_listen",
+        "policy": "policy_1_TEDPolicy",
+        "confidence": 0.9750581979751587
+      },
+      {
+        "event": "user",
+        "timestamp": 1596193873.8848274,
+        "text": "scan abort",
+        "parse_data": {
+          "intent": {
+            "name": "affirm",
+            "confidence": 0.4465080201625824
+          },
+          "entities": [],
+          "intent_ranking": [
+            {
+              "name": "affirm",
+              "confidence": 0.4465080201625824
+            },
+            {
+              "name": "scan_aborts",
+              "confidence": 0.3378986716270447
+            },
+            {
+              "name": "scan_setup_screen",
+              "confidence": 0.06454119831323624
+            },
+            {
+              "name": "harddrive_failure",
+              "confidence": 0.04488891735672951
+            },
+            {
+              "name": "mood_unhappy",
+              "confidence": 0.034815043210983276
+            },
+            {
+              "name": "save_Dose_Check_Log",
+              "confidence": 0.023495102301239967
+            },
+            {
+              "name": "Setting_Dose_Administrator_Role",
+              "confidence": 0.016829844564199448
+            },
+            {
+              "name": "Pediatric_and_small_patient_scans",
+              "confidence": 0.013042766600847244
+            },
+            {
+              "name": "Using_the_dose_audit_tool",
+              "confidence": 0.010853943414986134
+            },
+            {
+              "name": "buttons",
+              "confidence": 0.007126492913812399
+            }
+          ],
+          "response_selector": {
+            "default": {
+              "response": {
+                "name": null,
+                "confidence": 0.0
+              },
+              "ranking": [],
+              "full_retrieval_intent": null
+            }
+          },
+          "text": "scan abort"
+        },
+        "input_channel": "rest",
+        "message_id": "931b3fa482d54279bdcbd30d137518fc",
+        "metadata": {}
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193873.906768,
+        "name": "utter_cannot_do",
+        "policy": "policy_1_TEDPolicy",
+        "confidence": 0.1573183536529541
+      },
+      {
+        "event": "bot",
+        "timestamp": 1596193873.906768,
+        "text": "The assistant does not identify the following applications\nCommon user-interface with Advantage Windows for improved productivity. The OC1 now supports an expanded list of Advanced Application packages such as Volume Viewer, CT Perfusion 4- Multi-Organ or Neuro only, Advantage CTC Pro, AutoBone, AVA Xpress, and Dentascan. Volume Viewer is a prerequisite to support Advantage CTC Pro, AutoBone, and AVA Xpress\nIt is not intended to teach imaging or to make any type of clinical diagnosis. It is necessary for you to have sufficient knowledge to competently perform the various diagnostic imaging procedures within your modality. ",
+        "data": {
+          "elements": null,
+          "quick_replies": null,
+          "buttons": null,
+          "attachment": null,
+          "image": null,
+          "custom": null
+        },
+        "metadata": {}
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193873.9277155,
+        "name": "action_listen",
+        "policy": "policy_1_TEDPolicy",
+        "confidence": 0.9758535623550415
+      }
+    ],
+    "latest_input_channel": "rest",
+    "active_form": {},
+    "latest_action_name": "action_listen"
+  },
+  {
+    "sender_id": "krithika",
+    "slots": {},
+    "latest_message": {
+      "intent": {
+        "name": "thanks",
+        "confidence": 0.9765200614929199
+      },
+      "entities": [],
+      "intent_ranking": [
+        {
+          "name": "thanks",
+          "confidence": 0.9765200614929199
+        },
+        {
+          "name": "mood_unhappy",
+          "confidence": 0.011102274991571903
+        },
+        {
+          "name": "protocol_selection",
+          "confidence": 0.003431849181652069
+        },
+        {
+          "name": "navigation_bar",
+          "confidence": 0.0030723230447620153
+        },
+        {
+          "name": "Dose_Check",
+          "confidence": 0.002895368728786707
+        },
+        {
+          "name": "Building_protocols_with_notification_values",
+          "confidence": 0.00073453807272017
+        },
+        {
+          "name": "precautionary_signs",
+          "confidence": 0.0007247481262311339
+        },
+        {
+          "name": "Configure_the_system_for_protocol_change_control",
+          "confidence": 0.000690353277605027
+        },
+        {
+          "name": "Building_protocols_using_protocol_change_control",
+          "confidence": 0.0004270139615982771
+        },
+        {
+          "name": "patient_schedule",
+          "confidence": 0.00040142916259355843
+        }
+      ],
+      "response_selector": {
+        "default": {
+          "response": {
+            "name": null,
+            "confidence": 0.0
+          },
+          "ranking": [],
+          "full_retrieval_intent": null
+        }
+      },
+      "text": "thanks"
+    },
+    "latest_event_time": 1596193900.434034,
+    "followup_action": null,
+    "paused": false,
+    "events": [
+      {
+        "event": "action",
+        "timestamp": 1596193840.1733449,
+        "name": "action_session_start",
+        "policy": null,
+        "confidence": null
+      },
+      {
+        "event": "session_started",
+        "timestamp": 1596193840.1733449
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193840.1733449,
+        "name": "action_listen",
+        "policy": null,
+        "confidence": null
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193842.6347697,
+        "name": "action_greet_user",
+        "policy": "MappingPolicy",
+        "confidence": "0.98"
+      },
+      {
+        "event": "bot",
+        "timestamp": 1596193842.6347697,
+        "text": "Hey there I am your MEDBOT \ud83d\udc68\ud83c\udffd\u200d\u2695\ufe0f, How may I help you today",
+        "data": {
+          "elements": null,
+          "quick_replies": null,
+          "buttons": null,
+          "attachment": null,
+          "image": null,
+          "custom": null
+        },
+        "metadata": {}
+      },
+      {
+        "event": "rewind",
+        "timestamp": 1596193842.6347697
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193846.9053853,
+        "name": "action_session_start",
+        "policy": null,
+        "confidence": null
+      },
+      {
+        "event": "session_started",
+        "timestamp": 1596193846.9053853
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193846.9053853,
+        "name": "action_listen",
+        "policy": null,
+        "confidence": null
+      },
+      {
+        "event": "user",
+        "timestamp": 1596193847.4010592,
+        "text": "hey",
+        "parse_data": {
+          "intent": {
+            "name": "greet",
+            "confidence": 0.9789350032806396
+          },
+          "entities": [],
+          "intent_ranking": [
+            {
+              "name": "greet",
+              "confidence": 0.9789350032806396
+            },
+            {
+              "name": "goodbye",
+              "confidence": 0.01314576342701912
+            },
+            {
+              "name": "purpose",
+              "confidence": 0.002369318623095751
+            },
+            {
+              "name": "scan_parameters",
+              "confidence": 0.0014750799164175987
+            },
+            {
+              "name": "warning_label",
+              "confidence": 0.0009635488968342543
+            },
+            {
+              "name": "popup",
+              "confidence": 0.0007304187165573239
+            },
+            {
+              "name": "wrong_screen",
+              "confidence": 0.0007241149432957172
+            },
+            {
+              "name": "recon_management",
+              "confidence": 0.000632933690212667
+            },
+            {
+              "name": "message_bar",
+              "confidence": 0.0005389282014220953
+            },
+            {
+              "name": "ui_conv",
+              "confidence": 0.00048490057815797627
+            }
+          ],
+          "response_selector": {
+            "default": {
+              "response": {
+                "name": null,
+                "confidence": 0.0
+              },
+              "ranking": [],
+              "full_retrieval_intent": null
+            }
+          },
+          "text": "hey"
+        },
+        "input_channel": "rest",
+        "message_id": "7827420321b544e98143cd6ff5793cc6",
+        "metadata": {}
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193847.4259965,
+        "name": "utter_greet",
+        "policy": "policy_0_MemoizationPolicy",
+        "confidence": 1.0
+      },
+      {
+        "event": "bot",
+        "timestamp": 1596193847.4259965,
+        "text": "Hey! How are you?",
+        "data": {
+          "elements": null,
+          "quick_replies": null,
+          "buttons": null,
+          "attachment": null,
+          "image": null,
+          "custom": null
+        },
+        "metadata": {}
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193847.4469357,
+        "name": "action_listen",
+        "policy": "policy_0_MemoizationPolicy",
+        "confidence": 1.0
+      },
+      {
+        "event": "user",
+        "timestamp": 1596193860.6343603,
+        "text": "purupose of medbot",
+        "parse_data": {
+          "intent": {
+            "name": "purpose",
+            "confidence": 0.7032028436660767
+          },
+          "entities": [],
+          "intent_ranking": [
+            {
+              "name": "purpose",
+              "confidence": 0.7032028436660767
+            },
+            {
+              "name": "goodbye",
+              "confidence": 0.13610586524009705
+            },
+            {
+              "name": "greet",
+              "confidence": 0.059900861233472824
+            },
+            {
+              "name": "cannot_do",
+              "confidence": 0.025791173800826073
+            },
+            {
+              "name": "function_status_area",
+              "confidence": 0.015765199437737465
+            },
+            {
+              "name": "Setting_Dose_Administrator_Role",
+              "confidence": 0.013897400349378586
+            },
+            {
+              "name": "usage",
+              "confidence": 0.012970768846571445
+            },
+            {
+              "name": "warning_label",
+              "confidence": 0.011263897642493248
+            },
+            {
+              "name": "scan_parameters",
+              "confidence": 0.010699017904698849
+            },
+            {
+              "name": "scan_patient_position",
+              "confidence": 0.010402975603938103
+            }
+          ],
+          "response_selector": {
+            "default": {
+              "response": {
+                "name": null,
+                "confidence": 0.0
+              },
+              "ranking": [],
+              "full_retrieval_intent": null
+            }
+          },
+          "text": "purupose of medbot"
+        },
+        "input_channel": "rest",
+        "message_id": "ac39aeb77ac04fcc8b688830d3779028",
+        "metadata": {}
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193860.653311,
+        "name": "utter_purpose",
+        "policy": "policy_1_TEDPolicy",
+        "confidence": 0.892544686794281
+      },
+      {
+        "event": "bot",
+        "timestamp": 1596193860.653311,
+        "text": "It is a replacement to the manual, providing information on the purpose, prerequisite skills, organization, format, and graphic conventions that identify the visual symbols used throughout the MedBot. ",
+        "data": {
+          "elements": null,
+          "quick_replies": null,
+          "buttons": null,
+          "attachment": null,
+          "image": null,
+          "custom": null
+        },
+        "metadata": {}
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193860.6764264,
+        "name": "action_listen",
+        "policy": "policy_1_TEDPolicy",
+        "confidence": 0.9741061329841614
+      },
+      {
+        "event": "user",
+        "timestamp": 1596193870.6487978,
+        "text": "troubleshoot",
+        "parse_data": {
+          "intent": {
+            "name": "troubleshoot",
+            "confidence": 0.9948024153709412
+          },
+          "entities": [],
+          "intent_ranking": [
+            {
+              "name": "troubleshoot",
+              "confidence": 0.9948024153709412
+            },
+            {
+              "name": "Building_protocols_using_protocol_change_control",
+              "confidence": 0.0013001938350498676
+            },
+            {
+              "name": "pediatric_protocols",
+              "confidence": 0.0007051911088638008
+            },
+            {
+              "name": "optimize_pediatric_protocol",
+              "confidence": 0.0006090280367061496
+            },
+            {
+              "name": "Adjust_pediatric_and_small_patient_scan_parameters",
+              "confidence": 0.0005139139830134809
+            },
+            {
+              "name": "Dose_reporting_considerations",
+              "confidence": 0.0004996454226784408
+            },
+            {
+              "name": "deny",
+              "confidence": 0.000434864399721846
+            },
+            {
+              "name": "Configure_the_system_for_protocol_change_control",
+              "confidence": 0.0004098733770661056
+            },
+            {
+              "name": "Color_Coding_for_Kids_Protocol",
+              "confidence": 0.00040813646046444774
+            },
+            {
+              "name": "popup",
+              "confidence": 0.0003166958049405366
+            }
+          ],
+          "response_selector": {
+            "default": {
+              "response": {
+                "name": null,
+                "confidence": 0.0
+              },
+              "ranking": [],
+              "full_retrieval_intent": null
+            }
+          },
+          "text": "troubleshoot"
+        },
+        "input_channel": "rest",
+        "message_id": "79d7fb703c4b457ea5b390a68646de8d",
+        "metadata": {}
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193870.668744,
+        "name": "utter_troubleshoot",
+        "policy": "policy_1_TEDPolicy",
+        "confidence": 0.9448961019515991
+      },
+      {
+        "event": "bot",
+        "timestamp": 1596193870.668744,
+        "text": "please select an option below",
+        "data": {
+          "elements": null,
+          "quick_replies": null,
+          "buttons": [
+            {
+              "payload": "invalid text field",
+              "title": "invalid text field"
+            },
+            {
+              "payload": "air caliberations",
+              "title": "air caliberations"
+            },
+            {
+              "payload": "scan abort",
+              "title": "scan abort"
+            },
+            {
+              "payload": "wrong screen",
+              "title": "wrong screen"
+            },
+            {
+              "payload": "no response",
+              "title": "no response"
+            },
+            {
+              "payload": "lowdisk space",
+              "title": "low disk space"
+            },
+            {
+              "payload": "hard drive failure",
+              "title": "hard drive failure"
+            }
+          ],
+          "attachment": null,
+          "image": null,
+          "custom": null
+        },
+        "metadata": {}
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193870.6866975,
+        "name": "action_listen",
+        "policy": "policy_1_TEDPolicy",
+        "confidence": 0.9750581979751587
+      },
+      {
+        "event": "user",
+        "timestamp": 1596193873.8848274,
+        "text": "scan abort",
+        "parse_data": {
+          "intent": {
+            "name": "affirm",
+            "confidence": 0.4465080201625824
+          },
+          "entities": [],
+          "intent_ranking": [
+            {
+              "name": "affirm",
+              "confidence": 0.4465080201625824
+            },
+            {
+              "name": "scan_aborts",
+              "confidence": 0.3378986716270447
+            },
+            {
+              "name": "scan_setup_screen",
+              "confidence": 0.06454119831323624
+            },
+            {
+              "name": "harddrive_failure",
+              "confidence": 0.04488891735672951
+            },
+            {
+              "name": "mood_unhappy",
+              "confidence": 0.034815043210983276
+            },
+            {
+              "name": "save_Dose_Check_Log",
+              "confidence": 0.023495102301239967
+            },
+            {
+              "name": "Setting_Dose_Administrator_Role",
+              "confidence": 0.016829844564199448
+            },
+            {
+              "name": "Pediatric_and_small_patient_scans",
+              "confidence": 0.013042766600847244
+            },
+            {
+              "name": "Using_the_dose_audit_tool",
+              "confidence": 0.010853943414986134
+            },
+            {
+              "name": "buttons",
+              "confidence": 0.007126492913812399
+            }
+          ],
+          "response_selector": {
+            "default": {
+              "response": {
+                "name": null,
+                "confidence": 0.0
+              },
+              "ranking": [],
+              "full_retrieval_intent": null
+            }
+          },
+          "text": "scan abort"
+        },
+        "input_channel": "rest",
+        "message_id": "931b3fa482d54279bdcbd30d137518fc",
+        "metadata": {}
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193873.906768,
+        "name": "utter_cannot_do",
+        "policy": "policy_1_TEDPolicy",
+        "confidence": 0.1573183536529541
+      },
+      {
+        "event": "bot",
+        "timestamp": 1596193873.906768,
+        "text": "The assistant does not identify the following applications\nCommon user-interface with Advantage Windows for improved productivity. The OC1 now supports an expanded list of Advanced Application packages such as Volume Viewer, CT Perfusion 4- Multi-Organ or Neuro only, Advantage CTC Pro, AutoBone, AVA Xpress, and Dentascan. Volume Viewer is a prerequisite to support Advantage CTC Pro, AutoBone, and AVA Xpress\nIt is not intended to teach imaging or to make any type of clinical diagnosis. It is necessary for you to have sufficient knowledge to competently perform the various diagnostic imaging procedures within your modality. ",
+        "data": {
+          "elements": null,
+          "quick_replies": null,
+          "buttons": null,
+          "attachment": null,
+          "image": null,
+          "custom": null
+        },
+        "metadata": {}
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193873.9277155,
+        "name": "action_listen",
+        "policy": "policy_1_TEDPolicy",
+        "confidence": 0.9758535623550415
+      },
+      {
+        "event": "user",
+        "timestamp": 1596193900.3931437,
+        "text": "thanks",
+        "parse_data": {
+          "intent": {
+            "name": "thanks",
+            "confidence": 0.9765200614929199
+          },
+          "entities": [],
+          "intent_ranking": [
+            {
+              "name": "thanks",
+              "confidence": 0.9765200614929199
+            },
+            {
+              "name": "mood_unhappy",
+              "confidence": 0.011102274991571903
+            },
+            {
+              "name": "protocol_selection",
+              "confidence": 0.003431849181652069
+            },
+            {
+              "name": "navigation_bar",
+              "confidence": 0.0030723230447620153
+            },
+            {
+              "name": "Dose_Check",
+              "confidence": 0.002895368728786707
+            },
+            {
+              "name": "Building_protocols_with_notification_values",
+              "confidence": 0.00073453807272017
+            },
+            {
+              "name": "precautionary_signs",
+              "confidence": 0.0007247481262311339
+            },
+            {
+              "name": "Configure_the_system_for_protocol_change_control",
+              "confidence": 0.000690353277605027
+            },
+            {
+              "name": "Building_protocols_using_protocol_change_control",
+              "confidence": 0.0004270139615982771
+            },
+            {
+              "name": "patient_schedule",
+              "confidence": 0.00040142916259355843
+            }
+          ],
+          "response_selector": {
+            "default": {
+              "response": {
+                "name": null,
+                "confidence": 0.0
+              },
+              "ranking": [],
+              "full_retrieval_intent": null
+            }
+          },
+          "text": "thanks"
+        },
+        "input_channel": "rest",
+        "message_id": "22d1ffcd40a14bc4aea025a37e5b233c",
+        "metadata": {}
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193900.4131384,
+        "name": "utter_welcome",
+        "policy": "policy_1_TEDPolicy",
+        "confidence": 0.9224258065223694
+      },
+      {
+        "event": "bot",
+        "timestamp": 1596193900.4131384,
+        "text": "Cool! You're welcome.",
+        "data": {
+          "elements": null,
+          "quick_replies": null,
+          "buttons": null,
+          "attachment": null,
+          "image": null,
+          "custom": null
+        },
+        "metadata": {}
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193900.434034,
+        "name": "action_listen",
+        "policy": "policy_1_TEDPolicy",
+        "confidence": 0.9758081436157227
+      }
+    ],
+    "latest_input_channel": "rest",
+    "active_form": {},
+    "latest_action_name": "action_listen"
+  },
+  {
+    "sender_id": "krithika",
+    "slots": {},
+    "latest_message": {
+      "intent": {
+        "name": "greet",
+        "confidence": 0.9758283495903015
+      },
+      "entities": [],
+      "intent_ranking": [
+        {
+          "name": "greet",
+          "confidence": 0.9758283495903015
+        },
+        {
+          "name": "goodbye",
+          "confidence": 0.010252915322780609
+        },
+        {
+          "name": "purpose",
+          "confidence": 0.0044643389992415905
+        },
+        {
+          "name": "warning_label",
+          "confidence": 0.003374733729287982
+        },
+        {
+          "name": "popup",
+          "confidence": 0.0018082244787365198
+        },
+        {
+          "name": "scan_parameters",
+          "confidence": 0.0012108971131965518
+        },
+        {
+          "name": "message_bar",
+          "confidence": 0.0011510525364428759
+        },
+        {
+          "name": "bot_challenge",
+          "confidence": 0.0008752724970690906
+        },
+        {
+          "name": "recon_management",
+          "confidence": 0.000719711126293987
+        },
+        {
+          "name": "regulation_information",
+          "confidence": 0.00031456261058337986
+        }
+      ],
+      "response_selector": {
+        "default": {
+          "response": {
+            "name": null,
+            "confidence": 0.0
+          },
+          "ranking": [],
+          "full_retrieval_intent": null
+        }
+      },
+      "text": "hi"
+    },
+    "latest_event_time": 1596193948.5326643,
+    "followup_action": null,
+    "paused": false,
+    "events": [
+      {
+        "event": "action",
+        "timestamp": 1596193840.1733449,
+        "name": "action_session_start",
+        "policy": null,
+        "confidence": null
+      },
+      {
+        "event": "session_started",
+        "timestamp": 1596193840.1733449
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193840.1733449,
+        "name": "action_listen",
+        "policy": null,
+        "confidence": null
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193842.6347697,
+        "name": "action_greet_user",
+        "policy": "MappingPolicy",
+        "confidence": "0.98"
+      },
+      {
+        "event": "bot",
+        "timestamp": 1596193842.6347697,
+        "text": "Hey there I am your MEDBOT \ud83d\udc68\ud83c\udffd\u200d\u2695\ufe0f, How may I help you today",
+        "data": {
+          "elements": null,
+          "quick_replies": null,
+          "buttons": null,
+          "attachment": null,
+          "image": null,
+          "custom": null
+        },
+        "metadata": {}
+      },
+      {
+        "event": "rewind",
+        "timestamp": 1596193842.6347697
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193846.9053853,
+        "name": "action_session_start",
+        "policy": null,
+        "confidence": null
+      },
+      {
+        "event": "session_started",
+        "timestamp": 1596193846.9053853
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193846.9053853,
+        "name": "action_listen",
+        "policy": null,
+        "confidence": null
+      },
+      {
+        "event": "user",
+        "timestamp": 1596193847.4010592,
+        "text": "hey",
+        "parse_data": {
+          "intent": {
+            "name": "greet",
+            "confidence": 0.9789350032806396
+          },
+          "entities": [],
+          "intent_ranking": [
+            {
+              "name": "greet",
+              "confidence": 0.9789350032806396
+            },
+            {
+              "name": "goodbye",
+              "confidence": 0.01314576342701912
+            },
+            {
+              "name": "purpose",
+              "confidence": 0.002369318623095751
+            },
+            {
+              "name": "scan_parameters",
+              "confidence": 0.0014750799164175987
+            },
+            {
+              "name": "warning_label",
+              "confidence": 0.0009635488968342543
+            },
+            {
+              "name": "popup",
+              "confidence": 0.0007304187165573239
+            },
+            {
+              "name": "wrong_screen",
+              "confidence": 0.0007241149432957172
+            },
+            {
+              "name": "recon_management",
+              "confidence": 0.000632933690212667
+            },
+            {
+              "name": "message_bar",
+              "confidence": 0.0005389282014220953
+            },
+            {
+              "name": "ui_conv",
+              "confidence": 0.00048490057815797627
+            }
+          ],
+          "response_selector": {
+            "default": {
+              "response": {
+                "name": null,
+                "confidence": 0.0
+              },
+              "ranking": [],
+              "full_retrieval_intent": null
+            }
+          },
+          "text": "hey"
+        },
+        "input_channel": "rest",
+        "message_id": "7827420321b544e98143cd6ff5793cc6",
+        "metadata": {}
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193847.4259965,
+        "name": "utter_greet",
+        "policy": "policy_0_MemoizationPolicy",
+        "confidence": 1.0
+      },
+      {
+        "event": "bot",
+        "timestamp": 1596193847.4259965,
+        "text": "Hey! How are you?",
+        "data": {
+          "elements": null,
+          "quick_replies": null,
+          "buttons": null,
+          "attachment": null,
+          "image": null,
+          "custom": null
+        },
+        "metadata": {}
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193847.4469357,
+        "name": "action_listen",
+        "policy": "policy_0_MemoizationPolicy",
+        "confidence": 1.0
+      },
+      {
+        "event": "user",
+        "timestamp": 1596193860.6343603,
+        "text": "purupose of medbot",
+        "parse_data": {
+          "intent": {
+            "name": "purpose",
+            "confidence": 0.7032028436660767
+          },
+          "entities": [],
+          "intent_ranking": [
+            {
+              "name": "purpose",
+              "confidence": 0.7032028436660767
+            },
+            {
+              "name": "goodbye",
+              "confidence": 0.13610586524009705
+            },
+            {
+              "name": "greet",
+              "confidence": 0.059900861233472824
+            },
+            {
+              "name": "cannot_do",
+              "confidence": 0.025791173800826073
+            },
+            {
+              "name": "function_status_area",
+              "confidence": 0.015765199437737465
+            },
+            {
+              "name": "Setting_Dose_Administrator_Role",
+              "confidence": 0.013897400349378586
+            },
+            {
+              "name": "usage",
+              "confidence": 0.012970768846571445
+            },
+            {
+              "name": "warning_label",
+              "confidence": 0.011263897642493248
+            },
+            {
+              "name": "scan_parameters",
+              "confidence": 0.010699017904698849
+            },
+            {
+              "name": "scan_patient_position",
+              "confidence": 0.010402975603938103
+            }
+          ],
+          "response_selector": {
+            "default": {
+              "response": {
+                "name": null,
+                "confidence": 0.0
+              },
+              "ranking": [],
+              "full_retrieval_intent": null
+            }
+          },
+          "text": "purupose of medbot"
+        },
+        "input_channel": "rest",
+        "message_id": "ac39aeb77ac04fcc8b688830d3779028",
+        "metadata": {}
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193860.653311,
+        "name": "utter_purpose",
+        "policy": "policy_1_TEDPolicy",
+        "confidence": 0.892544686794281
+      },
+      {
+        "event": "bot",
+        "timestamp": 1596193860.653311,
+        "text": "It is a replacement to the manual, providing information on the purpose, prerequisite skills, organization, format, and graphic conventions that identify the visual symbols used throughout the MedBot. ",
+        "data": {
+          "elements": null,
+          "quick_replies": null,
+          "buttons": null,
+          "attachment": null,
+          "image": null,
+          "custom": null
+        },
+        "metadata": {}
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193860.6764264,
+        "name": "action_listen",
+        "policy": "policy_1_TEDPolicy",
+        "confidence": 0.9741061329841614
+      },
+      {
+        "event": "user",
+        "timestamp": 1596193870.6487978,
+        "text": "troubleshoot",
+        "parse_data": {
+          "intent": {
+            "name": "troubleshoot",
+            "confidence": 0.9948024153709412
+          },
+          "entities": [],
+          "intent_ranking": [
+            {
+              "name": "troubleshoot",
+              "confidence": 0.9948024153709412
+            },
+            {
+              "name": "Building_protocols_using_protocol_change_control",
+              "confidence": 0.0013001938350498676
+            },
+            {
+              "name": "pediatric_protocols",
+              "confidence": 0.0007051911088638008
+            },
+            {
+              "name": "optimize_pediatric_protocol",
+              "confidence": 0.0006090280367061496
+            },
+            {
+              "name": "Adjust_pediatric_and_small_patient_scan_parameters",
+              "confidence": 0.0005139139830134809
+            },
+            {
+              "name": "Dose_reporting_considerations",
+              "confidence": 0.0004996454226784408
+            },
+            {
+              "name": "deny",
+              "confidence": 0.000434864399721846
+            },
+            {
+              "name": "Configure_the_system_for_protocol_change_control",
+              "confidence": 0.0004098733770661056
+            },
+            {
+              "name": "Color_Coding_for_Kids_Protocol",
+              "confidence": 0.00040813646046444774
+            },
+            {
+              "name": "popup",
+              "confidence": 0.0003166958049405366
+            }
+          ],
+          "response_selector": {
+            "default": {
+              "response": {
+                "name": null,
+                "confidence": 0.0
+              },
+              "ranking": [],
+              "full_retrieval_intent": null
+            }
+          },
+          "text": "troubleshoot"
+        },
+        "input_channel": "rest",
+        "message_id": "79d7fb703c4b457ea5b390a68646de8d",
+        "metadata": {}
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193870.668744,
+        "name": "utter_troubleshoot",
+        "policy": "policy_1_TEDPolicy",
+        "confidence": 0.9448961019515991
+      },
+      {
+        "event": "bot",
+        "timestamp": 1596193870.668744,
+        "text": "please select an option below",
+        "data": {
+          "elements": null,
+          "quick_replies": null,
+          "buttons": [
+            {
+              "payload": "invalid text field",
+              "title": "invalid text field"
+            },
+            {
+              "payload": "air caliberations",
+              "title": "air caliberations"
+            },
+            {
+              "payload": "scan abort",
+              "title": "scan abort"
+            },
+            {
+              "payload": "wrong screen",
+              "title": "wrong screen"
+            },
+            {
+              "payload": "no response",
+              "title": "no response"
+            },
+            {
+              "payload": "lowdisk space",
+              "title": "low disk space"
+            },
+            {
+              "payload": "hard drive failure",
+              "title": "hard drive failure"
+            }
+          ],
+          "attachment": null,
+          "image": null,
+          "custom": null
+        },
+        "metadata": {}
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193870.6866975,
+        "name": "action_listen",
+        "policy": "policy_1_TEDPolicy",
+        "confidence": 0.9750581979751587
+      },
+      {
+        "event": "user",
+        "timestamp": 1596193873.8848274,
+        "text": "scan abort",
+        "parse_data": {
+          "intent": {
+            "name": "affirm",
+            "confidence": 0.4465080201625824
+          },
+          "entities": [],
+          "intent_ranking": [
+            {
+              "name": "affirm",
+              "confidence": 0.4465080201625824
+            },
+            {
+              "name": "scan_aborts",
+              "confidence": 0.3378986716270447
+            },
+            {
+              "name": "scan_setup_screen",
+              "confidence": 0.06454119831323624
+            },
+            {
+              "name": "harddrive_failure",
+              "confidence": 0.04488891735672951
+            },
+            {
+              "name": "mood_unhappy",
+              "confidence": 0.034815043210983276
+            },
+            {
+              "name": "save_Dose_Check_Log",
+              "confidence": 0.023495102301239967
+            },
+            {
+              "name": "Setting_Dose_Administrator_Role",
+              "confidence": 0.016829844564199448
+            },
+            {
+              "name": "Pediatric_and_small_patient_scans",
+              "confidence": 0.013042766600847244
+            },
+            {
+              "name": "Using_the_dose_audit_tool",
+              "confidence": 0.010853943414986134
+            },
+            {
+              "name": "buttons",
+              "confidence": 0.007126492913812399
+            }
+          ],
+          "response_selector": {
+            "default": {
+              "response": {
+                "name": null,
+                "confidence": 0.0
+              },
+              "ranking": [],
+              "full_retrieval_intent": null
+            }
+          },
+          "text": "scan abort"
+        },
+        "input_channel": "rest",
+        "message_id": "931b3fa482d54279bdcbd30d137518fc",
+        "metadata": {}
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193873.906768,
+        "name": "utter_cannot_do",
+        "policy": "policy_1_TEDPolicy",
+        "confidence": 0.1573183536529541
+      },
+      {
+        "event": "bot",
+        "timestamp": 1596193873.906768,
+        "text": "The assistant does not identify the following applications\nCommon user-interface with Advantage Windows for improved productivity. The OC1 now supports an expanded list of Advanced Application packages such as Volume Viewer, CT Perfusion 4- Multi-Organ or Neuro only, Advantage CTC Pro, AutoBone, AVA Xpress, and Dentascan. Volume Viewer is a prerequisite to support Advantage CTC Pro, AutoBone, and AVA Xpress\nIt is not intended to teach imaging or to make any type of clinical diagnosis. It is necessary for you to have sufficient knowledge to competently perform the various diagnostic imaging procedures within your modality. ",
+        "data": {
+          "elements": null,
+          "quick_replies": null,
+          "buttons": null,
+          "attachment": null,
+          "image": null,
+          "custom": null
+        },
+        "metadata": {}
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193873.9277155,
+        "name": "action_listen",
+        "policy": "policy_1_TEDPolicy",
+        "confidence": 0.9758535623550415
+      },
+      {
+        "event": "user",
+        "timestamp": 1596193900.3931437,
+        "text": "thanks",
+        "parse_data": {
+          "intent": {
+            "name": "thanks",
+            "confidence": 0.9765200614929199
+          },
+          "entities": [],
+          "intent_ranking": [
+            {
+              "name": "thanks",
+              "confidence": 0.9765200614929199
+            },
+            {
+              "name": "mood_unhappy",
+              "confidence": 0.011102274991571903
+            },
+            {
+              "name": "protocol_selection",
+              "confidence": 0.003431849181652069
+            },
+            {
+              "name": "navigation_bar",
+              "confidence": 0.0030723230447620153
+            },
+            {
+              "name": "Dose_Check",
+              "confidence": 0.002895368728786707
+            },
+            {
+              "name": "Building_protocols_with_notification_values",
+              "confidence": 0.00073453807272017
+            },
+            {
+              "name": "precautionary_signs",
+              "confidence": 0.0007247481262311339
+            },
+            {
+              "name": "Configure_the_system_for_protocol_change_control",
+              "confidence": 0.000690353277605027
+            },
+            {
+              "name": "Building_protocols_using_protocol_change_control",
+              "confidence": 0.0004270139615982771
+            },
+            {
+              "name": "patient_schedule",
+              "confidence": 0.00040142916259355843
+            }
+          ],
+          "response_selector": {
+            "default": {
+              "response": {
+                "name": null,
+                "confidence": 0.0
+              },
+              "ranking": [],
+              "full_retrieval_intent": null
+            }
+          },
+          "text": "thanks"
+        },
+        "input_channel": "rest",
+        "message_id": "22d1ffcd40a14bc4aea025a37e5b233c",
+        "metadata": {}
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193900.4131384,
+        "name": "utter_welcome",
+        "policy": "policy_1_TEDPolicy",
+        "confidence": 0.9224258065223694
+      },
+      {
+        "event": "bot",
+        "timestamp": 1596193900.4131384,
+        "text": "Cool! You're welcome.",
+        "data": {
+          "elements": null,
+          "quick_replies": null,
+          "buttons": null,
+          "attachment": null,
+          "image": null,
+          "custom": null
+        },
+        "metadata": {}
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193900.434034,
+        "name": "action_listen",
+        "policy": "policy_1_TEDPolicy",
+        "confidence": 0.9758081436157227
+      },
+      {
+        "event": "user",
+        "timestamp": 1596193948.464845,
+        "text": "hi",
+        "parse_data": {
+          "intent": {
+            "name": "greet",
+            "confidence": 0.9758283495903015
+          },
+          "entities": [],
+          "intent_ranking": [
+            {
+              "name": "greet",
+              "confidence": 0.9758283495903015
+            },
+            {
+              "name": "goodbye",
+              "confidence": 0.010252915322780609
+            },
+            {
+              "name": "purpose",
+              "confidence": 0.0044643389992415905
+            },
+            {
+              "name": "warning_label",
+              "confidence": 0.003374733729287982
+            },
+            {
+              "name": "popup",
+              "confidence": 0.0018082244787365198
+            },
+            {
+              "name": "scan_parameters",
+              "confidence": 0.0012108971131965518
+            },
+            {
+              "name": "message_bar",
+              "confidence": 0.0011510525364428759
+            },
+            {
+              "name": "bot_challenge",
+              "confidence": 0.0008752724970690906
+            },
+            {
+              "name": "recon_management",
+              "confidence": 0.000719711126293987
+            },
+            {
+              "name": "regulation_information",
+              "confidence": 0.00031456261058337986
+            }
+          ],
+          "response_selector": {
+            "default": {
+              "response": {
+                "name": null,
+                "confidence": 0.0
+              },
+              "ranking": [],
+              "full_retrieval_intent": null
+            }
+          },
+          "text": "hi"
+        },
+        "input_channel": "rest",
+        "message_id": "b2649c4103d54f72b81b874f2d307029",
+        "metadata": {}
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193948.4957638,
+        "name": "utter_greet",
+        "policy": "policy_1_TEDPolicy",
+        "confidence": 0.8843586444854736
+      },
+      {
+        "event": "bot",
+        "timestamp": 1596193948.4957638,
+        "text": "Hey! How are you?",
+        "data": {
+          "elements": null,
+          "quick_replies": null,
+          "buttons": null,
+          "attachment": null,
+          "image": null,
+          "custom": null
+        },
+        "metadata": {}
+      },
+      {
+        "event": "action",
+        "timestamp": 1596193948.5326643,
+        "name": "action_listen",
+        "policy": "policy_1_TEDPolicy",
+        "confidence": 0.9741861820220947
+      }
+    ],
+    "latest_input_channel": "rest",
+    "active_form": {},
+    "latest_action_name": "action_listen"
+  }
+]
